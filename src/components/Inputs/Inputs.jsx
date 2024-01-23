@@ -20,6 +20,12 @@ export function Inputs() {
             
             <label>Lorem</label>
             <input type="text" id='input4'/>
+
+            <label>Lorem</label>
+            <input type="text" id='input5'/>
+
+            <label>Lorem</label>
+            <input type="text" id='input6'/>
             
           </div>
 
