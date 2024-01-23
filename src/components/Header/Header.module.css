@@ -19,5 +19,16 @@
 .navbar li{
     display: inline;
     margin: 0 0.4rem;
+    font-size: 1.2rem;
 }
+
+.navbar li:hover{
+    
+    cursor: pointer;
+}
+
+.titulo{
+    color: var(--terciary);
+}
+
 

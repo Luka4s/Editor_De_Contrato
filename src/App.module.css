@@ -1,0 +1,35 @@
+h1,h2,h3,p{
+    color:var(--primary);
+}
+
+.wrapper{
+    max-width: 70rem;
+    margin: 2rem auto;
+    padding: 0 1rem;
+
+    display: grid;
+    grid-template-columns: 430px 1fr;
+    
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.titulo{
+    display: flex;
+    margin: 5% 5%;
+    width: fit-content;
+}
+
+.titulo h3{
+    border-bottom: 2px var(--primary) solid;
+}
+
+.titulo h3::before{
+    content: '► ';
+    filter: drop-shadow(5px 5px 10px #b71c1c);
+}
+
+.info{
+    margin: 5% 5%;
+}
+

@@ -1,11 +1,11 @@
 import styles from './Header.module.css';
-import multiLogo from '../assets/multipoint-logo-novo-horizontal.svg'
+import multiLogo from '../../assets/multipoint-logo-novo-horizontal.svg'
 
 export function Header() {
     return (
         <header className={styles.header}>
             <img src={multiLogo}/>
-            <a>Editor de Contratos</a>
+            <h2 className={styles.titulo}>Editor de Contratos</h2>
 
             <div>
                 <nav className={styles.navbar}> 

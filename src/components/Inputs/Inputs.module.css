@@ -1,0 +1,20 @@
+.inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+.inputs input{
+    width: 300px;
+    border: 2px var(--primary) outset;
+    margin: 0.5rem;
+    height: 25px;
+}
+
+.inputs label{
+    font-weight: bold;
+    color: var(--primary);
+    text-align: flex-start;
+    font-size: 1.1rem;
+}

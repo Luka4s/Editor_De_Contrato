@@ -1,0 +1,10 @@
+.visualization{
+    padding: 0.5rem 1rem;
+}
+
+.textArea{
+    overflow-y: scroll;
+    resize: none;
+    box-shadow: 3px 3px 10px 0px rgba(183,28,28,1);
+    border: 2px double rgba(183,28,28,1);
+}
