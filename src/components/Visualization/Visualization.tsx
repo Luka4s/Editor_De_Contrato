@@ -1,5 +1,5 @@
 import styles from './Visualization.module.css'
-import logomulti from '../../assets/multipoint-logo-novo-horizontal.svg'
+import logomulti from '../../assets/logo_multipoint.png'
 
 export function Visualization() {
     return (

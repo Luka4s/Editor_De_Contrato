@@ -4,7 +4,7 @@ import multiLogo from '../../assets/multipoint-logo-novo-horizontal.svg'
 export function Header() {
     return (
         <header className={styles.header}>
-            <img src={multiLogo}/>
+            <img src={multiLogo} className={styles.logo}/>
             <h2 className={styles.titulo}>Editor de Contratos</h2>
 
             <div>
