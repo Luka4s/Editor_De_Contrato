@@ -47,3 +47,27 @@ td{
 .view li{
     margin: 0.5rem 0.8rem;
 }
+
+.boxTextHeader{
+    height: 100px;
+    padding-bottom: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    border-bottom: 1px black solid;
+    margin-bottom: 10%;
+}
+
+.boxTextHeader p {
+    color: black;
+}
+
+.logo{
+    width: 60%;
+
+}
+
+.logo img{
+    background-color: black;
+}
