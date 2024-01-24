@@ -21,7 +21,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    color: var(--terciary);
     -webkit-font-smoothing: antialiased;
+    background-color: var(--terciary);
+    color: var(--terciary)
 }
-

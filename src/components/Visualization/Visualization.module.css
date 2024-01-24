@@ -1,13 +1,49 @@
 .visualization{
     padding: 0.5rem 1rem;
+    border: 4px var(--primary) double;
+    overflow-y: auto;
+    height: 500px;
+    text-align: justify;
+    box-shadow: 1px 1px 4px var(--primary);
 }
 
-.textArea{
-    overflow-y: auto;
-    resize: none;
-    box-shadow: 3px 3px 10px 0px rgba(183,28,28,1);
-    border: 2px double rgba(183,28,28,1);
-    padding: 1rem;
-    font-weight: 500;
-    
+.view{
+    font-size: 16px;
+    color: black;
+    margin: 1rem 0;
+}
+.title{
+    display: flex;
+    justify-content: center;
+}
+
+.topic{
+    color: black;
+    display: flex;
+    align-content: flex-start;
+}
+
+table{
+        
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+tbody td{
+    padding: 0.2rem;
+    text-align: center;
+}
+
+th{
+    text-align: center;
+}
+
+td{
+    border: 1px solid;
+}
+
+.view li{
+    margin: 0.5rem 0.8rem;
 }

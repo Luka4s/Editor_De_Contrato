@@ -1,6 +1,7 @@
 import { Header } from './components/Header/Header';
 import { Inputs } from './components/Inputs/Inputs';
 import { Visualization } from './components/Visualization/Visualization';
+import { Download } from './components/Download/Download';
 import './global.css';
 import styles from './App.module.css';
 
@@ -27,7 +28,13 @@ export function App() {
         </div>
        
       </main>
+
+      <section>
+        <Download/>
+      </section>
+      
     </div>
+    
   </div>
   
   );

@@ -28,10 +28,6 @@ export function Inputs() {
             <input type="text" id='input6'/>
             
           </div>
-
-          {/* <div className={styles.textArea}>
-            <textarea readOnly cols="90" rows="20"></textarea>
-          </div> */}
         </section>
         
     )

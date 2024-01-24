@@ -1,0 +1,23 @@
+.download{
+    display: flex;
+    height: 45px;
+    width: 140px;
+    background-color: var(--primary);
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin: 0 0.5rem;
+}
+
+.download a{
+    text-decoration: none;
+    font-family: 'Roboto';
+    color: var(--terciary);
+    font-weight: 500;
+}
+
+.download:hover{
+    height: 47px;
+    width: 142px;
+    box-shadow: 2px 2px 10px var(--primary);
+}

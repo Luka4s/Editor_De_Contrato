@@ -9,6 +9,7 @@ h1,h2,h3,p{
 
     display: grid;
     grid-template-columns: 430px 1fr;
+    grid-template-rows: 450px 40px;
     
     align-items: flex-start;
     justify-content: center;
@@ -26,7 +27,7 @@ h1,h2,h3,p{
 
 .titulo h3::before{
     content: '► ';
-    filter: drop-shadow(5px 5px 10px #b71c1c);
+    font-size: 1rem;
 }
 
 .info{
