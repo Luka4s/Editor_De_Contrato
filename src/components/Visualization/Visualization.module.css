@@ -72,3 +72,17 @@ td{
 .logo img{
     background-color: black;
 }
+
+.boxAssinatura{
+    display: flex;
+    flex-direction: column;
+    margin-top: 13%;
+    padding-top: 2.5%;
+    border-top: 1px black solid;
+    align-items: flex-start;
+    width: 60%;
+}
+
+.boxAssinatura p{
+    color: black;
+}

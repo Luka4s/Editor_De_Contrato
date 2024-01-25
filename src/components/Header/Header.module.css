@@ -11,8 +11,6 @@
     border-bottom-left-radius: 15% ;
 }
 
-
-
 .header a {
     font-size: 1.5rem;
     color: var(--terciary)
@@ -25,8 +23,7 @@
 }
 
 .navbar li:hover{
-    
-    cursor: pointer;
+    cursor: pointer
 }
 
 .titulo{

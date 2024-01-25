@@ -91,8 +91,8 @@ export function Visualization() {
                             </tr>
                             </tbody>
                         </table>
-                    </div>
-                    <h4 className={styles.topic}>2.2 - DETALHAMENTO DO ESCOPO DE SERVIÇOS</h4>
+                        </div>
+                        <h4 className={styles.topic}>2.2 - DETALHAMENTO DO ESCOPO DE SERVIÇOS</h4>
                         <div className={styles.view}>
                             <ul>
                                 <li>Gestão e monitoramento dos dispositivos e usuários conforme tabela de Escopo de Serviços;</li>
@@ -193,6 +193,19 @@ export function Visualization() {
                             de duas testemunhas de tudo ciente.
                         </p>
                         <h4 className={styles.topic}><strong>São Caetano do Sul, 24/01/2024</strong></h4>
+                        <section className={styles.view}>
+                            <div className={styles.boxAssinatura}>
+                                <p>CONTRATANTE</p>
+                                <p>NEW ACTION CORRETORA DE SEGUROS LTDA</p>
+                                <p>16.585.544/0001-00</p>
+                            </div>
+                            <div className={styles.view}>
+                                <div className={styles.boxAssinatura}>
+                                    <p>CONTRATADA</p>
+                                    <p>DANIEL F DE ALCATARA EPP</p>
+                                </div>
+                            </div>
+                        </section>
                         
                 </aside> 
         </section>
