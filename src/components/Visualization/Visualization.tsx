@@ -11,39 +11,34 @@ export function Visualization() {
     const test = document.getElementById("content1");
 
     html2canvas(test!).then(function (canvas) {
-      /*
-        [210,297] Sao os números (largura e altura do papel a4) que eu encontrei para trabalhar com eles.
-        Se você puder encontrar números oficiais do jsPDF, usa.
-         */
       const imgData = canvas.toDataURL("image/png");
-      const imgWidth = 210; // Largura em mm de um a4
-      const pageHeight = 297; // Altura em mm de um a4
+      const imgWidth = 210;
+      const pageHeight = 297;
 
       const imgHeight = (canvas.height * imgWidth) / canvas.width;
       let heightLeft = imgHeight;
       let position = 0;
-      const pdf = new jsPDF("p", "mm");
-      const fix_imgWidth = 10; // Vai subindo e descendo esses valores ate ficar como queres
-      const fix_imgHeight = 10; // Vai subindo e descendo esses valores ate ficar como queres
+      const pdf = new jsPDF("p", "mm", "a4", true);
+      const fix_imgWidth = -80;
+      const fix_imgHeight = -80;
 
       pdf.addImage(imgData, "PNG", 30, position, -95, -95);
       heightLeft -= pageHeight;
 
       while (heightLeft >= 0) {
-        position = 80 /*  heightLeft - imgHeight */;
+        position = heightLeft - imgHeight;
         pdf.addPage();
         pdf.addImage(
           imgData,
           "PNG",
-          10,
+          30,
           position,
-          -95 + fix_imgWidth,
-          -95 + fix_imgHeight
+          imgWidth + fix_imgWidth,
+          imgHeight + fix_imgHeight
         );
         heightLeft -= pageHeight;
       }
-
-      pdf.save("filename.pdf");
+      pdf.save("arquivo.pdf");
     });
   }
 
