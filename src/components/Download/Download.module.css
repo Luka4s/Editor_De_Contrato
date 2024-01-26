@@ -1,23 +1,24 @@
 .download{
+    height: 60px;
+    width: 160px;
     display: flex;
-    height: 45px;
-    width: 140px;
-    background-color: var(--primary);
-    justify-content: center;
     align-items: center;
-    border-radius: 10px;
-    margin: 0 0.5rem;
+    justify-content: flex-start;
+   
 }
 
-.download a{
-    text-decoration: none;
-    font-family: 'Roboto';
-    color: var(--terciary);
-    font-weight: 500;
+button{
+    height: 40px;
+    width: 130px;
+    border-radius: 1rem;
+    background-color: var(--primary);
+    margin-left: 0.6rem;
 }
 
-.download:hover{
-    height: 47px;
-    width: 142px;
-    box-shadow: 2px 2px 10px var(--primary);
+button:hover{
+    box-shadow: 3px 3px 10px var(--primary);
 }
+
+
+
+

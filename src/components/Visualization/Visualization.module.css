@@ -4,7 +4,8 @@
     overflow-y: auto;
     height: 500px;
     text-align: justify;
-    box-shadow: 1px 1px 4px var(--primary);
+    box-shadow: 2px 2px 4px var(--primary);
+    background-color: rgb(255, 255, 255);
 }
 
 .view{

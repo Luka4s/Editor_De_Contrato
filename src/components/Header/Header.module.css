@@ -13,21 +13,25 @@
 
 .header a {
     font-size: 1.5rem;
-    color: var(--terciary)
+    color: var(--text)
 }
 
 .navbar li{
     display: inline;
     margin: 0 0.4rem;
     font-size: 1.2rem;
+    color: var(--text);
+    text-transform: uppercase;
+    list-style: none;
 }
 
 .navbar li:hover{
-    cursor: pointer
+    cursor: pointer;
+    text-shadow: 4px 9px 14px rgba(0,0,0,0.75);
 }
 
 .titulo{
-    color: var(--terciary);
+    color: var(--text);
 }
 
 

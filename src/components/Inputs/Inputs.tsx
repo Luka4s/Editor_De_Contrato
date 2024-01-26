@@ -6,25 +6,25 @@ export function Inputs() {
         <section>
           <div className={styles.inputs}>
             
-            <label>Contratante</label>
+            <label className={styles.labels}>Contratante</label>
             <input type="text" id='input1'/>
             
             
-            <label>CNPJ</label>
+            <label className={styles.labels}>CNPJ</label>
             <input type="text" id='input2'/>
             
             
-            <label>Lorem</label>
+            <label className={styles.labels}>Lorem</label>
             <input type="text" id='input3'/>
             
             
-            <label>Lorem</label>
+            <label className={styles.labels}>Lorem</label>
             <input type="text" id='input4'/>
 
-            <label>Lorem</label>
+            <label className={styles.labels}>Lorem</label>
             <input type="text" id='input5'/>
 
-            <label>Lorem</label>
+            <label className={styles.labels}>Lorem</label>
             <input type="text" id='input6'/>
             
           </div>

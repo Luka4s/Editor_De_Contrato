@@ -3,7 +3,8 @@ import logomulti from '../../assets/logo_multipoint.png'
 
 export function Visualization() {
     return (
-        <section className={styles.visualization}>
+        <body id="html">
+            <section className={styles.visualization}>
                 <aside className={styles.boxView}>
                     <section className={styles.Header}>
                         <div>
@@ -206,9 +207,8 @@ export function Visualization() {
                                 </div>
                             </div>
                         </section>
-                        
+                                
                 </aside> 
-        </section>
-    )
-
-}
+            </section>
+        </body>
+    )}

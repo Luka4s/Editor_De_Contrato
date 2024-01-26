@@ -3,22 +3,28 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: baseline;
+    
 }
 
 .inputs input{
     width: 300px;
-    border: 2px var(--primary) outset;
     margin: 0.5rem;
-    height: 25px;
-    border-radius: 4px;
-    border: 1px black solid;
-    padding: 0.4rem;
+    height: 27px;
+    border-radius: 1rem;
+    border: 0.1px black solid;
+    padding: 0.5rem 1rem;
     font-size: 1rem;
+    
 }
 
-.inputs label{
+.labels{
     font-weight: bold;
-    color: var(--primary);
+    color: var(--text);
     text-align: flex-start;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
+
+input:focus{
+    background-color: white;
+}
+
