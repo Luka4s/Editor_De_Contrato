@@ -1,7 +1,6 @@
 import { Header } from "./components/Header/Header";
 import { Inputs } from "./components/Inputs/Inputs";
 import { Visualization } from "./components/Visualization/Visualization";
-import { Download } from "./components/Download/Download";
 import "./global.css";
 import styles from "./App.module.css";
 import { InputUserProvider } from "./Context/InputUserContext";
@@ -22,16 +21,11 @@ export function App() {
 
         <div className={styles.wrapper}>
           <Inputs />
-
           <main>
             <div>
               <Visualization />
             </div>
           </main>
-
-          <section>
-            <Download />
-          </section>
         </div>
       </div>
     </InputUserProvider>
