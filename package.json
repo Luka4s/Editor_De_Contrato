@@ -10,7 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+<<<<<<< HEAD
     "babel-plugin-macros": "^3.1.0",
+=======
+>>>>>>> refs/remotes/origin/master
     "jspdf": "^2.5.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
