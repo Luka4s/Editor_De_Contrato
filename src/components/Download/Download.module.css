@@ -13,6 +13,10 @@ button{
     border-radius: 1rem;
     background-color: var(--primary);
     margin-left: 0.6rem;
+    color: white;
+    font-weight: bold;
+    border: 0;
+    cursor: pointer;
 }
 
 button:hover{
