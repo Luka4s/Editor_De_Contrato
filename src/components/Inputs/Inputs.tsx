@@ -2,7 +2,17 @@ import { InputUser } from "../../Context/InputUserContext";
 import styles from "./Inputs.module.css";
 
 export function Inputs() {
-  const { setUserInfo, setCnpjUser, setCity, setEstado, setDate } = InputUser();
+  const {
+    cnpjUser,
+    setUserInfo,
+    setCnpjUser,
+    setCity,
+    setEstado,
+    setDate,
+    handleChangeCnpj,
+  } = InputUser();
+
+  console.log(cnpjUser);
 
   return (
     <section>
@@ -20,8 +30,8 @@ export function Inputs() {
         <input
           type="text"
           id="input2"
-          onChange={(e) => {
-            setCnpjUser(e.target.value);
+          onChange={() => {
+            setCnpjUser(handleChangeCnpj);
           }}
         />
 

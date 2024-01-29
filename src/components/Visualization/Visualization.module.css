@@ -1,11 +1,11 @@
-.visualization{
-    padding: 0.5rem 1rem;
-    border: 4px var(--primary) double;
-    overflow-y: auto;
-    height: 550px;
-    text-align: justify;
-    box-shadow: 2px 2px 4px var(--primary);
-    background-color: rgb(255, 255, 255);
+.visualization {
+  padding: 0.5rem 1rem;
+  border: 4px var(--primary) double;
+  overflow-y: auto;
+  height: 550px;
+  text-align: justify;
+  box-shadow: 2px 2px 4px var(--primary);
+  background-color: rgb(255, 255, 255);
 }
 
 .view {
@@ -50,14 +50,14 @@ td {
 }
 
 .boxTextHeader {
-  height: 100px;
-  padding-bottom: 3%;
+  height: 50px;
+  padding-bottom: 1%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
   border-bottom: 1px black solid;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 
 .boxTextHeader p {
