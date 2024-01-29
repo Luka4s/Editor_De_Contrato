@@ -1,10 +1,11 @@
 import styles from './Download.module.css'
+import { handleUserClick } from '../Visualization/Visualization'
 
 export function Download () {
     return (
             <div className={styles.download}>
                 
-                <button>Download PDF</button>
+                <button onClick={handleUserClick}>Download PDF</button>
                 
             </div>
             

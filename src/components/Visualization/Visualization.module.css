@@ -2,7 +2,7 @@
     padding: 0.5rem 1rem;
     border: 4px var(--primary) double;
     overflow-y: auto;
-    height: 500px;
+    height: 550px;
     text-align: justify;
     box-shadow: 2px 2px 4px var(--primary);
     background-color: rgb(255, 255, 255);
@@ -86,4 +86,7 @@ td{
 
 .boxAssinatura p{
     color: black;
+}
+.download{
+    margin-top: 10%;
 }

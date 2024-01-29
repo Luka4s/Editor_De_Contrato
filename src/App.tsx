@@ -2,6 +2,7 @@ import { Header } from "./components/Header/Header";
 import { Inputs } from "./components/Inputs/Inputs";
 import { Visualization } from "./components/Visualization/Visualization";
 import { Download } from "./components/Download/Download";
+import { Footer } from "./components/Footer/Footer";
 import "./global.css";
 import styles from "./App.module.css";
 import { InputUserProvider } from "./Context/InputUserContext";
@@ -32,7 +33,10 @@ export function App() {
           <section>
             <Download />
           </section>
+
+
         </div>
+        <Footer/>
       </div>
     </InputUserProvider>
   );

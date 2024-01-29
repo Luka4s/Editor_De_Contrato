@@ -1,9 +1,15 @@
 .inputs{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: baseline;
-    
+    justify-content: center;
+    align-items: center;
+    border: 1px inset var(--primary);
+    padding: 5%;
+    margin-right: 15%;
+    /* box-shadow: 2px 1px 10px 1px var(--primary); */
+    box-shadow: 5px 5px 15px -3px var(--primary);
+    border-radius: 1rem;
+    height: 470px;
 }
 
 .inputs input{
