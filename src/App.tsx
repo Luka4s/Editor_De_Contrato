@@ -23,7 +23,6 @@ export function App() {
 
         <div className={styles.wrapper}>
           <Inputs />
-
           <main>
             <div>
               <Visualization />
@@ -33,8 +32,6 @@ export function App() {
           <section>
             <Download />
           </section>
-
-
         </div>
         <Footer/>
       </div>
