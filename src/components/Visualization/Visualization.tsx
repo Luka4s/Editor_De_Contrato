@@ -3,9 +3,6 @@
 import styles from "./Visualization.module.css";
 import logomulti from "../../assets/logo_multipoint.png";
 import { InputUser } from "../../Context/InputUserContext";
-//import jsPDF from "jspdf";
-//import html2canvas from "html2canvas";
-
 import html2pdf from "html2pdf.js";
 
 export function handleUserClick() {
@@ -44,6 +41,7 @@ export function handleUserClick() {
 export function Visualization() {
   const { userInfo, cnpjUser, city, estado, date } = InputUser();
 
+  console.log(userInfo);
   return (
     <section className={styles.visualization}>
       <aside className={styles.boxView} id="content1">
@@ -76,12 +74,12 @@ export function Visualization() {
           </p>
           <p className={styles.view}>
             <strong>CONTRATANTE</strong>: Pessoa jurídica que adquiriu os
-            serviços de INFRAESTRUTURA DE TI, inscrito no CNPJ sob o nº
-            <text>{cnpjUser}</text> , Razão Social: <text>{userInfo}</text> com
-            sede na cidade de <text>{city}</text> , Estado de{" "}
-            <text>{estado}</text> , na Rua Sete de Abril, nº264 , Bairro
-            República, CEP 01044-000 , Brasil, doravante denominada simplesmente
-            de <strong>USUÁRIO</strong>.
+            serviços de INFRAESTRUTURA DE TI, inscrito no CNPJ sob o nº{" "}
+            <text>{cnpjUser}</text> ,Razão Social: {"  "}{" "}
+            <text>{userInfo}</text> {"  "}com sede na cidade de{" "}
+            <text>{city}</text> , Estado de <text>{estado}</text> , na Rua Sete
+            de Abril, nº264 , Bairro República, CEP 01044-000 , Brasil,
+            doravante denominada simplesmente de <strong>USUÁRIO</strong>.
           </p>
           <p className={styles.view}>
             As partes devidamente qualiﬁcadas, conforme dispõem seus contratos
