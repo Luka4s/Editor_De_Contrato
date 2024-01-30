@@ -348,9 +348,9 @@ export function Visualization() {
         </div>
         <h4 className={styles.topic}>4 - DA VIGÊNCIA</h4>
         <p className={styles.view}>
-          O presente contrato entrará em vigor em <text>{date}</text>, por
+          O presente contrato entrará em vigor em{"  "} <text>{date}</text>, por
           período de 12 (doze) meses, e será renovado automaticamente, salvo
-          comunicação por escrito com 60 (sessenta) dias de antecedência à
+          comunicação por escrito com 60 (sessenta) dias de antecedência à{"  "}
           <text>{date}</text>
         </p>
         <h4 className={styles.topic}>5 - DA RESCISÃO</h4>
@@ -429,7 +429,7 @@ export function Visualization() {
         </p>
         <h4 className={styles.topic}>
           <strong>
-            São Caetano do Sul, <strong>{date}</strong>
+            São Caetano do Sul,{"  "} <strong>{date}</strong>
           </strong>
         </h4>
         <section className={styles.view}>
