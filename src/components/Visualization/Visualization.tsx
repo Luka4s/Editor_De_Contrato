@@ -4,6 +4,7 @@ import styles from "./Visualization.module.css";
 import logomulti from "../../assets/logo_multipoint.png";
 import { InputUser } from "../../Context/InputUserContext";
 import html2pdf from "html2pdf.js";
+import { EditTable } from "../EditTable/EditTable";
 
 export function handleUserClick() {
   const contentElement = document.getElementById("content1");
@@ -38,11 +39,14 @@ export function handleUserClick() {
   });
 }
 
+
+
 export function Visualization() {
   const { userInfo, cnpjUser, city, estado, date } = InputUser();
 
   console.log(userInfo);
   return (
+    <div>
     <section className={styles.visualization}>
       <aside className={styles.boxView} id="content1">
         <div id="page-break">
@@ -77,7 +81,7 @@ export function Visualization() {
             serviços de INFRAESTRUTURA DE TI, inscrito no CNPJ sob o nº{" "}
             <text>{cnpjUser}</text> ,Razão Social: {"  "}{" "}
             <text>{userInfo}</text> {"  "}com sede na cidade de{" "}
-            <text>{city}</text> , Estado de <text>{estado}</text> , na Rua Sete
+            <text>{city}</text>, Estado de <text>{estado}</text>, na Rua Sete
             de Abril, nº264 , Bairro República, CEP 01044-000 , Brasil,
             doravante denominada simplesmente de <strong>USUÁRIO</strong>.
           </p>
@@ -447,5 +451,8 @@ export function Visualization() {
         </section>
       </aside>
     </section>
+    
+      <EditTable/>
+    </div>
   );
 }

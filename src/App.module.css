@@ -2,6 +2,22 @@ h1,h2,h3,p{
     color:var(--primary);
 }
 
+button{
+    height: 3rem;
+    width: 10rem;
+    border-radius: 1rem;
+    background-color: var(--primary);
+    margin-left: 0.6rem;
+    color: white;
+    font-weight: bold;
+    border: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 0.9rem;
+}
+
 .wrapper{
     max-width: 70rem;
     margin: 2rem auto;
