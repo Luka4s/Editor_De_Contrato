@@ -1,10 +1,15 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable react-refresh/only-export-components */
 import styles from "./Visualization.module.css";
 import logomulti from "../../assets/logo_multipoint.png";
 import { InputUser } from "../../Context/InputUserContext";
 import html2pdf from "html2pdf.js";
 import { EditTable } from "../EditTable/EditTable";
+import ReactDOM from 'react-dom';
+import { MyTable, Data } from '../Table/Table';
+import Table from 'rc-table';
+import { ColumnsType } from 'rc-table';
+import { Modal } from '../Modal/Modal';
+
+ReactDOM.render(<Table />, document.getElementById('root'));
 
 export function handleUserClick() {
   const contentElement = document.getElementById("content1");
@@ -43,8 +48,29 @@ export function handleUserClick() {
 
 export function Visualization() {
   const { userInfo, cnpjUser, city, estado, date } = InputUser();
+  
 
-  console.log(userInfo);
+  const columns: ColumnsType<Data> = [
+    {
+      title: 'Quantidade',
+      dataIndex: 'name',
+      key: 'name',
+      width: 100,
+    },
+    {
+      title: 'Serviço',
+      dataIndex: 'age',
+      key: 'age',
+      width: 100,
+    },
+  ];
+  const data: Data[] = [
+    { name: 'Jack', age: 28, address: 'some where', key: '1' },
+    { name: 'Rose', age: 36, address: 'some where', key: '2' },
+  ];
+
+
+
   return (
     <div>
     <section className={styles.visualization}>
@@ -116,49 +142,9 @@ export function Visualization() {
           </h4>
 
           <div className={styles.view}>
-            <table>
-              <thead>
-                <tr>
-                  <th>Quantidade</th>
-                  <th>Item</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>10 UN.</td>
-                  <td>Dispositivo/Usuário</td>
-                </tr>
-                <tr>
-                  <td>1 UN.</td>
-                  <td>Servidor-controlador de domínio AC/DC</td>
-                </tr>
-                <tr>
-                  <td>1 UN.</td>
-                  <td>Gestão de Firewall</td>
-                </tr>
-                <tr>
-                  <td>5 UN.</td>
-                  <td>Deslocamento mensal</td>
-                </tr>
-                <tr>
-                  <td>2 HS.</td>
-                  <td>Preventiva mensal</td>
-                </tr>
-                <tr>
-                  <td>6 HS.</td>
-                  <td>Corretiva mensal</td>
-                </tr>
-                <tr>
-                  <td>10 HS.</td>
-                  <td>Serviços internos</td>
-                </tr>
-                <tr>
-                  <td>1 UN.</td>
-                  <td>Reunião de gestão trimestral</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <MyTable columns={columns} data={data} />
+          <Modal open={false}/>
+          </div> 
           <div>
             <h4 className={styles.topic}>
               2.2 - DETALHAMENTO DO ESCOPO DE SERVIÇOS
@@ -452,7 +438,7 @@ export function Visualization() {
       </aside>
     </section>
     
-      <EditTable/>
+      <EditTable />
     </div>
   );
 }
