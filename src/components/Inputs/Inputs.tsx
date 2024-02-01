@@ -3,10 +3,18 @@ import { InputUser } from "../../Context/InputUserContext";
 import styles from "./Inputs.module.css";
 
 export function Inputs() {
-  const { cnpjUser, setUserInfo, setCnpjUser, setCity, setEstado, setDate } =
-    InputUser();
+  const {
+    //  cnpjUser,
+    itenList,
+    setUserInfo,
+    setCnpjUser,
+    setCity,
+    setEstado,
+    setDate,
+    setItenList,
+  } = InputUser();
 
-  console.log(cnpjUser);
+  console.log(itenList);
 
   return (
     <section>
@@ -46,7 +54,13 @@ export function Inputs() {
         />
 
         <label className={styles.labels}>Lorem</label>
-        <input type="text" id="input5" />
+        <input
+          type="text"
+          id="input5"
+          onChange={(e) => {
+            setItenList(e.target.value);
+          }}
+        />
 
         <label className={styles.labels}>Date</label>
         <IMaskInput

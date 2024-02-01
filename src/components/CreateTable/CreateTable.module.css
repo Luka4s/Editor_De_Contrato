@@ -1,0 +1,16 @@
+.ItensService {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid black;
+  width: 599px;
+}
+.quantity {
+  text-align: center;
+  width: 300px;
+  border-right: 1px solid black;
+}
+.content {
+  text-align: center;
+  width: 100%;
+}

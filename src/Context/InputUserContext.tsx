@@ -8,12 +8,18 @@ interface IUserContext {
   city: string;
   estado: string;
   date: number | undefined;
+  modalList: string[];
+  itenList: string;
+  open: boolean;
   setUserInfo: (e: any) => void;
   setIsEditing: (e: any) => void;
   setCnpjUser: (e: any) => void;
   setCity: (e: any) => void;
   setEstado: (e: any) => void;
   setDate: (e: any) => void;
+  setModalList: (e: any) => void;
+  setItenList: (e: any) => void;
+  setOpen: (e: any) => void;
 }
 
 const UserContext = createContext<IUserContext | undefined>(undefined);
@@ -47,6 +53,12 @@ export function InputUserProvider({ children }: { children: ReactNode }) {
   const [city, setCity] = useState("");
   const [estado, setEstado] = useState("");
   const [date, setDate] = useState();
+
+  const [modalList, setModalList] = useState([]);
+  const [itenList, setItenList] = useState("");
+
+  const [open, setOpen] = useState(false);
+
   return (
     <UserContext.Provider
       value={{
@@ -56,12 +68,18 @@ export function InputUserProvider({ children }: { children: ReactNode }) {
         city,
         estado,
         date,
+        modalList,
+        itenList,
+        open,
         setIsEditing,
         setUserInfo,
         setCnpjUser,
         setCity,
         setEstado,
         setDate,
+        setModalList,
+        setItenList,
+        setOpen,
       }}
     >
       {children}
