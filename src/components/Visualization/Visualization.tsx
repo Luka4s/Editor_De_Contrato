@@ -4,13 +4,8 @@ import logomulti from "../../assets/logo_multipoint.png";
 import { InputUser } from "../../Context/InputUserContext";
 import html2pdf from "html2pdf.js";
 import { EditTable } from "../EditTable/EditTable";
-import ReactDOM from "react-dom";
-import { MyTable, Data } from "../Table/Table";
-import Table from "rc-table";
-import { ColumnsType } from "rc-table";
-import { Modal } from "../Modal/Modal";
-
-ReactDOM.render(<Table />, document.getElementById("root"));
+import { CreateTable } from "../CreateTable/Index";
+//import { CreateTable } from "../CreateTable/Index";
 
 export function handleUserClick() {
   const contentElement = document.getElementById("content1");
@@ -40,30 +35,13 @@ export function handleUserClick() {
       after: ["#page-break", "#after2"],
       avoid: "img",
     },
-  }).then((pdf) => {
+  }).then((pdf: { save: () => void }) => {
     pdf.save();
   });
 }
 
 export function Visualization() {
-  const { userInfo, cnpjUser, city, estado, date, modalList, itenList } =
-    InputUser();
-
-  const columns: ColumnsType<Data> = [
-    {
-      title: "Quantidade",
-      dataIndex: "name",
-      key: "name",
-      width: 100,
-    },
-    {
-      title: "Serviço",
-      dataIndex: "age",
-      key: "age",
-      width: 100,
-    },
-  ];
-  const data: Data[] = [{ name: itenList, key: "1" }];
+  const { userInfo, cnpjUser, city, estado, date, itenTable } = InputUser();
 
   return (
     <div>
@@ -136,12 +114,22 @@ export function Visualization() {
             </h4>
 
             <div className={styles.view}>
-              <MyTable columns={columns} data={data} />
-              {modalList.map((item) => {
-                return (
-                  <Modal key={item.key} content={item.content} open={false} />
-                );
-              })}
+              <table>
+                <thead>
+                  <th>Quantidade</th>
+                  <th>Serviço</th>
+                </thead>
+                <tbody>
+                  {itenTable.map((item) => {
+                    return (
+                      <CreateTable
+                        content={item.content}
+                        quantity={item.quantity}
+                      />
+                    );
+                  })}
+                </tbody>
+              </table>
             </div>
             <div>
               <h4 className={styles.topic}>

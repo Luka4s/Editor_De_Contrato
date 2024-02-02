@@ -3,14 +3,29 @@ import { BsFillPencilFill } from "react-icons/bs";
 import { InputUser } from "../../Context/InputUserContext";
 
 export function EditTable() {
-  const { modalList, itenList, setModalList } = InputUser();
-  function handleClick() {
-    setModalList([...modalList, { content: itenList }]);
+  const {
+    itenTable,
+    quantityItens,
+    contentIten,
+    setContentIten,
+    setItenTable,
+    setQuantityItens,
+  } = InputUser();
+
+  function handleUserClick(e: { preventDefault: () => void }) {
+    e.preventDefault();
+    setItenTable([
+      ...itenTable,
+      { quantity: quantityItens, content: contentIten },
+    ]);
+
+    setContentIten("");
+    setQuantityItens(0);
   }
 
   return (
     <div className={styles.container}>
-      <button className={styles.button} onClick={handleClick}>
+      <button className={styles.button} onClick={handleUserClick}>
         <BsFillPencilFill />
         Editar tabela
       </button>

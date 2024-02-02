@@ -26,23 +26,17 @@
 }
 
 table {
+  display: flex;
+  flex-direction: column;
   table-layout: fixed;
   width: 100%;
   border-collapse: collapse;
   border: 2px solid black;
 }
-
-tbody td {
-  padding: 0.2rem;
+thead {
+  display: flex;
+  justify-content: space-around;
   text-align: center;
-}
-
-th {
-  text-align: center;
-}
-
-td {
-  border: 1px solid;
 }
 
 .view li {

@@ -8,8 +8,9 @@ interface IUserContext {
   city: string;
   estado: string;
   date: number | undefined;
-  modalList: string[];
-  itenList: string;
+  itenTable: string[];
+  contentIten: string;
+  quantityItens: number;
   open: boolean;
   setUserInfo: (e: any) => void;
   setIsEditing: (e: any) => void;
@@ -17,8 +18,9 @@ interface IUserContext {
   setCity: (e: any) => void;
   setEstado: (e: any) => void;
   setDate: (e: any) => void;
-  setModalList: (e: any) => void;
-  setItenList: (e: any) => void;
+  setItenTable: (e: any) => void;
+  setContentIten: (e: any) => void;
+  setQuantityItens: (e: any) => void;
   setOpen: (e: any) => void;
 }
 
@@ -54,8 +56,11 @@ export function InputUserProvider({ children }: { children: ReactNode }) {
   const [estado, setEstado] = useState("");
   const [date, setDate] = useState();
 
-  const [modalList, setModalList] = useState([]);
-  const [itenList, setItenList] = useState("");
+  //define o Array da tabela
+  const [itenTable, setItenTable] = useState([""]);
+  //define o conteudo que vai dentro da tabela
+  const [contentIten, setContentIten] = useState("");
+  const [quantityItens, setQuantityItens] = useState(0);
 
   const [open, setOpen] = useState(false);
 
@@ -68,18 +73,20 @@ export function InputUserProvider({ children }: { children: ReactNode }) {
         city,
         estado,
         date,
-        modalList,
-        itenList,
+        contentIten,
+        itenTable,
         open,
+        quantityItens,
         setIsEditing,
         setUserInfo,
         setCnpjUser,
         setCity,
         setEstado,
         setDate,
-        setModalList,
-        setItenList,
+        setItenTable,
+        setContentIten,
         setOpen,
+        setQuantityItens,
       }}
     >
       {children}

@@ -5,16 +5,17 @@ import styles from "./Inputs.module.css";
 export function Inputs() {
   const {
     //  cnpjUser,
-    itenList,
+    itenTable,
     setUserInfo,
     setCnpjUser,
     setCity,
     setEstado,
     setDate,
-    setItenList,
+    setContentIten,
+    setQuantityItens,
   } = InputUser();
 
-  console.log(itenList);
+  console.log(itenTable);
 
   return (
     <section>
@@ -53,12 +54,21 @@ export function Inputs() {
           }}
         />
 
-        <label className={styles.labels}>Lorem</label>
+        <label className={styles.labels}>Quantidade</label>
         <input
           type="text"
           id="input5"
           onChange={(e) => {
-            setItenList(e.target.value);
+            setQuantityItens(e.target.value);
+          }}
+        />
+
+        <label className={styles.labels}>Serviços</label>
+        <input
+          type="text"
+          id="input5"
+          onChange={(e) => {
+            setContentIten(e.target.value);
           }}
         />
 
