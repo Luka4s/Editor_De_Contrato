@@ -5,6 +5,8 @@ interface TableData {
   quantity: number;
 }
 
+document.getElementById('root')
+
 export function CreateTable({ content, quantity }: TableData) {
   return (
     <div>

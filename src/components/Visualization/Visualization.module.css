@@ -1,81 +1,10 @@
 .visualization {
   padding: 0.5rem 1rem;
   border: 4px var(--primary) double;
+  box-shadow: 2px 2px 4px var(--primary);
   overflow-y: auto;
   height: 550px;
   text-align: justify;
-  box-shadow: 2px 2px 4px var(--primary);
   background-color: rgb(255, 255, 255);
 }
 
-.view {
-  font-size: 16px;
-  color: black;
-  margin: 1rem 0;
-}
-.title {
-  display: flex;
-  justify-content: center;
-  color: black;
-}
-
-.topic {
-  color: black;
-  display: flex;
-  align-content: flex-start;
-}
-
-table {
-  display: flex;
-  flex-direction: column;
-  table-layout: fixed;
-  width: 100%;
-  border-collapse: collapse;
-  border: 2px solid black;
-}
-thead {
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-}
-
-.view li {
-  margin: 0.5rem 0.8rem;
-}
-
-.boxTextHeader {
-  height: 50px;
-  padding-bottom: 1%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
-  border-bottom: 1px black solid;
-  margin-bottom: 5%;
-}
-
-.boxTextHeader p {
-  color: black;
-}
-
-.logo {
-  width: 60%;
-}
-
-.logo img {
-  background-color: black;
-}
-
-.boxAssinatura {
-  display: flex;
-  flex-direction: column;
-  margin-top: 13%;
-  padding-top: 2.5%;
-  border-top: 1px black solid;
-  align-items: flex-start;
-  width: 60%;
-}
-
-.boxAssinatura p {
-  color: black;
-}

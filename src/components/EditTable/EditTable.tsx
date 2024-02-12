@@ -13,6 +13,9 @@ export function EditTable() {
   } = InputUser();
 
   function handleUserClick(e: { preventDefault: () => void }) {
+    while (contentIten === "" || quantityItens === 0) {
+      return alert("Por favor, preencha todos os campos");
+    }
     e.preventDefault();
     setItenTable([
       ...itenTable,

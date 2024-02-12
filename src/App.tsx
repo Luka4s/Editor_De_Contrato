@@ -6,6 +6,7 @@ import { Footer } from "./components/Footer/Footer";
 import "./global.css";
 import styles from "./App.module.css";
 import { InputUserProvider } from "./Context/InputUserContext";
+import { MyModal } from "./components/Modal/Modal";
 
 export function App() {
   return (
@@ -27,11 +28,17 @@ export function App() {
             <div>
               <Visualization />
             </div>
+            
           </main>
-
           <section>
             <Download />
           </section>
+
+          
+
+          <aside>
+            <MyModal/>
+          </aside>
         </div>
         <Footer/>
       </div>

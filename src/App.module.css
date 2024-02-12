@@ -19,16 +19,17 @@ button{
 }
 
 .wrapper{
-    max-width: 70rem;
+    max-width: 60rem;
     margin: 2rem auto;
     padding: 0 1rem;
 
     display: grid;
-    grid-template-columns: 430px 1fr;
-    grid-template-rows: 450px 40px;
+    grid-template-columns: 26.875rem 1fr;
+    grid-template-rows: 34.375rem 18.75rem;
     
     align-items: flex-start;
     justify-content: center;
+    gap: 2rem;
 }
 
 .titulo{
@@ -50,4 +51,5 @@ button{
     margin: 5% 5%;
     color:var(--text)
 }
+
 

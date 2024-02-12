@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { ReactNode, createContext, useContext, useState } from "react";
 
+
+
 interface IUserContext {
   userInfo: string;
   cnpjUser: string;
@@ -11,7 +13,7 @@ interface IUserContext {
   itenTable: string[];
   contentIten: string;
   quantityItens: number;
-  open: boolean;
+  modalIsOpen: boolean;
   setUserInfo: (e: any) => void;
   setIsEditing: (e: any) => void;
   setCnpjUser: (e: any) => void;
@@ -21,7 +23,7 @@ interface IUserContext {
   setItenTable: (e: any) => void;
   setContentIten: (e: any) => void;
   setQuantityItens: (e: any) => void;
-  setOpen: (e: any) => void;
+  setModalIsOpen: (e: any) => void;
 }
 
 const UserContext = createContext<IUserContext | undefined>(undefined);
@@ -34,6 +36,8 @@ export const InputUser = (): IUserContext => {
   }
   return context;
 };
+
+
 
 /* function handleChangeCnpj(value: string) {
   const cnpjUser = value.replace(/\D/g, "");
@@ -61,8 +65,8 @@ export function InputUserProvider({ children }: { children: ReactNode }) {
   //define o conteudo que vai dentro da tabela
   const [contentIten, setContentIten] = useState("");
   const [quantityItens, setQuantityItens] = useState(0);
-
-  const [open, setOpen] = useState(false);
+  //Modal
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   return (
     <UserContext.Provider
@@ -75,8 +79,8 @@ export function InputUserProvider({ children }: { children: ReactNode }) {
         date,
         contentIten,
         itenTable,
-        open,
         quantityItens,
+        modalIsOpen,
         setIsEditing,
         setUserInfo,
         setCnpjUser,
@@ -85,8 +89,8 @@ export function InputUserProvider({ children }: { children: ReactNode }) {
         setDate,
         setItenTable,
         setContentIten,
-        setOpen,
         setQuantityItens,
+        setModalIsOpen,
       }}
     >
       {children}
