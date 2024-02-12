@@ -23,19 +23,17 @@ export function App() {
         <h2 className={styles.info}>Preencha os campos abaixo:</h2>
 
         <div className={styles.wrapper}>
-          <Inputs />
+          <div>
+            <Inputs />
+          <section className={styles.sectionDownload}>
+            <Download/>
+          </section>
+          </div>
           <main>
             <div>
               <Visualization />
             </div>
-            
           </main>
-          <section>
-            <Download />
-          </section>
-
-          
-
           <aside>
             <MyModal/>
           </aside>

@@ -70,15 +70,15 @@ const { userInfo, cnpjUser, city, estado, date, itenTable } = InputUser();
           </p>
         </div>
         <div id="view">
-          <h4 className={styles.topic}>
+        <h4 className={styles.topic}>
             2.1 - TABELA DE SERVIÇOS E RECURSOS CONTRATADOS
           </h4>
-
           <div className={styles.view}>
             <table>
               <thead>
                 <th>Quantidade</th>
                 <th>Serviço</th>
+                <th>Valor</th>
               </thead>
               <tbody>
                 {itenTable.map((item) => {
@@ -86,6 +86,7 @@ const { userInfo, cnpjUser, city, estado, date, itenTable } = InputUser();
                     <CreateTable
                       content={item.content}
                       quantity={item.quantity}
+                      value={item.value}
                     />
                   );
                 })}

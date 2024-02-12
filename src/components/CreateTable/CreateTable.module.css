@@ -1,15 +1,25 @@
 .ItensService {
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
+
 .quantity {
-  width: 50%;
+  width: 40%;
   text-align: center;
   border-top: 1px solid black;
   border-right: 1px solid black;
 }
 .content {
-  width: 50%;
+  width: 30%;
+  text-align: center;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-left: none;
+}
+
+.value{
+  width: 13.50rem; 
   text-align: center;
   border-top: 1px solid black;
   border-right: 1px solid black;

@@ -19,7 +19,7 @@ button{
 }
 
 .wrapper{
-    max-width: 60rem;
+    max-width: 75rem;
     margin: 2rem auto;
     padding: 0 1rem;
 
@@ -29,7 +29,7 @@ button{
     
     align-items: flex-start;
     justify-content: center;
-    gap: 2rem;
+    gap: 4rem;
 }
 
 .titulo{
@@ -45,6 +45,10 @@ button{
 .titulo h3::before{
     content: '► ';
     font-size: 1rem;
+}
+
+.sectionDownload{
+    margin-top: 2rem;
 }
 
 .info{

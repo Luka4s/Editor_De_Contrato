@@ -14,6 +14,7 @@ interface IUserContext {
   contentIten: string;
   quantityItens: number;
   modalIsOpen: boolean;
+  valueIten: number;
   setUserInfo: (e: any) => void;
   setIsEditing: (e: any) => void;
   setCnpjUser: (e: any) => void;
@@ -24,6 +25,7 @@ interface IUserContext {
   setContentIten: (e: any) => void;
   setQuantityItens: (e: any) => void;
   setModalIsOpen: (e: any) => void;
+  setValueIten: (e: any) => void;
 }
 
 const UserContext = createContext<IUserContext | undefined>(undefined);
@@ -64,9 +66,11 @@ export function InputUserProvider({ children }: { children: ReactNode }) {
   const [itenTable, setItenTable] = useState([""]);
   //define o conteudo que vai dentro da tabela
   const [contentIten, setContentIten] = useState("");
-  const [quantityItens, setQuantityItens] = useState(0);
+  const [quantityItens, setQuantityItens] = useState("");
   //Modal
   const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const [valueIten, setValueIten] = useState("");
 
   return (
     <UserContext.Provider
@@ -81,6 +85,7 @@ export function InputUserProvider({ children }: { children: ReactNode }) {
         itenTable,
         quantityItens,
         modalIsOpen,
+        valueIten,
         setIsEditing,
         setUserInfo,
         setCnpjUser,
@@ -91,6 +96,7 @@ export function InputUserProvider({ children }: { children: ReactNode }) {
         setContentIten,
         setQuantityItens,
         setModalIsOpen,
+        setValueIten,
       }}
     >
       {children}

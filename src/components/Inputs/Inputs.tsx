@@ -11,8 +11,6 @@ export function Inputs() {
     setCity,
     setEstado,
     setDate,
-    setContentIten,
-    setQuantityItens,
   } = InputUser();
 
   console.log(itenTable);
@@ -54,25 +52,7 @@ export function Inputs() {
           }}
         />
 
-        <label className={styles.labels}>Quantidade</label>
-        <input
-          type="text"
-          id="input5"
-          onChange={(e) => {
-            setQuantityItens(e.target.value);
-          }}
-        />
-
-        <label className={styles.labels}>Serviços</label>
-        <input
-          type="text"
-          id="input5"
-          onChange={(e) => {
-            setContentIten(e.target.value);
-          }}
-        />
-
-        <label className={styles.labels}>Date</label>
+        <label className={styles.labels}>Data</label>
         <IMaskInput
           mask={"00/00/0000"}
           type="text"

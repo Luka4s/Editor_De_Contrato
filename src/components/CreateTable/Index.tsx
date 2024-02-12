@@ -3,11 +3,13 @@ import Style from "../CreateTable/CreateTable.module.css";
 interface TableData {
   content: string;
   quantity: number;
+  value: number;
 }
 
 document.getElementById('root')
 
-export function CreateTable({ content, quantity }: TableData) {
+export function CreateTable({ content, quantity, value }: TableData) {
+  
   return (
     <div>
       <div className={Style.ItensService}>
@@ -16,6 +18,9 @@ export function CreateTable({ content, quantity }: TableData) {
         </div>
         <div className={Style.content}>
           <span>{content}</span>
+        </div>
+        <div className={Style.value}>
+          <span>{value}</span>
         </div>
       </div>
     </div>
