@@ -3,9 +3,14 @@ import logomulti from "../../../assets/logo_multipoint.png";
 import { InputUser } from "../../../Context/InputUserContext";
 import { CreateTable } from "../../CreateTable/Index";
 import { BsFillPencilFill } from "react-icons/bs";
+import { MyModal } from "../../Modal/Modal"
 
 export function TemplateInfra(){
-const { userInfo, cnpjUser, city, estado, date, itenTable } = InputUser();
+const { userInfo, cnpjUser, city, estado, date, itenTable,setModalVisible, setQuantityItens, setValueIten, setContentIten } = InputUser();
+
+const abrirModal = () => {
+  setModalVisible(false)
+}
     return(
         <aside className={styles.boxView} id="content1">
         <div id="page-break">
@@ -38,9 +43,9 @@ const { userInfo, cnpjUser, city, estado, date, itenTable } = InputUser();
           <p className={styles.view}>
             <strong>CONTRATANTE</strong>: Pessoa jurídica que adquiriu os
             serviços de INFRAESTRUTURA DE TI, inscrito no CNPJ sob o nº{" "}
-            <text>{cnpjUser}</text> ,Razão Social: {"  "}{" "}
-            <text>{userInfo}</text> {"  "}com sede na cidade de{" "}
-            <text>{city}</text>, Estado de <text>{estado}</text>, na Rua Sete
+            <span>{cnpjUser}</span> ,Razão Social: {"  "}{" "}
+            <span>{userInfo}</span>{"  "}com sede na cidade de{" "}
+            <span>{city}</span>, Estado de {estado}, na Rua Sete
             de Abril, nº264 , Bairro República, CEP 01044-000 , Brasil,
             doravante denominada simplesmente de <strong>USUÁRIO</strong>.
           </p>
@@ -75,25 +80,34 @@ const { userInfo, cnpjUser, city, estado, date, itenTable } = InputUser();
           </h4>
           <div className={styles.view}>
             <table>
-              <thead>
-                <th>Quantidade</th>
-                <th>Serviço</th>
-                <th>Valor</th>
+              <thead className={styles.headerTable}>
+                <tr className={styles.rowHeader}>
+                  <td className={styles.borderRB}>Quantidade</td>
+                  <td className={styles.borderRB}>Serviço</td>
+                  <td className={styles.borderB}>Valor</td>
+                </tr>
               </thead>
               <tbody>
-                {itenTable.map((item) => {
+                <tr>
+                {itenTable.map((item,index) => {
                   return (
                     <CreateTable
+                      key={index}
                       content={item.content}
                       quantity={item.quantity}
                       value={item.value}
                     />
+                
                   );
                 })}
+                </tr>
               </tbody>
             </table>
             <div className={styles.editarTable}>
-                <button className={styles.button}><BsFillPencilFill/></button>
+                <button className={styles.button} onClick={abrirModal}><BsFillPencilFill/></button>
+            </div>
+            <div className={styles.view}>
+              <MyModal/>
             </div>
           </div>
           <div>
@@ -104,74 +118,103 @@ const { userInfo, cnpjUser, city, estado, date, itenTable } = InputUser();
           <div className={styles.view}>
             <ul>
               <li>
+                <p>
                 Gestão e monitoramento dos dispositivos e usuários conforme
                 tabela de Escopo de Serviços;
+                </p>
               </li>
               <li>
+                <p>
                 Monitoramento de estações de trabalho e atualização dinâmica
                 do inventário de Hardware e Software;{" "}
+                </p>
               </li>
               <li>
+                <p>
                 Monitoramento 24/7 dos ativos de rede e estações de trabalho
                 com foco em manutenção preventiva, com geração de alertas em
                 caso de falhas críticas de hardware ou software;{" "}
+                </p>
               </li>
               <li>
+                <p>
                 Manutenções corretivas e preventivas de hardware nas estações
                 de trabalho e outro dispositivos conforme estabelecido na
                 proposta comercial. Não incluso troca de peças ou reparos
                 eletrônicos em circuitos, fontes e placas, ou despesas de
                 deslocamento até o local. Caso necessário, esses itens não
                 inclusos serão cobrados de maneira avulsa;
+                </p>
               </li>
               <li>
+                <p>
                 Suporte a aplicações usadas como colaboração empresarial e
                 sistemas operacionais para estações e servidores;
+                </p>
               </li>
               <li>
+                <p>
                 Atendimento ou suporte às soluções de terceiros, mediante
                 colaboração por parte dos provedores destas soluções,
                 estabelecendo uma relação de parceria para proporcioar ao
                 cliente maior segurança e estabilidade nos seus processos;{" "}
+                </p>
               </li>
               <li>
+                <p>
                 Consultoria operacional de gestão de tecnologia da informação
                 para novos projetos e/ou aquisição de novos hardwares e
                 softwares;
+                </p>
               </li>
               <li>
+                <p>
                 Treinamento operacional quando necessário, mediante
                 solicitação e programação;
+                </p>
               </li>
               <li>
+                <p>
                 Horas de atendimento interno para manutenção de equipamentos
                 (serviços realizações em laboratório e que não incluem custo
                 de deslocamento ou transporte dos equipamentos) conforme
                 proposta comercial;{" "}
+                </p>
               </li>
               <li>
+                <p>
                 Atendimento presencial mensal para manutenção preventiva com
                 duração conforme indicado na proposta comercial;{" "}
+                </p>
               </li>
               <li>
+                <p>
                 Atendimento presencial mensal para manutenção corretiva com
                 duração conforme indicado na proposta comercial;{" "}
+                </p>
               </li>
               <li>
+                <p>
                 Visitas corretivas adicionais ou avulsas serão taxas de acordo
                 com o informado na proposta comercial;{" "}
+                </p>
               </li>
               <li>
+                <p>
                 Reunião de gestão bimestral online, para discussão e análise
                 de necessidades geradas pelas estratégias do negócio do
                 cliente, para que o TI possa dar suporte às outras áreas
                 funcionais do negócio;{" "}
+                </p>
               </li>
               <li>
+                <p>
                 Atendimento remoto ou telefônico, para suporte técnico a
                 usuários conforme indicado na proposta comercial;{" "}
+                </p>
               </li>
               <li>
+                <p>
                 Atendimento: de segunda a sexta-feira das 09h00 às 18h00
                 horário de Brasília; Para chamados de manutenção corretiva
                 presencial, atendidos de segunda a sexta após as 18h00 e
@@ -179,20 +222,27 @@ const { userInfo, cnpjUser, city, estado, date, itenTable } = InputUser();
                 cinquenta reais) a primeira hora e R$95,00 (noventa e cinco
                 reais) por hora adicional trabalhada, somado o custo de
                 deslocamento.
+                </p>
               </li>
               <li>
+                <p>
                 Para chamados de manutenção remota, atendidos de segunda a
                 sexta após as 18h00 e sabado das 09h00 às 18h00, será taxado
                 em R$35,00 (trinta e cinco reais) por hora trabalhada.{" "}
+                </p>
               </li>
               <li>
+                <p>
                 Para chamados de manutenção remota atendidos aos sabados após
                 as 18h00,domingos e feriados, será taxado em R$70,00 (setenta
                 reais) por hora trabalhada.{" "}
+                </p>
               </li>
               <li>
+                <p>
                 Prazo contratual de acordo com a proposta comercial e com
                 renovação automática.{" "}
+                </p>
               </li>
             </ul>
           </div>
@@ -290,11 +340,11 @@ const { userInfo, cnpjUser, city, estado, date, itenTable } = InputUser();
         </div>
         <h4 className={styles.topic}>4 - DA VIGÊNCIA</h4>
         <p className={styles.view}>
-          O presente contrato entrará em vigor em{"  "} <text>{date}</text>,
+          O presente contrato entrará em vigor em{"  "} <span>{date}</span>,
           por período de 12 (doze) meses, e será renovado automaticamente,
           salvo comunicação por escrito com 60 (sessenta) dias de antecedência
           à{"  "}
-          <text>{date}</text>
+          <span>{date}</span>
         </p>
         <h4 className={styles.topic}>5 - DA RESCISÃO</h4>
         <p className={styles.view}>

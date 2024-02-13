@@ -34,9 +34,6 @@ export function App() {
               <Visualization />
             </div>
           </main>
-          <aside>
-            <MyModal/>
-          </aside>
         </div>
         <Footer/>
       </div>

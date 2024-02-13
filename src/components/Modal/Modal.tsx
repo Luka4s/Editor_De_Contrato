@@ -14,15 +14,24 @@ export function MyModal() {
     quantityItens,
     contentIten,
     valueIten,
+    modalVisible,
+    setModalVisible,
   } = InputUser();
+
+  const fecharModal = () => {
+    setModalVisible(true)
+
+  }
+
   
   const handleAddClick = (e) => {
-    if (quantityItens != 0 && contentIten != "" && valueIten != 0){
+    if (quantityItens != 0 && contentIten != "" && valueIten != 0 || null){
     e.preventDefault();
     setItenTable([
       ...itenTable,
       { quantity: quantityItens, content: contentIten, value: valueIten },
     ]);
+    
     setContentIten("");
     setQuantityItens("");
     setValueIten("");
@@ -37,8 +46,8 @@ export function MyModal() {
     setItenTable(newItenTable)
     
   }
-
-  return(
+  
+  return modalVisible?null:
     <section className={styles.sectionModal}>
       <div className={styles.boxModal}> 
         <h3 className={styles.title}>Preencha os campos para inserir na tabela:</h3>
@@ -46,7 +55,7 @@ export function MyModal() {
           <input 
           type="text" 
           id="input1"
-          value={quantityItens}
+          value={quantityItens || ''}
           onChange={(e) => {
                 setQuantityItens(e.target.value);
               }}/>
@@ -55,7 +64,7 @@ export function MyModal() {
           <input 
           type="text" 
           id="input2"
-          value={contentIten}
+          value={contentIten || ''}
           onChange={(e) => {
             setContentIten(e.target.value);
           }} />
@@ -64,7 +73,7 @@ export function MyModal() {
           <input 
             type="text" 
             id="input3"
-            value={valueIten}
+            value={valueIten || ''}
             onChange={(e) => {
               setValueIten(e.target.value);
             }}/>
@@ -72,10 +81,9 @@ export function MyModal() {
         <div className={styles.boxButton}>
           <button className={styles.buttonErase} onClick={handleRemoveClick}><BsEraser/></button>
           <button className={styles.buttonAdd} onClick={handleAddClick} ><BsPlus/></button>
-          <button className={styles.buttonSave} ><BsCheck/></button>
+          <button className={styles.buttonSave} onClick={fecharModal} ><BsCheck/></button>
         </div>
       </div>
     </section>
-  )
-    
-}
+  }  
+

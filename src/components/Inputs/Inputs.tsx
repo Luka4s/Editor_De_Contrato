@@ -13,8 +13,6 @@ export function Inputs() {
     setDate,
   } = InputUser();
 
-  console.log(itenTable);
-
   return (
     <section>
       <div className={styles.inputs}>

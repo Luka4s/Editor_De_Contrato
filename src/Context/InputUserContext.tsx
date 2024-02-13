@@ -13,8 +13,8 @@ interface IUserContext {
   itenTable: string[];
   contentIten: string;
   quantityItens: number;
-  modalIsOpen: boolean;
   valueIten: number;
+  modalVisible: boolean;
   setUserInfo: (e: any) => void;
   setIsEditing: (e: any) => void;
   setCnpjUser: (e: any) => void;
@@ -24,8 +24,8 @@ interface IUserContext {
   setItenTable: (e: any) => void;
   setContentIten: (e: any) => void;
   setQuantityItens: (e: any) => void;
-  setModalIsOpen: (e: any) => void;
   setValueIten: (e: any) => void;
+  setModalVisible: (e: any) => void;
 }
 
 const UserContext = createContext<IUserContext | undefined>(undefined);
@@ -41,19 +41,6 @@ export const InputUser = (): IUserContext => {
 
 
 
-/* function handleChangeCnpj(value: string) {
-  const cnpjUser = value.replace(/\D/g, "");
-
-  if (cnpjUser.length === 11) {
-    return cnpjUser.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/g, "$1.$2.$3-$4");
-  }
-
-  return cnpjUser.replace(
-    /(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/g,
-    "$1.$2.$3/$4-$5"
-  );
-} */
-
 export function InputUserProvider({ children }: { children: ReactNode }) {
   const [isEditing, setIsEditing] = useState(false);
   const [userInfo, setUserInfo] = useState("");
@@ -66,12 +53,13 @@ export function InputUserProvider({ children }: { children: ReactNode }) {
   const [itenTable, setItenTable] = useState([""]);
   //define o conteudo que vai dentro da tabela
   const [contentIten, setContentIten] = useState("");
-  const [quantityItens, setQuantityItens] = useState("");
+  const [quantityItens, setQuantityItens] = useState(null);
+  
+  const [valueIten, setValueIten] = useState(null);
   //Modal
-  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [modalVisible, setModalVisible] = useState(true);
 
-  const [valueIten, setValueIten] = useState("");
-
+  
   return (
     <UserContext.Provider
       value={{
@@ -84,8 +72,8 @@ export function InputUserProvider({ children }: { children: ReactNode }) {
         contentIten,
         itenTable,
         quantityItens,
-        modalIsOpen,
         valueIten,
+        modalVisible,
         setIsEditing,
         setUserInfo,
         setCnpjUser,
@@ -95,8 +83,8 @@ export function InputUserProvider({ children }: { children: ReactNode }) {
         setItenTable,
         setContentIten,
         setQuantityItens,
-        setModalIsOpen,
         setValueIten,
+        setModalVisible,
       }}
     >
       {children}

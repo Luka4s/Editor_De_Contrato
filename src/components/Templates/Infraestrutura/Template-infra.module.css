@@ -88,4 +88,36 @@
   .boxAssinatura p {
     color: black;
   }
+
+  tr{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1.1fr 2fr 0.85fr;
+    grid-template-rows: min-content;
+    font-size: 1rem;
+    align-items: flex-start;
+    text-align: center;
+    text-transform: uppercase; 
+  }
+
+  .headerTable{
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+
+  .borderRB{
+    border-right: 1px black solid;
+    border-bottom: 1px black solid;
+    text-align: center;
+  }
+
+  .borderB{
+    border-bottom: 1px black solid;
+  }
+
+
+  
   

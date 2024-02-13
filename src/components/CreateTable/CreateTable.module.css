@@ -1,27 +1,40 @@
 .ItensService {
-  display: flex;
-  flex-direction: row;
+  display: grid;
   width: 100%;
+  grid-template-columns: 1.1fr 2fr 0.85fr;
+  grid-template-rows: min-content;
+  font-size: 1rem;
+  align-items: flex-start;
+  text-align: center;
+  
 }
 
 .quantity {
-  width: 40%;
-  text-align: center;
-  border-top: 1px solid black;
-  border-right: 1px solid black;
+    
+    border-right: 1.5px black solid;
+
 }
 .content {
-  width: 30%;
-  text-align: center;
-  border-top: 1px solid black;
-  border-right: 1px solid black;
-  border-left: none;
+    
+    border-right: 1.5px black solid;
+ 
 }
 
-.value{
-  width: 13.50rem; 
-  text-align: center;
-  border-top: 1px solid black;
-  border-right: 1px solid black;
-  border-left: none;
+td{
+  height: 1.6rem;
+  
+}
+
+.servico{
+  border-right: 1.6px solid black;
+  border-bottom: 1.6px solid black;
+}
+
+.quantidade{
+  border-right: 1.6px solid black;
+  border-bottom: 1.6px solid black;
+}
+
+.valor{
+  border-bottom: 1.6px solid black;
 }
