@@ -4,7 +4,11 @@ import { BsCheck } from "react-icons/bs";
 import { BsEraser } from "react-icons/bs";
 import { InputUser } from "../../Context/InputUserContext";
 
+
 export function MyModal() {
+
+ 
+
   const {
     setContentIten,
     setQuantityItens,
@@ -70,7 +74,7 @@ export function MyModal() {
           }} />
 
         <label htmlFor="input3">Valor</label>
-          <input 
+          <input
             type="text" 
             id="input3"
             value={valueIten || ''}

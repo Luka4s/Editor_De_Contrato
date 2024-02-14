@@ -5,7 +5,6 @@ import styles from "./Inputs.module.css";
 export function Inputs() {
   const {
     //  cnpjUser,
-    itenTable,
     setUserInfo,
     setCnpjUser,
     setCity,

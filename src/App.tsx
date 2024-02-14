@@ -6,8 +6,8 @@ import { Footer } from "./components/Footer/Footer";
 import "./global.css";
 import styles from "./App.module.css";
 import { InputUserProvider } from "./Context/InputUserContext";
-import { MyModal } from "./components/Modal/Modal";
-
+import { EditTable } from "./components/EditarTable/EditTable"
+import {MyModal} from './components/Modal/Modal'
 export function App() {
   return (
     <InputUserProvider>
@@ -32,6 +32,10 @@ export function App() {
           <main>
             <div>
               <Visualization />
+              <EditTable/>
+              <div className={styles.editTable}>
+                <MyModal/>
+              </div>
             </div>
           </main>
         </div>

@@ -25,11 +25,11 @@ button{
 
     display: grid;
     grid-template-columns: 26.875rem 1fr;
-    grid-template-rows: 34.375rem 18.75rem;
+    grid-template-rows: 70.375rem;
     
     align-items: flex-start;
     justify-content: center;
-    gap: 4rem;
+    gap:0 4rem;
 }
 
 .titulo{
@@ -54,6 +54,14 @@ button{
 .info{
     margin: 5% 5%;
     color:var(--text)
+}
+
+.modal{
+    grid-column: 2;
+}
+
+.editTable{
+    margin-top: 1.5rem;
 }
 
 

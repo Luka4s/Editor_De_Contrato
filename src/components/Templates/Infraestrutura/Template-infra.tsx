@@ -2,15 +2,12 @@ import styles from "./Template-infra.module.css";
 import logomulti from "../../../assets/logo_multipoint.png";
 import { InputUser } from "../../../Context/InputUserContext";
 import { CreateTable } from "../../CreateTable/Index";
-import { BsFillPencilFill } from "react-icons/bs";
 import { MyModal } from "../../Modal/Modal"
 
 export function TemplateInfra(){
-const { userInfo, cnpjUser, city, estado, date, itenTable,setModalVisible, setQuantityItens, setValueIten, setContentIten } = InputUser();
+const { userInfo, cnpjUser, city, estado, date, itenTable,} = InputUser();
 
-const abrirModal = () => {
-  setModalVisible(false)
-}
+
     return(
         <aside className={styles.boxView} id="content1">
         <div id="page-break">
@@ -102,12 +99,6 @@ const abrirModal = () => {
                 </tr>
               </tbody>
             </table>
-            <div className={styles.editarTable}>
-                <button className={styles.button} onClick={abrirModal}><BsFillPencilFill/></button>
-            </div>
-            <div className={styles.view}>
-              <MyModal/>
-            </div>
           </div>
           <div>
             <h4 className={styles.topic}>
@@ -117,26 +108,26 @@ const abrirModal = () => {
           <div className={styles.view}>
             <ul>
               <li>
-                <p>
+                <p className={styles.list}>
                 Gestão e monitoramento dos dispositivos e usuários conforme
                 tabela de Escopo de Serviços;
                 </p>
               </li>
               <li>
-                <p>
+                <p className={styles.list}>
                 Monitoramento de estações de trabalho e atualização dinâmica
                 do inventário de Hardware e Software;{" "}
                 </p>
               </li>
               <li>
-                <p>
+                <p className={styles.list}>
                 Monitoramento 24/7 dos ativos de rede e estações de trabalho
                 com foco em manutenção preventiva, com geração de alertas em
                 caso de falhas críticas de hardware ou software;{" "}
                 </p>
               </li>
               <li>
-                <p>
+                <p className={styles.list}>
                 Manutenções corretivas e preventivas de hardware nas estações
                 de trabalho e outro dispositivos conforme estabelecido na
                 proposta comercial. Não incluso troca de peças ou reparos
@@ -146,13 +137,13 @@ const abrirModal = () => {
                 </p>
               </li>
               <li>
-                <p>
+                <p className={styles.list}>
                 Suporte a aplicações usadas como colaboração empresarial e
                 sistemas operacionais para estações e servidores;
                 </p>
               </li>
               <li>
-                <p>
+                <p className={styles.list}>
                 Atendimento ou suporte às soluções de terceiros, mediante
                 colaboração por parte dos provedores destas soluções,
                 estabelecendo uma relação de parceria para proporcioar ao
@@ -160,20 +151,20 @@ const abrirModal = () => {
                 </p>
               </li>
               <li>
-                <p>
+                <p className={styles.list}>
                 Consultoria operacional de gestão de tecnologia da informação
                 para novos projetos e/ou aquisição de novos hardwares e
                 softwares;
                 </p>
               </li>
               <li>
-                <p>
+                <p className={styles.list}>
                 Treinamento operacional quando necessário, mediante
                 solicitação e programação;
                 </p>
               </li>
               <li>
-                <p>
+                <p className={styles.list}>
                 Horas de atendimento interno para manutenção de equipamentos
                 (serviços realizações em laboratório e que não incluem custo
                 de deslocamento ou transporte dos equipamentos) conforme
@@ -181,25 +172,25 @@ const abrirModal = () => {
                 </p>
               </li>
               <li>
-                <p>
+                <p className={styles.list}>
                 Atendimento presencial mensal para manutenção preventiva com
                 duração conforme indicado na proposta comercial;{" "}
                 </p>
               </li>
               <li>
-                <p>
+                <p className={styles.list}>
                 Atendimento presencial mensal para manutenção corretiva com
                 duração conforme indicado na proposta comercial;{" "}
                 </p>
               </li>
               <li>
-                <p>
+                <p className={styles.list}>
                 Visitas corretivas adicionais ou avulsas serão taxas de acordo
                 com o informado na proposta comercial;{" "}
                 </p>
               </li>
               <li>
-                <p>
+                <p className={styles.list}>
                 Reunião de gestão bimestral online, para discussão e análise
                 de necessidades geradas pelas estratégias do negócio do
                 cliente, para que o TI possa dar suporte às outras áreas
@@ -207,13 +198,13 @@ const abrirModal = () => {
                 </p>
               </li>
               <li>
-                <p>
+                <p className={styles.list}>
                 Atendimento remoto ou telefônico, para suporte técnico a
                 usuários conforme indicado na proposta comercial;{" "}
                 </p>
               </li>
               <li>
-                <p>
+                <p className={styles.list}>
                 Atendimento: de segunda a sexta-feira das 09h00 às 18h00
                 horário de Brasília; Para chamados de manutenção corretiva
                 presencial, atendidos de segunda a sexta após as 18h00 e
@@ -224,21 +215,21 @@ const abrirModal = () => {
                 </p>
               </li>
               <li>
-                <p>
+                <p className={styles.list}>
                 Para chamados de manutenção remota, atendidos de segunda a
                 sexta após as 18h00 e sabado das 09h00 às 18h00, será taxado
                 em R$35,00 (trinta e cinco reais) por hora trabalhada.{" "}
                 </p>
               </li>
               <li>
-                <p>
+                <p className={styles.list}>
                 Para chamados de manutenção remota atendidos aos sabados após
                 as 18h00,domingos e feriados, será taxado em R$70,00 (setenta
                 reais) por hora trabalhada.{" "}
                 </p>
               </li>
               <li>
-                <p>
+                <p className={styles.list}>
                 Prazo contratual de acordo com a proposta comercial e com
                 renovação automática.{" "}
                 </p>

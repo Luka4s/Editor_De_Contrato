@@ -28,25 +28,6 @@
     justify-content: space-around;
     text-align: center;
   }
-
-  .editarTable{
-    margin-top: 0.5rem;
-    height: 2rem;
-    width: auto;
-    
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-  }
-
-  .button{
-    width: 2rem;
-    height: 2rem;
-  }
-
-  .button:hover{
-    box-shadow: 2px 2px 4px var(--primary);
-  }
   
   .view li {
     margin: 0.5rem 0.8rem;
@@ -73,6 +54,10 @@
   
   .logo img {
     background-color: black;
+  }
+
+  .list{
+    color:black;
   }
   
   .boxAssinatura {
