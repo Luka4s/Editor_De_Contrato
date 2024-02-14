@@ -52,10 +52,10 @@ export function App() {
           <main className={styles.line2}>
             <div>
               <Visualization />
-              <EditTable/>
-              <div className={styles.editTable}>
-                <MyModal/>
-              </div>
+              <MyModal/>
+              
+                <EditTable/>
+              
             </div>
           </main>
         </div>

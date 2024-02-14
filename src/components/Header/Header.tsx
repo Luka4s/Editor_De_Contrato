@@ -7,15 +7,15 @@ export function Header() {
             <img src={multiLogo} className={styles.logo}/>
             <h2 className={styles.titulo}>Editor de Contratos</h2>
 
-            <div>
+            
                 <nav className={styles.navbar}> 
                     <ul>
-                     <li>Lorem</li>
-                     <li>Lorem</li>
+                     <li>Editor de contratos</li>
+                     <li>Gerador de propostas</li>
                      <li>Lorem</li>
                     </ul>
                 </nav>
-            </div>
+            
            
         </header>
     );

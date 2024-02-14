@@ -104,11 +104,6 @@ const { userInfo, cnpjUser, city, estado, date, itenTable,} = InputUser();
                     <td>Total</td>
                     <td></td>
                 </tr>
-                <tr>
-                    <td>Total quant</td>
-                    <td>Service</td>
-                    <td>TOTAL</td>
-                </tr>
               </tfoot>
             </table>
           </div>

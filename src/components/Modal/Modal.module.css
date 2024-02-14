@@ -1,4 +1,5 @@
 .boxModal{
+    z-index: 999;
     padding: 1rem;
     width: 24rem;
     height: 20rem;
@@ -8,6 +9,8 @@
     display: grid;
     border: 1px var(--primary) outset;
     box-shadow: 2px 2px 4px var(--primary);
+    position: absolute;
+    top: 35rem;
 }
 
 .title{
