@@ -28,13 +28,27 @@ td{
 .servico{
   border-right: 1.6px solid black;
   border-bottom: 1.6px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .quantidade{
   border-right: 1.6px solid black;
   border-bottom: 1.6px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .valor{
   border-bottom: 1.6px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
+
+

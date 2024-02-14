@@ -90,6 +90,7 @@ const abrirModal = () => {
               <tbody>
                 <tr>
                 {itenTable.map((item,index) => {
+          
                   return (
                     <CreateTable
                       key={index}
@@ -97,9 +98,7 @@ const abrirModal = () => {
                       quantity={item.quantity}
                       value={item.value}
                     />
-                
-                  );
-                })}
+                  )})}
                 </tr>
               </tbody>
             </table>
