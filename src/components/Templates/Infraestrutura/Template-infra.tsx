@@ -81,7 +81,7 @@ const { userInfo, cnpjUser, city, estado, date, itenTable,} = InputUser();
                 <tr className={styles.rowHeader}>
                   <td className={styles.borderRB}>Quantidade</td>
                   <td className={styles.borderRB}>Serviço</td>
-                  <td className={styles.borderB}>Valor</td>
+                  <td className={styles.borderB}>Sub-total</td>
                 </tr>
               </thead>
               <tbody>
@@ -98,6 +98,18 @@ const { userInfo, cnpjUser, city, estado, date, itenTable,} = InputUser();
                   )})}
                 </tr>
               </tbody>
+              <tfoot className={styles.footerTable}>
+                <tr className={styles.footerTotal}>
+                    <td></td>
+                    <td>Total</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Total quant</td>
+                    <td>Service</td>
+                    <td>TOTAL</td>
+                </tr>
+              </tfoot>
             </table>
           </div>
           <div>

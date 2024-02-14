@@ -18,7 +18,12 @@ export function CreateTable({ content, quantity, value }: TableData) {
     <React.Fragment>
       <td className={Style.servico}>{content}</td>
       <td className={Style.quantidade}>{quantity}</td>
-      <td className={Style.valor}>{value}</td>
+      <td className={Style.valor}>
+        <div className={Style.value}>
+          <span>R$</span>
+          {value}
+        </div>
+      </td>
     </React.Fragment>
     
   );

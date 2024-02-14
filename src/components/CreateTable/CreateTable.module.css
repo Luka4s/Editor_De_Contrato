@@ -28,6 +28,7 @@ td{
 .servico{
   border-right: 1.6px solid black;
   border-top: 1.6px solid black;
+  border-bottom: 1.6px solid black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,6 +38,7 @@ td{
 .quantidade{
   border-right: 1.6px solid black;
   border-top: 1.6px solid black;
+  border-bottom: 1.6px solid black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,10 +47,19 @@ td{
 
 .valor{
   border-top: 1.6px solid black;
+  border-bottom: 1.6px solid black;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.value{
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 0.3rem;
+  align-items: center;
 }
 
 
