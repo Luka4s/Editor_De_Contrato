@@ -91,8 +91,8 @@ const { userInfo, cnpjUser, city, estado, date, itenTable,} = InputUser();
                   return (
                     <CreateTable
                       key={index}
-                      content={item.content}
-                      quantity={item.quantity}
+                      content={item.quantity}
+                      quantity={item.content}
                       value={item.value}
                     />
                   )})}

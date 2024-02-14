@@ -20,17 +20,48 @@ button{
 
 .wrapper{
     max-width: 75rem;
-    margin: 2rem auto;
+    margin: 4rem auto;
     padding: 0 1rem;
 
     display: grid;
     grid-template-columns: 26.875rem 1fr;
-    grid-template-rows: 70.375rem;
+    grid-template-rows: 3rem 34.375rem;
     
     align-items: flex-start;
     justify-content: center;
     gap:0 4rem;
 }
+
+.containerButtons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border: 1.5px outset var(--primary);
+    box-shadow: 0px 4px 24px -3px var(--primary);
+    
+}
+
+.boxButtons{
+    display: flex;
+    width: fit-content;
+    align-items: center;
+}
+
+.buttons{
+    width: 15rem;
+    background-color: transparent;
+    color: black;
+    background-color: none;
+    justify-content: center;
+    column-gap: 0.5rem;
+}
+
+.buttons:hover{
+    cursor: pointer;
+    text-shadow: 0px 0px 12px var(--primary);
+}
+
+
 
 .titulo{
     display: flex;
@@ -51,11 +82,6 @@ button{
     margin-top: 2rem;
 }
 
-.info{
-    margin: 5% 5%;
-    color:var(--text)
-}
-
 .modal{
     grid-column: 2;
 }
@@ -63,5 +89,6 @@ button{
 .editTable{
     margin-top: 1.5rem;
 }
+
 
 

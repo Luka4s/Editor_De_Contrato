@@ -8,6 +8,11 @@ import styles from "./App.module.css";
 import { InputUserProvider } from "./Context/InputUserContext";
 import { EditTable } from "./components/EditarTable/EditTable"
 import {MyModal} from './components/Modal/Modal'
+import { GrSystem } from "react-icons/gr";
+import { FaServer } from "react-icons/fa6";
+import { FaCashRegister } from "react-icons/fa";
+
+
 export function App() {
   return (
     <InputUserProvider>
@@ -20,16 +25,31 @@ export function App() {
           </div>
         </section>
 
-        <h2 className={styles.info}>Preencha os campos abaixo:</h2>
+        <section>
+          <div className={styles.containerButtons}>
+            <div className={styles.boxButtons}>
+              
+                <button className={styles.buttons}><FaServer/>INFRAESTRUTURA</button>
+              
+              
+                <button className={styles.buttons}><FaCashRegister/>HIPER</button>
+              
+              
+                <button className={styles.buttons}><GrSystem/>SISTEMAS</button> 
+               
+            </div>
+          </div>
+        </section>
 
         <div className={styles.wrapper}>
+          
           <div>
             <Inputs />
           <section className={styles.sectionDownload}>
             <Download/>
           </section>
           </div>
-          <main>
+          <main className={styles.line2}>
             <div>
               <Visualization />
               <EditTable/>

@@ -12,6 +12,12 @@
   height: 25rem;
 }
 
+
+.info{
+  margin-bottom: 1.5rem;
+  color:var(--text)
+}
+
 .inputs input {
   width: 300px;
   margin: 0.5rem;

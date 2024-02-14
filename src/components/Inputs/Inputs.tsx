@@ -4,7 +4,6 @@ import styles from "./Inputs.module.css";
 
 export function Inputs() {
   const {
-    //  cnpjUser,
     setUserInfo,
     setCnpjUser,
     setCity,
@@ -14,6 +13,9 @@ export function Inputs() {
 
   return (
     <section>
+      <div>
+        <h2 className={styles.info}>Preencha os campos abaixo:</h2>
+      </div>
       <div className={styles.inputs}>
         <label className={styles.labels}>Contratante</label>
         <input
