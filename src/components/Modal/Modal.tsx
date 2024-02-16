@@ -11,12 +11,7 @@ export function MyModal() {
     itenTable,
     contentIten,
     modalVisible,
-    //inputTextValue,
-    // valorTotal,
-    setValorTotal,
     setContentIten,
-    //  setQuantityItens,
-    // setValueIten,
     setItenTable,
     setModalVisible,
     setSumTotal,
@@ -103,15 +98,6 @@ export function MyModal() {
           value={inputValueIten}
           onChange={(e) => {
             setInputValueIten(e.target.value);
-          }}
-        />
-
-        <label htmlFor="input3">Valor Total</label>
-        <input
-          type="text"
-          id="input4"
-          onChange={(e) => {
-            setValorTotal(e.target.value);
           }}
         />
 

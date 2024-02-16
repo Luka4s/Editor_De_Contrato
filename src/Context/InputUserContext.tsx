@@ -14,8 +14,8 @@ interface IUserContext {
   valueIten: number[];
   modalVisible: boolean;
   inputTextValue: string;
-  valorTotal: string;
   sumTotal: number;
+  totalContractValue: string;
   setUserInfo: (e: any) => void;
   setIsEditing: (e: any) => void;
   setCnpjUser: (e: any) => void;
@@ -28,8 +28,8 @@ interface IUserContext {
   setValueIten: (e: any) => void;
   setModalVisible: (e: any) => void;
   setInputTextValue: (e: any) => void;
-  setValorTotal: (e: any) => void;
   setSumTotal: (e: any) => void;
+  setTotalContractValue: (e: any) => void;
 }
 
 const UserContext = createContext<IUserContext | undefined>(undefined);
@@ -62,14 +62,14 @@ export function InputUserProvider({ children }: { children: ReactNode }) {
   //Pegar o valor desse array para utilizar no reduce
   const [valueIten, setValueIten] = useState([0]);
 
-  //Valor Total (Teste Daniel)
-  const [valorTotal, setValorTotal] = useState("");
-
   //Input que controla o valor digitado na coluna valor
   const [inputTextValue, setInputTextValue] = useState("");
 
   //Valor da soma total dos valores
   const [sumTotal, setSumTotal] = useState(0);
+
+  //Valor total do contrato
+  const [totalContractValue, setTotalContractValue] = useState("");
 
   //Modal
   const [modalVisible, setModalVisible] = useState(true);
@@ -89,8 +89,8 @@ export function InputUserProvider({ children }: { children: ReactNode }) {
         valueIten,
         modalVisible,
         inputTextValue,
-        valorTotal,
         sumTotal,
+        totalContractValue,
         setIsEditing,
         setUserInfo,
         setCnpjUser,
@@ -103,8 +103,8 @@ export function InputUserProvider({ children }: { children: ReactNode }) {
         setValueIten,
         setModalVisible,
         setInputTextValue,
-        setValorTotal,
         setSumTotal,
+        setTotalContractValue,
       }}
     >
       {children}

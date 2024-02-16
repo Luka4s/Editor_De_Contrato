@@ -9,6 +9,7 @@ export function Inputs() {
     setCity,
     setEstado,
     setDate,
+    setTotalContractValue,
   } = InputUser();
 
   return (
@@ -57,6 +58,14 @@ export function Inputs() {
           type="text"
           onChange={(e) => {
             setDate(e.target.value);
+          }}
+        />
+
+        <label className={styles.labels}>Valor Total</label>
+        <input
+          type="text"
+          onChange={(e) => {
+            setTotalContractValue(e.target.value);
           }}
         />
       </div>
