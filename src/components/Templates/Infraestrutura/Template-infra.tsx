@@ -4,8 +4,18 @@ import { InputUser } from "../../../Context/InputUserContext";
 import { CreateTable } from "../../CreateTable/Index";
 
 export function TemplateInfra() {
-  const { userInfo, cnpjUser, city, estado, date, itenTable, valueIten } =
-    InputUser();
+  const {
+    userInfo,
+    cnpjUser,
+    city,
+    estado,
+    date,
+    itenTable,
+    valueIten,
+    inputTextValue,
+    valorTotal,
+  } = InputUser();
+  console.log(valueIten);
 
   return (
     <aside className={styles.boxView} id="content1">
@@ -100,7 +110,12 @@ export function TemplateInfra() {
               <tr className={styles.footerTotal}>
                 <td></td>
                 <td>Total</td>
-                <td>{valueIten.reduce((acc, val) => acc + val, 0)}</td>
+                <td>
+                  {valorTotal}
+                  {/*   {itenTable.map(() => {
+                    return <span>{valueIten}</span>;
+                  })} */}
+                </td>
               </tr>
             </tfoot>
           </table>
@@ -367,6 +382,10 @@ export function TemplateInfra() {
         </ul>
       </div>
       <h4 className={styles.topic}>6 - PREÇO E CONDIÇÕES DE PAGAMENTO</h4>
+      <p className={styles.view}>
+        <strong>6.1</strong>O preço certo e ajustado a ser pago mensalmente pelo
+        Contratante a Contratada, será de R$2300.00 .
+      </p>
       <p className={styles.view}>
         <strong>6.2</strong> - Na ﬁxação do preço não se incluem os tributos,
         impostos ou taxas Federais, Estaduais ou Municipais. A inclusão dos

@@ -3,7 +3,7 @@ import { BsPlus } from "react-icons/bs";
 import { BsCheck } from "react-icons/bs";
 import { BsEraser } from "react-icons/bs";
 import { InputUser } from "../../Context/InputUserContext";
-import { MouseEvent, useState } from "react";
+import { MouseEvent } from "react";
 
 export function MyModal() {
   const {
@@ -13,6 +13,8 @@ export function MyModal() {
     valueIten,
     modalVisible,
     inputTextValue,
+    valorTotal,
+    setValorTotal,
     setContentIten,
     setQuantityItens,
     setValueIten,
@@ -28,25 +30,27 @@ export function MyModal() {
   function handleAddClick(e: MouseEvent<HTMLButtonElement>) {
     if (contentIten != "" || null) {
       e.preventDefault();
-      const newItem = parseFloat(inputTextValue);
+      /* const newItem = parseFloat(inputTextValue);
 
       if (!isNaN(newItem)) {
-        const newArrayValueItens = [...valueIten, newItem];
-        setValueIten(newArrayValueItens);
-        setItenTable([
-          ...itenTable,
-          {
-            quantity: quantityItens,
-            content: contentIten,
-            value: newArrayValueItens,
-          },
-        ]);
+        const newArrayValueItens = [newItem];
+        setValueIten(valueIten.reduce((acc, val) => acc + val, 0));
+        console.log(newArrayValueItens);
       } else {
         alert("Digite um valor valido.");
-      }
+      } */
 
+      setItenTable([
+        ...itenTable,
+        {
+          quantity: quantityItens,
+          content: contentIten,
+          value: valueIten,
+        },
+      ]);
       setContentIten("");
       setQuantityItens("");
+      setValorTotal("");
     } else {
       alert("Preencha todos os campos");
     }
@@ -89,7 +93,16 @@ export function MyModal() {
           type="text"
           id="input3"
           onChange={(e) => {
-            setInputTextValue(e.target.value);
+            setValueIten(e.target.value);
+          }}
+        />
+
+        <label htmlFor="input3">Valor Total</label>
+        <input
+          type="text"
+          id="input4"
+          onChange={(e) => {
+            setValorTotal(e.target.value);
           }}
         />
 
