@@ -1,7 +1,6 @@
 import styles from "./Visualization.module.css";
 import html2pdf from "html2pdf.js";
-import { TemplateInfra } from "../Templates/Infraestrutura/Template-infra"
-
+import { TemplateInfra } from "../Templates/Infraestrutura/Template-infra";
 
 export function handleUserClick() {
   const contentElement = document.getElementById("content1");
@@ -42,11 +41,8 @@ export function Visualization() {
   return (
     <div>
       <section className={styles.visualization}>
-       
-          <TemplateInfra/>
-        
+        <TemplateInfra />
       </section>
     </div>
-    );
-  }
-        
+  );
+}
