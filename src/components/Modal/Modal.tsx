@@ -3,58 +3,65 @@ import { BsPlus } from "react-icons/bs";
 import { BsCheck } from "react-icons/bs";
 import { BsEraser } from "react-icons/bs";
 import { InputUser } from "../../Context/InputUserContext";
-import { MouseEvent } from "react";
+import { MouseEvent, useState } from "react";
+import React from "react";
 
 export function MyModal() {
   const {
     itenTable,
-    quantityItens,
     contentIten,
-    valueIten,
     modalVisible,
-    inputTextValue,
-    valorTotal,
+    //inputTextValue,
+    // valorTotal,
     setValorTotal,
     setContentIten,
-    setQuantityItens,
-    setValueIten,
+    //  setQuantityItens,
+    // setValueIten,
     setItenTable,
     setModalVisible,
-    setInputTextValue,
+    setSumTotal,
   } = InputUser();
+
+  const [quantityItens, setQuantityItens] = useState([0]);
+  const [valueIten, setValueIten] = useState([0]);
+  const [inputQuantity, setInputQuantity] = useState("");
+  const [inputValueIten, setInputValueIten] = useState("");
 
   const fecharModal = () => {
     setModalVisible(true);
   };
 
   function handleAddClick(e: MouseEvent<HTMLButtonElement>) {
+    e.preventDefault();
     if (contentIten != "" || null) {
-      e.preventDefault();
-      /* const newItem = parseFloat(inputTextValue);
+      const quantity = parseInt(inputQuantity, 10) || 0;
+      const value = parseInt(inputValueIten, 10) || 0;
 
-      if (!isNaN(newItem)) {
-        const newArrayValueItens = [newItem];
-        setValueIten(valueIten.reduce((acc, val) => acc + val, 0));
-        console.log(newArrayValueItens);
-      } else {
-        alert("Digite um valor valido.");
-      } */
+      setQuantityItens([...quantityItens, quantity]);
+      setValueIten([...valueIten, value]);
+      setInputQuantity("");
+      setInputValueIten("");
 
       setItenTable([
         ...itenTable,
         {
-          quantity: quantityItens,
+          quantity: quantity,
           content: contentIten,
-          value: valueIten,
+          value: value,
         },
       ]);
-      setContentIten("");
-      setQuantityItens("");
-      setValorTotal("");
     } else {
       alert("Preencha todos os campos");
     }
   }
+
+  React.useEffect(() => {
+    const total = quantityItens.reduce((acc, quantity, index) => {
+      const value = valueIten[index] || 0;
+      return acc + quantity * value;
+    }, 0);
+    setSumTotal(total);
+  }, [quantityItens, valueIten, setSumTotal]);
 
   const handleRemoveClick = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -73,8 +80,9 @@ export function MyModal() {
         <input
           type="text"
           id="input1"
+          value={inputQuantity}
           onChange={(e) => {
-            setQuantityItens(e.target.value);
+            setInputQuantity(e.target.value);
           }}
         />
 
@@ -92,8 +100,9 @@ export function MyModal() {
         <input
           type="text"
           id="input3"
+          value={inputValueIten}
           onChange={(e) => {
-            setValueIten(e.target.value);
+            setInputValueIten(e.target.value);
           }}
         />
 

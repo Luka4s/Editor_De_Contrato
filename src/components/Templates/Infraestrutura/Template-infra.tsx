@@ -12,8 +12,7 @@ export function TemplateInfra() {
     date,
     itenTable,
     valueIten,
-    inputTextValue,
-    valorTotal,
+    sumTotal,
   } = InputUser();
   console.log(valueIten);
 
@@ -111,7 +110,8 @@ export function TemplateInfra() {
                 <td></td>
                 <td>Total</td>
                 <td>
-                  {valorTotal}
+                  <span>R$</span>
+                  {sumTotal}
                   {/*   {itenTable.map(() => {
                     return <span>{valueIten}</span>;
                   })} */}

@@ -15,6 +15,7 @@ interface IUserContext {
   modalVisible: boolean;
   inputTextValue: string;
   valorTotal: string;
+  sumTotal: number;
   setUserInfo: (e: any) => void;
   setIsEditing: (e: any) => void;
   setCnpjUser: (e: any) => void;
@@ -28,6 +29,7 @@ interface IUserContext {
   setModalVisible: (e: any) => void;
   setInputTextValue: (e: any) => void;
   setValorTotal: (e: any) => void;
+  setSumTotal: (e: any) => void;
 }
 
 const UserContext = createContext<IUserContext | undefined>(undefined);
@@ -55,16 +57,19 @@ export function InputUserProvider({ children }: { children: ReactNode }) {
 
   //define o conteudo que vai dentro da tabela
   const [contentIten, setContentIten] = useState("");
-  const [quantityItens, setQuantityItens] = useState([]);
+  const [quantityItens, setQuantityItens] = useState([0]);
 
   //Pegar o valor desse array para utilizar no reduce
-  const [valueIten, setValueIten] = useState([]);
+  const [valueIten, setValueIten] = useState([0]);
 
   //Valor Total (Teste Daniel)
   const [valorTotal, setValorTotal] = useState("");
 
   //Input que controla o valor digitado na coluna valor
   const [inputTextValue, setInputTextValue] = useState("");
+
+  //Valor da soma total dos valores
+  const [sumTotal, setSumTotal] = useState(0);
 
   //Modal
   const [modalVisible, setModalVisible] = useState(true);
@@ -85,6 +90,7 @@ export function InputUserProvider({ children }: { children: ReactNode }) {
         modalVisible,
         inputTextValue,
         valorTotal,
+        sumTotal,
         setIsEditing,
         setUserInfo,
         setCnpjUser,
@@ -98,6 +104,7 @@ export function InputUserProvider({ children }: { children: ReactNode }) {
         setModalVisible,
         setInputTextValue,
         setValorTotal,
+        setSumTotal,
       }}
     >
       {children}
