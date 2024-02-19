@@ -9,6 +9,10 @@ export function TemplateInfra() {
     cnpjUser,
     city,
     estado,
+    street,
+    numberHouse,
+    neighborhood,
+    cep,
     date,
     itenTable,
     valueIten,
@@ -50,9 +54,11 @@ export function TemplateInfra() {
           <strong>CONTRATANTE</strong>: Pessoa jurídica que adquiriu os serviços
           de INFRAESTRUTURA DE TI, inscrito no CNPJ sob o nº{" "}
           <span>{cnpjUser}</span> ,Razão Social: {"  "} <span>{userInfo}</span>
-          {"  "}com sede na cidade de <span>{city}</span>, Estado de {estado},
-          na Rua Sete de Abril, nº264 , Bairro República, CEP 01044-000 ,
-          Brasil, doravante denominada simplesmente de <strong>USUÁRIO</strong>.
+          {"  "}com sede na cidade de <span>{city}</span>, Estado de{" "}
+          <span>{estado}</span>, na <span>{street}</span>,{" "}
+          <span>{numberHouse}</span> ,Bairro: <span>{neighborhood}</span>, CEP
+          <span>{cep}</span>, Brasil, doravante denominada simplesmente de{" "}
+          <strong>USUÁRIO</strong>.
         </p>
         <p className={styles.view}>
           As partes devidamente qualiﬁcadas, conforme dispõem seus contratos
@@ -83,7 +89,7 @@ export function TemplateInfra() {
         <h4 className={styles.topic}>
           2.1 - TABELA DE SERVIÇOS E RECURSOS CONTRATADOS
         </h4>
-        <div className={styles.view}>
+        <div className={styles.view} id="page-break">
           <table>
             <thead className={styles.headerTable}>
               <tr className={styles.rowHeader}>
@@ -113,9 +119,6 @@ export function TemplateInfra() {
                 <td>
                   <span>R$</span>
                   <strong>{sumTotal}</strong>
-                  {/*   {itenTable.map(() => {
-                    return <span>{valueIten}</span>;
-                  })} */}
                 </td>
               </tr>
             </tfoot>
@@ -126,7 +129,7 @@ export function TemplateInfra() {
             2.2 - DETALHAMENTO DO ESCOPO DE SERVIÇOS
           </h4>
         </div>
-        <div className={styles.view}>
+        <div className={styles.view} id="page-break">
           <ul>
             <li>
               <p className={styles.list}>
@@ -226,26 +229,26 @@ export function TemplateInfra() {
             </li>
             <li>
               <p className={styles.list}>
-                Atendimento: de segunda a sexta-feira das 09h00 às 18h00 horário
-                de Brasília; Para chamados de manutenção corretiva presencial,
-                atendidos de segunda a sexta após as 18h00 e sábado das 09h00 às
-                18h00 , será taxado em R$150,00 (cento e cinquenta reais) a
-                primeira hora e R$95,00 (noventa e cinco reais) por hora
-                adicional trabalhada, somado o custo de deslocamento.
+                Atendimento: de segunda a sexta-feira das 09h00 às 18h00
+                horário. de Brasília; Para chamados de manutenção corretiva
+                atendidos apos o horario de expediente ou finais de semana serão
+                taxados em: R$150,00 (cento e cinquenta reais) a primeira hora e
+                R$95,00 (noventa e cinco reais) por hora adicional trabalhada,
+                somado o custo de deslocamento.
               </p>
             </li>
             <li>
               <p className={styles.list}>
-                Para chamados de manutenção remota, atendidos de segunda a sexta
-                após as 18h00 e sabado das 09h00 às 18h00, será taxado em
-                R$35,00 (trinta e cinco reais) por hora trabalhada.{" "}
+                Para chamados de manutenção remota, atendidos após os horarios
+                de expedientes, será taxado em R$35,00 (trinta e cinco reais)
+                por hora trabalhada.{" "}
               </p>
             </li>
             <li>
               <p className={styles.list}>
-                Para chamados de manutenção remota atendidos aos sabados após as
-                18h00,domingos e feriados, será taxado em R$70,00 (setenta
-                reais) por hora trabalhada.{" "}
+                Deslocamentos adicionais e atendimento corretivo ou preventivo
+                local excedente seguirão os valores da tabela de serviços
+                contratada.
               </p>
             </li>
             <li>
@@ -353,7 +356,7 @@ export function TemplateInfra() {
         O presente contrato entrará em vigor em{"  "} <span>{date}</span>, por
         período de 12 (doze) meses, e será renovado automaticamente, salvo
         comunicação por escrito com 60 (sessenta) dias de antecedência à{"  "}
-        <span>{date}</span>
+        <span>01/03/2024</span>
       </p>
       <h4 className={styles.topic}>5 - DA RESCISÃO</h4>
       <p className={styles.view}>
@@ -384,8 +387,9 @@ export function TemplateInfra() {
       </div>
       <h4 className={styles.topic}>6 - PREÇO E CONDIÇÕES DE PAGAMENTO</h4>
       <p className={styles.view}>
-        <strong>6.1</strong>O preço certo e ajustado a ser pago mensalmente pelo
-        Contratante a Contratada, será de R$ <span>{totalContractValue}</span> .
+        <strong>6.1</strong> - O preço certo e ajustado a ser pago mensalmente
+        pelo Contratante a Contratada, será de R${" "}
+        <span>{totalContractValue}</span> .
       </p>
       <p className={styles.view}>
         <strong>6.2</strong> - Na ﬁxação do preço não se incluem os tributos,

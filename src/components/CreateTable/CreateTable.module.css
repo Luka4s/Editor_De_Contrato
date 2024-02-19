@@ -6,26 +6,20 @@
   font-size: 1rem;
   align-items: flex-start;
   text-align: center;
-  
 }
 
 .quantity {
-    
-    border-right: 15px black solid;
-
+  border-right: 15px black solid;
 }
 .content {
-    
-    border-right: 1.5px black solid;
- 
+  border-right: 1.5px black solid;
 }
 
-td{
-  height: 1.6rem;
-  
+td {
+  height: 3rem;
 }
 
-.servico{
+.servico {
   border-right: 1.6px solid black;
   border-top: 1.6px solid black;
   border-bottom: 1.6px solid black;
@@ -35,7 +29,7 @@ td{
   text-align: center;
 }
 
-.quantidade{
+.quantidade {
   border-right: 1.6px solid black;
   border-top: 1.6px solid black;
   border-bottom: 1.6px solid black;
@@ -45,7 +39,7 @@ td{
   text-align: center;
 }
 
-.valor{
+.valor {
   border-top: 1.6px solid black;
   border-bottom: 1.6px solid black;
   display: flex;
@@ -54,12 +48,10 @@ td{
   text-align: center;
 }
 
-.value{
+.value {
   align-items: center;
   display: flex;
   flex-direction: row;
   gap: 0.3rem;
   align-items: center;
 }
-
-
