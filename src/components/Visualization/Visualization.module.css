@@ -1,6 +1,6 @@
 .visualization {
   padding: 0.5rem 1rem;
-  border: 4px var(--primary) double;
+  border: 3px var(--primary) double;
   box-shadow: 2px 2px 4px var(--primary);
   overflow-y: auto;
   height: 550px;

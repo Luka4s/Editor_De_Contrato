@@ -8,19 +8,17 @@ export function InputsContractor() {
 
   return (
     <section>
-      <div>
-        <div>
-          <h2 className={styles.info}>Preencha os campos abaixo:</h2>
-        </div>
+     
+      <div>       
         <Popover.Root>
           <Popover.Trigger>
-            <button>
+            <button className={styles.buttonsInput}>
               <span>Contratante</span>
             </button>
           </Popover.Trigger>
           <Popover.Portal>
             <Popover.Content>
-              <div className={styles.PopoverContent}>
+              <div className={styles.ContractorContent}>
                 <label className={styles.labels}>Contratante</label>
                 <input
                   type="text"

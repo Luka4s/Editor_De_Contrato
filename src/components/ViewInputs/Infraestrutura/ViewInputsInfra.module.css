@@ -1,0 +1,12 @@
+
+.boxInputs{
+    display: flex;
+    height: 5rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    box-shadow: 0px 3px 35px 0px var(--primary);
+    border: 4px inset var(--primary);
+    background-color: rgb(255, 255, 255);
+}

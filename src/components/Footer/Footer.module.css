@@ -1,6 +1,6 @@
 footer{
-    margin-top: 20%;
-    display: absolute;
+    margin-top: 16rem;
+    display: fixed;
     bottom: 0;
 }
 .footer{

@@ -115,6 +115,48 @@
     border-bottom: 2px black solid;
   }
 
+  .wrapper {
+    max-width: 100vw;
+    margin: 1rem 2rem;
+    padding: 0 1rem;
+  
+    display: grid;
+    grid-template-columns: 30rem auto;
+    grid-template-rows: 35rem;
+  
+    align-items: flex-start;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  .info {
+    display: flex;
+    justify-content: left;
+    margin-bottom: 1.5rem;
+    color: var(--text);
+    padding-top: 2rem ;
+    margin-left: 1rem;
+  }
+
+  .InputsContainer{
+    width: 30rem;
+    height: 25rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .sectionDownload{
+    height: 10rem;
+    
+  }
+
+  .background{
+    z-index: -1;
+    position: relative;
+  }
+
 
   
   

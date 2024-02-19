@@ -9,14 +9,14 @@ export function DataInput() {
     <div>
       <Popover.Root>
         <Popover.Trigger>
-          <button>
-            <span>Date</span>
+          <button className={styles.buttonsInput}>
+            <span>Data</span>
           </button>
         </Popover.Trigger>
         <Popover.Portal>
           <Popover.Content>
-            <div className={styles.PopoverContent}>
-              <label className={styles.labels}>Date</label>
+            <div className={styles.DataContent}>
+              <label>Data</label>
               <IMaskInput
                 mask={"00/00/0000"}
                 type="text"

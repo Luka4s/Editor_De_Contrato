@@ -27,6 +27,18 @@
 body {
     font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
-    background: rgb(255,255,255);
+    background: rgb(240, 23, 23);
    
 }
+
+button {
+    border-radius: 1rem;
+    color: white;
+    font-weight: bold;
+    border: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+  }

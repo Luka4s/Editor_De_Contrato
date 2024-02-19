@@ -10,7 +10,7 @@
   border: 1px var(--primary) outset;
   box-shadow: 2px 2px 4px var(--primary);
   position: absolute;
-  top: 35rem;
+  top: 46rem;
 }
 
 .title {
@@ -46,6 +46,7 @@ input:focus {
   width: 2rem;
   height: 2rem;
   font-size: 2rem;
+  margin-right: 0.3rem;
 }
 
 .buttonAdd:hover {
@@ -68,6 +69,7 @@ input:focus {
   width: 2rem;
   height: 2rem;
   font-size: 1.4rem;
+  margin-right: 0.3rem;
 }
 
 .buttonErase:hover {

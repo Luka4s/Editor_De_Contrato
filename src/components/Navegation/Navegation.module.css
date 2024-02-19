@@ -1,0 +1,78 @@
+
+
+  .buttons {
+    width: 15rem;
+    background-color: transparent;
+    color: black;
+    background-color: none;
+    justify-content: center;
+    column-gap: 0.5rem;
+    text-decoration: none;
+  }
+
+  .buttons:hover {
+    cursor: pointer;
+    text-shadow: 0px 0px 12px var(--primary);
+  }
+
+  .titulo {
+    display: flex;
+    margin: 5% 5%;
+    width: fit-content;
+  }
+
+  .titulo h3 {
+    border-bottom: 2px var(--primary) solid;
+  }
+
+  .titulo h3::before {
+    content: "► ";
+    font-size: 1rem;
+  }
+
+  .containerButtons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border: 5.9px outset var(--primary);
+    box-shadow: 0px 4px 30px 3px var(--primary);
+    align-items: center;
+    background-color: var(--primary);
+    height: 2.7rem;
+  }
+
+  .boxButtons {
+    display: flex;
+    width: 75%;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+  }
+
+  .NavLink{
+    display: flex;
+    text-decoration: none;
+    width: 13rem;
+    height: 1.8rem;
+    background-color: transparent;
+    color: black;
+    background-color: none;
+    justify-content: center;
+    column-gap: 0.5rem;
+    align-items: center;
+  }
+
+  .NavLink:hover{
+    text-shadow: 4px 4px 14px rgba(255, 233, 233, 0.6);
+    color: rgba(255, 233, 233, 0.6);
+  }
+
+  .buttons{
+    display: flex;
+    width: 13rem;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+  }
+
+
