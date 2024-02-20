@@ -15,11 +15,9 @@ export function TemplateInfra() {
     cep,
     date,
     itenTable,
-    valueIten,
     sumTotal,
     totalContractValue,
   } = InputUser();
-  console.log(valueIten);
 
   return (
     <aside className={styles.boxView} id="content1">
@@ -388,7 +386,7 @@ export function TemplateInfra() {
       <h4 className={styles.topic}>6 - PREÇO E CONDIÇÕES DE PAGAMENTO</h4>
       <p className={styles.view}>
         <strong>6.1</strong> - O preço certo e ajustado a ser pago mensalmente
-        pelo Contratante a Contratada, será de R${" "}
+        pelo Contratante a Contratada, será de R${sumTotal}
         <span>{totalContractValue}</span> .
       </p>
       <p className={styles.view}>

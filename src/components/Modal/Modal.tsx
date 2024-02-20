@@ -11,6 +11,7 @@ export function MyModal() {
     itenTable,
     contentIten,
     modalVisible,
+    sumTotal,
     setContentIten,
     setItenTable,
     setModalVisible,
@@ -45,6 +46,8 @@ export function MyModal() {
           value: value,
         },
       ]);
+      console.log("ItenTable", itenTable);
+      console.log("value", value);
     } else {
       alert("Preencha todos os campos");
     }
@@ -60,9 +63,25 @@ export function MyModal() {
 
   const handleRemoveClick = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    const newItenTable = [...itenTable];
-    newItenTable.pop();
-    setItenTable(newItenTable);
+
+    if (itenTable.length > 0 && valueIten.length > 0) {
+      const lastQuantity = quantityItens[quantityItens.length - 1];
+      const lastValue = valueIten[valueIten.length - 1];
+
+      const newItenTable = [...itenTable];
+      newItenTable.pop();
+
+      const newValueSumTotal = [...valueIten];
+      newValueSumTotal.pop();
+
+      setItenTable(newItenTable);
+
+      // Calcular o valor do último item removido
+      const removedValue = lastQuantity * lastValue;
+
+      // Subtrair o valor do último item do total e garantir que seja no mínimo 0
+      setSumTotal((prevTotal) => Math.max(0, prevTotal - removedValue));
+    }
   };
 
   return modalVisible ? null : (
@@ -95,7 +114,6 @@ export function MyModal() {
         <input
           type="text"
           id="input3"
-          value={inputValueIten}
           onChange={(e) => {
             setInputValueIten(e.target.value);
           }}
