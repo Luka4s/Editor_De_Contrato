@@ -21,7 +21,8 @@
     table-layout: fixed;
     width: 100%;
     border-collapse: collapse;
-    border: 2px solid black;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
   }
   thead {
     display: flex;
@@ -77,12 +78,12 @@
   tr{
     display: grid;
     width: 100%;
-    grid-template-columns: 1.1fr 2fr 0.85fr;
+    grid-template-columns: 0.7fr 2fr 0.6fr;
     grid-template-rows: min-content;
     font-size: 1rem;
-    align-items: flex-start;
+    align-items: center;
     text-align: center;
-    text-transform: uppercase; 
+    text-transform: uppercase;
   }
 
   .headerTable{
@@ -94,25 +95,40 @@
   }
 
   .borderRB{
+    display: flex;
     border-right: 1px black solid;
     border-bottom: 1px black solid;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(248, 240, 240);
+    border-top: 2px outset black;
+    border-bottom: 2px outset black;
+    
   }
 
   .borderB{
+    display: flex;
     border-bottom: 1px black solid;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(248, 240, 240);
+    border-top: 2px outset black;
+    border-bottom: 2px outset black;
   }
 
   .footerTable{
-    padding-top: 0.3rem;
-    border-top: 2px black double;
+    display: flex;
+    border-top: 2px outset black;
     text-transform: uppercase;
     font-weight: bold;
+    
   }
 
   .footerTotal{
-    padding-bottom: 0.1rem;
-    border-bottom: 2px black solid;
+    border-bottom: 2px outset black;
+    padding-top: 0.4rem;
+    height: 2.2rem;
+    background-color: rgb(248, 240, 240);
   }
 
   .wrapper {
@@ -132,7 +148,6 @@
   .info {
     display: flex;
     justify-content: left;
-    margin-bottom: 1.5rem;
     color: var(--text);
     padding-top: 2rem ;
     margin-left: 1rem;
@@ -155,6 +170,36 @@
   .background{
     z-index: -1;
     position: relative;
+  }
+
+  .buttonSwitch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    
+    
+  }
+
+
+  .buttonSwitch span {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 1.8rem;
+    color: var(--primary);
+  }
+
+  .buttonSwitchContainer{
+    justify-content: flex-end;
+    align-items: center;
+    display: flex;
+    width: 63rem;
+    height: 3rem;
+    
   }
 
 

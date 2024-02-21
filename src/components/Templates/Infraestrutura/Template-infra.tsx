@@ -2,6 +2,7 @@ import styles from "./Template-infra.module.css";
 import logomulti from "../../../assets/logo_multipoint.png";
 import { InputUser } from "../../../Context/InputUserContext";
 import { CreateTable } from "../../CreateTable/Index";
+import { TemplateSistemas } from "../Sistemas/Template-sistemas";
 
 export function TemplateInfra() {
   const {
@@ -18,12 +19,14 @@ export function TemplateInfra() {
     valueIten,
     sumTotal,
     totalContractValue,
+    switchInfra,
   } = InputUser();
   console.log(valueIten);
 
-  return (
+  
+    return !switchInfra ?(
     <aside className={styles.boxView} id="content1">
-      <div id="page-break">
+      <div >
         <section className={styles.Header}>
           <div>
             <img src={logomulti} className={styles.logo} />
@@ -40,6 +43,7 @@ export function TemplateInfra() {
           </h4>{" "}
           <br />
         </div>
+        
         <p className={styles.view}>
           <strong>CONTRATADA</strong>: Pessoa jurídica responsável pela
           implantação, atendimento e treinamento do <strong>USUÁRIO</strong>,
@@ -89,7 +93,7 @@ export function TemplateInfra() {
         <h4 className={styles.topic}>
           2.1 - TABELA DE SERVIÇOS E RECURSOS CONTRATADOS
         </h4>
-        <div className={styles.view} id="page-break">
+        <div className={styles.view} >
           <table>
             <thead className={styles.headerTable}>
               <tr className={styles.rowHeader}>
@@ -129,7 +133,7 @@ export function TemplateInfra() {
             2.2 - DETALHAMENTO DO ESCOPO DE SERVIÇOS
           </h4>
         </div>
-        <div className={styles.view} id="page-break">
+        <div className={styles.view} >
           <ul>
             <li>
               <p className={styles.list}>
@@ -309,7 +313,7 @@ export function TemplateInfra() {
       <h4 className={styles.topic}>
         2.4 - ACORDO DE NÍVEL DE SERVIÇOS (ANS/SLA)
       </h4>
-      <div className={styles.view} id="page-break">
+      <div className={styles.view} >
         <ul>
           <li>
             Atendimento telefônico e suporte remoto 1º Nível: atendimento em até
@@ -411,7 +415,7 @@ export function TemplateInfra() {
         ou, ainda, por qualquer outro determinado pelo Governo Federal, a ﬁm de
         manter o equilíbrio econômico e ﬁnanceiro desta prestação de serviços.
       </p>
-      <p className={styles.view} id="page-break">
+      <p className={styles.view} >
         <strong>6.4</strong> - Todo equipamento adicional que for adquirido
         durante a vigência deste instrumento, deverá ser informado à contratada
         para que seja incorporado ao presente contrato, assim como reajustado o
@@ -455,5 +459,5 @@ export function TemplateInfra() {
         </div>
       </section>
     </aside>
-  );
+  ):(<div><TemplateSistemas/></div>)
 }

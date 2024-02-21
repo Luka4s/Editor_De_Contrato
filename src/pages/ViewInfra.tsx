@@ -5,17 +5,30 @@ import styles from "../components/Templates/Infraestrutura/Template-infra.module
 import { ViewInputsInfra } from "../components/ViewInputs/Infraestrutura/ViewInputsInfra"
 import { Visualization } from "../components/Visualization/Visualization"
 import { Background } from "../components/Background/Background"
+import { TbSwitchHorizontal } from "react-icons/tb";
+import { InputUser } from "../Context/InputUserContext"
+
+
 
 export function ViewInfra(){
+
+  const {setSwitchInfra, switchInfra} = InputUser()
+  console.log(switchInfra);
+  
 
     return(
       <div>
         <div>
-        <Background/>
+          <Background/>
         </div>
-        <h2 className={styles.info}>Preencha os campos abaixo:</h2>
-        <div className={styles.wrapper}>
-        <div>
+          <div className={styles.info}>
+          <h2>Preencha os campos abaixo:</h2>
+          </div>
+          <div className={styles.buttonSwitchContainer}>
+            <button className={styles.buttonSwitch} onClick={() => {setSwitchInfra(!switchInfra)}}><span>{switchInfra?"Proposta":"Contrato"}<TbSwitchHorizontal/></span></button>
+          </div>
+          <div className={styles.wrapper}>
+          <div>
           <div className={styles.InputsContainer}>
             <ViewInputsInfra/>
           </div>

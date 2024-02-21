@@ -24,7 +24,6 @@
 }
 
 .labels {
-  font-weight: bold;
   color: var(--text);
   text-align: center;
   font-size: 1rem;

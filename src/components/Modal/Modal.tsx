@@ -60,9 +60,24 @@ export function MyModal() {
 
   const handleRemoveClick = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
+ 
     const newItenTable = [...itenTable];
+    console.log(newItenTable);
     newItenTable.pop();
+ 
+    let newValueSumTotal = [...valueIten];
+    newValueSumTotal.pop();
+ 
     setItenTable(newItenTable);
+    if (itenTable.length >= 1) {
+      setSumTotal(newValueSumTotal.reduce((acc, val) => acc - val, 0));
+    } else if (itenTable.length == 0) {
+      console.log("Else");
+      console.log("Valor Atual da lista de valores", newValueSumTotal);
+      console.log(itenTable);
+      const newArray = [0];
+      newValueSumTotal = newArray;
+    }
   };
 
   return modalVisible ? null : (
