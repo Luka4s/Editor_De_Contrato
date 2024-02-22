@@ -1,12 +1,3 @@
-.ItensService {
-  display: grid;
-  width: 100%;
-  grid-template-columns: 1.1fr 2fr 0.85fr;
-  grid-template-rows: min-content;
-  font-size: 1rem;
-  align-items: flex-start;
-  text-align: center;
-}
 
 .quantity {
   border-right: 15px black solid;
@@ -16,7 +7,7 @@
 }
 
 td {
-  height: 3rem;
+  height: 2.7rem;
 }
 
 .servico {
@@ -46,6 +37,7 @@ td {
   align-items: center;
   justify-content: center;
   text-align: center;
+  
 }
 
 .value {
@@ -54,4 +46,5 @@ td {
   flex-direction: row;
   gap: 0.3rem;
   align-items: center;
+  
 }

@@ -64,23 +64,22 @@ export function MyModal() {
   const handleRemoveClick = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
 
-    if (itenTable.length > 0 && valueIten.length > 0) {
-      const lastQuantity = quantityItens[quantityItens.length - 1];
-      const lastValue = valueIten[valueIten.length - 1];
+    const newItenTable = [...itenTable];
+    console.log(newItenTable);
+    newItenTable.pop();
 
-      const newItenTable = [...itenTable];
-      newItenTable.pop();
+    let newValueSumTotal = [...valueIten];
+    newValueSumTotal.pop();
 
-      const newValueSumTotal = [...valueIten];
-      newValueSumTotal.pop();
-
-      setItenTable(newItenTable);
-
-      // Calcular o valor do último item removido
-      const removedValue = lastQuantity * lastValue;
-
-      // Subtrair o valor do último item do total e garantir que seja no mínimo 0
-      setSumTotal((prevTotal) => Math.max(0, prevTotal - removedValue));
+    setItenTable(newItenTable);
+    if (itenTable.length >= 1) {
+      setSumTotal(newValueSumTotal.reduce((acc, val) => acc - val, 0));
+    } else if (itenTable.length == 0) {
+      console.log("Else");
+      console.log("Valor Atual da lista de valores", newValueSumTotal);
+      console.log(itenTable);
+      const newArray = [0];
+      newValueSumTotal = newArray;
     }
   };
 

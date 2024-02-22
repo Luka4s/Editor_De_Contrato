@@ -2,7 +2,7 @@ import styles from "../Infraestrutura/Template-infra.module.css"
 import logomulti from "../../../assets/logo_multipoint.png"
 import { InputUser } from "../../../Context/InputUserContext";
 
-export function TemplateSistemas() {
+export function TemplateHiper() {
 
   const {
     userInfo,

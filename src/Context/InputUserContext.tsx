@@ -18,8 +18,12 @@ interface IUserContext {
   valueIten: number[];
   modalVisible: boolean;
   inputTextValue: string;
+  inputInfra: boolean;
   sumTotal: number;
   totalContractValue: string;
+  switchInfra: boolean;
+  switchSistema: boolean;
+  switchHiper: boolean;
   setUserInfo: (e: any) => void;
   setIsEditing: (e: any) => void;
   setCnpjUser: (e: any) => void;
@@ -38,6 +42,10 @@ interface IUserContext {
   setInputTextValue: (e: any) => void;
   setSumTotal: (e: any) => void;
   setTotalContractValue: (e: any) => void;
+  setInputInfra: (e: any) => void;
+  setSwitchInfra: (e: any) => void;
+  setSwitchSistema: (e: any) => void;
+  setSwitchHiper: (e: any) => void;
 }
 
 const UserContext = createContext<IUserContext | undefined>(undefined);
@@ -86,6 +94,20 @@ export function InputUserProvider({ children }: { children: ReactNode }) {
   //Modal
   const [modalVisible, setModalVisible] = useState(true);
 
+  //Inputs infra
+  const [inputInfra, setInputInfra] = useState(false);
+
+  //Switch infra proposta
+  const [switchInfra, setSwitchInfra] = useState(false);
+
+  //Switch sistemas
+  const [switchSistema, setSwitchSistema] = useState(false);
+
+  //Switch hiper
+  const [switchHiper, setSwitchHiper] = useState(false);
+
+  
+
   return (
     <UserContext.Provider
       value={{
@@ -105,8 +127,12 @@ export function InputUserProvider({ children }: { children: ReactNode }) {
         valueIten,
         modalVisible,
         inputTextValue,
+        inputInfra,
         sumTotal,
         totalContractValue,
+        switchInfra,
+        switchSistema,
+        switchHiper,
         setIsEditing,
         setUserInfo,
         setCnpjUser,
@@ -125,6 +151,10 @@ export function InputUserProvider({ children }: { children: ReactNode }) {
         setInputTextValue,
         setSumTotal,
         setTotalContractValue,
+        setInputInfra,
+        setSwitchInfra,
+        setSwitchSistema,
+        setSwitchHiper,
       }}
     >
       {children}
