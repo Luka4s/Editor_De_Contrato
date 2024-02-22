@@ -1,53 +1,59 @@
+.welcome {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  text-align: center;
+  margin: 30px;
+}
 
+.buttons {
+  width: 15rem;
+  background-color: transparent;
+  color: black;
+  background-color: none;
+  justify-content: center;
+  column-gap: 0.5rem;
+  text-decoration: none;
+}
 
-  .buttons {
-    width: 15rem;
-    background-color: transparent;
-    color: black;
-    background-color: none;
-    justify-content: center;
-    column-gap: 0.5rem;
-    text-decoration: none;
-  }
+.buttons:hover {
+  cursor: pointer;
+  text-shadow: 0px 0px 12px var(--primary);
+}
 
-  .buttons:hover {
-    cursor: pointer;
-    text-shadow: 0px 0px 12px var(--primary);
-  }
+.titulo {
+  display: flex;
+  margin: 5% 5%;
+  width: fit-content;
+}
 
-  .titulo {
-    display: flex;
-    margin: 5% 5%;
-    width: fit-content;
-  }
+.titulo h3 {
+  border-bottom: 2px var(--primary) solid;
+}
 
-  .titulo h3 {
-    border-bottom: 2px var(--primary) solid;
-  }
+.titulo h3::before {
+  content: "► ";
+  font-size: 1rem;
+}
 
-  .titulo h3::before {
-    content: "► ";
-    font-size: 1rem;
-  }
+.containerButtons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border: 5.9px outset var(--primary);
+  box-shadow: 0px 4px 30px 3px var(--primary);
+  align-items: center;
+  background-color: var(--primary);
+  height: 2.7rem;
+}
 
-  .containerButtons {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    border: 5.9px outset var(--primary);
-    box-shadow: 0px 4px 30px 3px var(--primary);
-    align-items: center;
-    background-color: var(--primary);
-    height: 2.7rem;
-  }
-
-  .boxButtons {
-    display: flex;
-    width: 75%;
-    align-items: center;
-    justify-content: center;
-    gap: 5rem;
-  }
+.boxButtons {
+  display: flex;
+  width: 75%;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
 
   .NavLink{
     display: flex;

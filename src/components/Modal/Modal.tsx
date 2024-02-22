@@ -11,6 +11,7 @@ export function MyModal() {
     itenTable,
     contentIten,
     modalVisible,
+    sumTotal,
     setContentIten,
     setItenTable,
     setModalVisible,
@@ -45,6 +46,8 @@ export function MyModal() {
           value: value,
         },
       ]);
+      console.log("ItenTable", itenTable);
+      console.log("value", value);
     } else {
       alert("Preencha todos os campos");
     }
@@ -60,14 +63,14 @@ export function MyModal() {
 
   const handleRemoveClick = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
- 
+
     const newItenTable = [...itenTable];
     console.log(newItenTable);
     newItenTable.pop();
- 
+
     let newValueSumTotal = [...valueIten];
     newValueSumTotal.pop();
- 
+
     setItenTable(newItenTable);
     if (itenTable.length >= 1) {
       setSumTotal(newValueSumTotal.reduce((acc, val) => acc - val, 0));
@@ -110,7 +113,6 @@ export function MyModal() {
         <input
           type="text"
           id="input3"
-          value={inputValueIten}
           onChange={(e) => {
             setInputValueIten(e.target.value);
           }}

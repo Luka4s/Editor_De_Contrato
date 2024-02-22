@@ -1,6 +1,6 @@
 import { FaCashRegister, FaServer } from "react-icons/fa6";
 import { GrSystem } from "react-icons/gr";
-import styles from "./Navegation.module.css"
+import styles from "./Navegation.module.css";
 import { NavLink } from "react-router-dom";
 
 
@@ -30,27 +30,26 @@ export function Navegation(){
                     </NavLink>
                   </div>
 
-                  <div className={styles.buttons}>
-                  <NavLink to="/hiper" className={styles.NavLink}>
-                  <span>
-                    <FaCashRegister />
-                  </span>
-                    HIPER
-                  </NavLink>
-                  </div>
+            <div className={styles.buttons}>
+              <NavLink to="/hiper" className={styles.NavLink}>
+                <span>
+                  <FaCashRegister />
+                </span>
+                HIPER
+              </NavLink>
+            </div>
 
-                  <div className={styles.buttons}>
-                    <NavLink to="/sistemas" className={styles.NavLink}>
-                      <span>
-                      <GrSystem />
-                      </span>
-                      SISTEMAS
-                     
-                    </NavLink>
-                  </div>
-                </div>
-              </div>
-            </section>
+            <div className={styles.buttons}>
+              <NavLink to="/sistemas" className={styles.NavLink}>
+                <span>
+                  <GrSystem />
+                </span>
+                SISTEMAS
+              </NavLink>
+            </div>
+          </div>
         </div>
-    )
+      </section>
+    </div>
+  );
 }
