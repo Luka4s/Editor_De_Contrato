@@ -52,19 +52,20 @@
   .NavLink{
     display: flex;
     text-decoration: none;
+    color: #000000;
     width: 13rem;
     height: 1.8rem;
     background-color: transparent;
-    color: black;
     background-color: none;
     justify-content: center;
     column-gap: 0.5rem;
     align-items: center;
   }
 
-  .NavLink:hover{
-    text-shadow: 4px 4px 14px rgba(255, 233, 233, 0.6);
-    color: rgba(255, 233, 233, 0.6);
+  .NavLink:active, .NavLink.active, .NavLink:focus{
+    color: #fff;
+    text-shadow: 1px 1px 8px #fff;
+
   }
 
   .buttons{
@@ -74,5 +75,7 @@
     align-items: center;
     font-weight: 500;
   }
+
+
 
 

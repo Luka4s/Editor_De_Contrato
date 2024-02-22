@@ -3,7 +3,11 @@ import { GrSystem } from "react-icons/gr";
 import styles from "./Navegation.module.css"
 import { NavLink } from "react-router-dom";
 
+
 export function Navegation(){
+
+  
+
 
     return(
         <div>
@@ -19,7 +23,7 @@ export function Navegation(){
 
                   <div className={styles.buttons}>
                     <NavLink to="/infra" className={styles.NavLink}>
-                    <span>
+                    <span >
                       <FaServer />
                     </span>
                       INFRAESTRUTURA
