@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import { DefaultLayout } from "./DefaultLayout";
-
-import { TemplateSistemas } from "../Templates/Sistemas/Template-sistemas"
 import { ViewInfra } from "../../pages/ViewInfra";
+import { ViewSistemas } from "../../pages/ViewSistemas";
+import { ViewHiper } from "../../pages/ViewHiper";
 
 
 export function MyRouter(){
@@ -12,10 +12,9 @@ export function MyRouter(){
             <Routes>
                 <Route path="/" element={<DefaultLayout/>}>
                     <Route path="/infra" element={<ViewInfra/>}/>
-                    <Route path="/sistemas" element={<TemplateSistemas/>}/>
+                    <Route path="/sistemas" element={<ViewSistemas/>}/>
+                    <Route path="/hiper" element={<ViewHiper/>}/>
                 </Route>
-
-                
             </Routes>
         </div>
     )

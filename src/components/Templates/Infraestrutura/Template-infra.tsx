@@ -2,7 +2,6 @@ import styles from "./Template-infra.module.css";
 import logomulti from "../../../assets/logo_multipoint.png";
 import { InputUser } from "../../../Context/InputUserContext";
 import { CreateTable } from "../../CreateTable/Index";
-import { TemplateSistemas } from "../Sistemas/Template-sistemas";
 
 export function TemplateInfra() {
   const {
@@ -19,12 +18,11 @@ export function TemplateInfra() {
     valueIten,
     sumTotal,
     totalContractValue,
-    switchInfra,
   } = InputUser();
   console.log(valueIten);
 
   
-    return !switchInfra ?(
+    return(
     <aside className={styles.boxView} id="content1">
       <div >
         <section className={styles.Header}>
@@ -89,7 +87,7 @@ export function TemplateInfra() {
           (ANS/SLA), conforme deﬁnições abaixo:
         </p>
       </div>
-      <div id="view">
+      <div>
         <h4 className={styles.topic}>
           2.1 - TABELA DE SERVIÇOS E RECURSOS CONTRATADOS
         </h4>
@@ -459,5 +457,5 @@ export function TemplateInfra() {
         </div>
       </section>
     </aside>
-  ):(<div><TemplateSistemas/></div>)
+  )
 }
