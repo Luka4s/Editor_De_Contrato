@@ -68,11 +68,21 @@
     align-items: center;
   }
 
-  .NavLink:active, .NavLink.active, .NavLink:focus{
+  /* .NavLink:active, .NavLink.active, .NavLink:focus{
     color: #fff;
     text-shadow: 1px 1px 8px #fff;
 
   }
+  .NavLink.active {
+    color: #fff;
+    text-shadow: 1px 1px 8px #fff;
+  } */
+
+  .active{
+    color: #fff;
+    text-shadow: 1px 1px 8px #fff;
+  }
+  
 
   .buttons{
     display: flex;
@@ -81,6 +91,7 @@
     align-items: center;
     font-weight: 500;
   }
+
 
 
 

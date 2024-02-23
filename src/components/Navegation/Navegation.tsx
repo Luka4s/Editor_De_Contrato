@@ -1,12 +1,16 @@
 import { FaCashRegister, FaServer } from "react-icons/fa6";
 import { GrSystem } from "react-icons/gr";
 import styles from "./Navegation.module.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
+import { useState } from "react";
 
 
 export function Navegation(){
 
-  
+  const [activeRoute, setActiveRoute] = useState('');
+
+  const navigate = useNavigate();
+  const location = useLocation();
 
 
     return(
@@ -22,7 +26,9 @@ export function Navegation(){
                 <div className={styles.boxButtons}>
 
                   <div className={styles.buttons}>
-                    <NavLink to="/infra" className={styles.NavLink}>
+                    <NavLink to="/infra" className={`${styles.NavLink} ${location.pathname === "/infra" ? styles.active : ""}`} onClick={()=>{
+                      navigate("/infra"); 
+                      setActiveRoute('infra')}}>
                     <span >
                       <FaServer />
                     </span>
@@ -31,7 +37,9 @@ export function Navegation(){
                   </div>
 
             <div className={styles.buttons}>
-              <NavLink to="/hiper" className={styles.NavLink}>
+              <NavLink to="/hiper" className={`${styles.NavLink} ${location.pathname === "/hiper" ? styles.active : ""}`} onClick={()=>{
+                    navigate("/hiper"); 
+                    setActiveRoute('hiper')}}>
                 <span>
                   <FaCashRegister />
                 </span>
@@ -40,7 +48,9 @@ export function Navegation(){
             </div>
 
             <div className={styles.buttons}>
-              <NavLink to="/sistemas" className={styles.NavLink}>
+              <NavLink to="/sistemas" className={`${styles.NavLink} ${location.pathname === "/sistemas" ? styles.active : ""}`} onClick={()=>{
+                  navigate("/sistemas"); 
+                  setActiveRoute('sistemas')}}>
                 <span>
                   <GrSystem />
                 </span>
