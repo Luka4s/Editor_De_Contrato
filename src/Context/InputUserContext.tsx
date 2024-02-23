@@ -24,6 +24,8 @@ interface IUserContext {
   switchInfra: boolean;
   switchSistema: boolean;
   switchHiper: boolean;
+  linesTable: number;
+  classe: string;
   setUserInfo: (e: any) => void;
   setIsEditing: (e: any) => void;
   setCnpjUser: (e: any) => void;
@@ -46,6 +48,8 @@ interface IUserContext {
   setSwitchInfra: (e: any) => void;
   setSwitchSistema: (e: any) => void;
   setSwitchHiper: (e: any) => void;
+  setLinesTable: (e: any) => void;
+  setClasse: (e: any) => void;
 }
 
 const UserContext = createContext<IUserContext | undefined>(undefined);
@@ -106,6 +110,11 @@ export function InputUserProvider({ children }: { children: ReactNode }) {
   //Switch hiper
   const [switchHiper, setSwitchHiper] = useState(false);
 
+  //Linhas da tabela
+  const [linesTable, setLinesTable] = useState(0);
+
+  //Classe para quebra de página
+  const [classe, setClasse] = useState("");
  
   
 
@@ -134,6 +143,8 @@ export function InputUserProvider({ children }: { children: ReactNode }) {
         switchInfra,
         switchSistema,
         switchHiper,
+        linesTable,
+        classe,
         setIsEditing,
         setUserInfo,
         setCnpjUser,
@@ -156,6 +167,8 @@ export function InputUserProvider({ children }: { children: ReactNode }) {
         setSwitchInfra,
         setSwitchSistema,
         setSwitchHiper,
+        setLinesTable,
+        setClasse,
       }}
     >
       {children}

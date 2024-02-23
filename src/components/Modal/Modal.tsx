@@ -12,10 +12,12 @@ export function MyModal() {
     contentIten,
     modalVisible,
     sumTotal,
+    linesTable,
     setContentIten,
     setItenTable,
     setModalVisible,
     setSumTotal,
+    setLinesTable,
   } = InputUser();
 
   const [quantityItens, setQuantityItens] = useState([0]);
@@ -30,6 +32,7 @@ export function MyModal() {
   function handleAddClick(e: MouseEvent<HTMLButtonElement>) {
     e.preventDefault();
     if (contentIten != "" || null) {
+      let linhasTabela = 0;
       const quantity = parseInt(inputQuantity, 10) || 0;
       const value = parseInt(inputValueIten, 10) || 0;
 
@@ -46,8 +49,12 @@ export function MyModal() {
           value: value,
         },
       ]);
-      console.log("ItenTable", itenTable);
-      console.log("value", value);
+      linhasTabela = linesTable+1;
+      setLinesTable(linhasTabela)
+      console.log(linhasTabela);
+      
+      // console.log("ItenTable", itenTable);
+      // console.log("value", value);
     } else {
       alert("Preencha todos os campos");
     }
@@ -63,9 +70,10 @@ export function MyModal() {
 
   const handleRemoveClick = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-
+    setLinesTable(linesTable - 1);
+    console.log(linesTable)
     const newItenTable = [...itenTable];
-    console.log(newItenTable);
+    // console.log(newItenTable);
     newItenTable.pop();
 
     let newValueSumTotal = [...valueIten];

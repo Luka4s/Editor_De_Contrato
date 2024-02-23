@@ -4,6 +4,8 @@ import { InputUser } from "../../../Context/InputUserContext";
 import { CreateTable } from "../../CreateTable/Index";
 
 export function TemplateInfra() {
+
+ 
   const {
     userInfo,
     cnpjUser,
@@ -17,9 +19,9 @@ export function TemplateInfra() {
     itenTable,
     sumTotal,
     totalContractValue,
+    linesTable,
   } = InputUser();
 
-  
     return(
     <aside className={styles.boxView} id="content1">
       <div >
@@ -86,9 +88,11 @@ export function TemplateInfra() {
         </p>
       </div>
       <div>
-        <h4 className={styles.topic}>
-          2.1 - TABELA DE SERVIÇOS E RECURSOS CONTRATADOS
-        </h4>
+        <div className={styles.quebrarPage}>
+          <h4 className={styles.topic}>
+            2.1 - TABELA DE SERVIÇOS E RECURSOS CONTRATADOS
+          </h4>
+        </div>
         <div className={styles.view} >
           <table>
             <thead className={styles.headerTable}>
@@ -334,6 +338,7 @@ export function TemplateInfra() {
           </li>
         </ul>
       </div>
+      <div>
       <h4 className={styles.topic}>3 - DAS EXCLUSÕES</h4>
       <div className={styles.view}>
         <p className={styles.view}>
@@ -351,6 +356,8 @@ export function TemplateInfra() {
           </li>
         </ul>
       </div>
+      </div>
+      <div className={linesTable == 4? 'styles.quebrarPage':''}>
       <h4 className={styles.topic}>4 - DA VIGÊNCIA</h4>
       <p className={styles.view}>
         O presente contrato entrará em vigor em{"  "} <span>{date}</span>, por
@@ -358,6 +365,7 @@ export function TemplateInfra() {
         comunicação por escrito com 60 (sessenta) dias de antecedência à{"  "}
         <span>01/03/2024</span>
       </p>
+      </div>
       <h4 className={styles.topic}>5 - DA RESCISÃO</h4>
       <p className={styles.view}>
         O presente contrato poderá ser rescindido em decorrência de:
@@ -418,6 +426,7 @@ export function TemplateInfra() {
         valor do contrato nos itens contratados por usuário ou dispositivo
         conform tabela de deﬁnição de investimento.
       </p>
+      <div>
       <h4 className={styles.topic}>7 - DAS CLÁUSULAS PENAIS</h4>
       <p className={styles.view}>
         <strong>7.1</strong> - A falta de pagamento de qualquer fatura em seu
@@ -436,24 +445,27 @@ export function TemplateInfra() {
         vias de igual teor e para um só ﬁm, na presença de duas testemunhas de
         tudo ciente.
       </p>
-      <h4 className={styles.topic}>
-        <strong>
+      </div>
+      <div className={styles.quebrarPage}>
+        <h4 className={styles.topic}>
+          <strong>
           São Caetano do Sul,{"  "} <strong>{date}</strong>
-        </strong>
-      </h4>
-      <section className={styles.view}>
-        <div className={styles.boxAssinatura}>
-          <p>CONTRATANTE</p>
-          <p>{userInfo}</p>
-          <p>{cnpjUser}</p>
-        </div>
-        <div className={styles.view}>
+          </strong>
+        </h4>
+        <section className={styles.view}>
           <div className={styles.boxAssinatura}>
-            <p>CONTRATADA</p>
-            <p>DANIEL F DE ALCATARA EPP</p>
+            <p>CONTRATANTE</p>
+            <p>{userInfo}</p>
+            <p>{cnpjUser}</p>
           </div>
-        </div>
+          <div className={styles.view}>
+            <div className={styles.boxAssinatura}>
+              <p>CONTRATADA</p>
+              <p>DANIEL F DE ALCATARA EPP</p>
+            </div>
+           </div>
       </section>
+      </div>
     </aside>
   )
 }

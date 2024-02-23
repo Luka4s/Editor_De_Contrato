@@ -6,12 +6,12 @@ export function handleUserClick() {
   const contentElement = document.getElementById("content1");
 
   html2pdf(contentElement, {
-    margin: 15,
+    margin: 8.5,
   filename: "ContratoInfra.pdf",
   image: { type: "jpeg", quality: 0.98 },
   html2canvas: { scale: 2 },
   jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
-  pagebreak: { mode: ['css'] },
+  pagebreak: { mode: ['css']}
   }).then((pdf) => {
     pdf.save("ContratoInfra.pdf");
   });
