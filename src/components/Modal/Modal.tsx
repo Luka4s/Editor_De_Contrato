@@ -11,7 +11,7 @@ export function MyModal() {
     itenTable,
     contentIten,
     modalVisible,
-    sumTotal,
+    //sumTotal,
     linesTable,
     setContentIten,
     setItenTable,
@@ -49,10 +49,10 @@ export function MyModal() {
           value: value,
         },
       ]);
-      linhasTabela = linesTable+1;
-      setLinesTable(linhasTabela)
+      linhasTabela = linesTable + 1;
+      setLinesTable(linhasTabela);
       console.log(linhasTabela);
-      
+
       // console.log("ItenTable", itenTable);
       // console.log("value", value);
     } else {
@@ -71,7 +71,7 @@ export function MyModal() {
   const handleRemoveClick = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     setLinesTable(linesTable - 1);
-    console.log(linesTable)
+    console.log(linesTable);
     const newItenTable = [...itenTable];
     // console.log(newItenTable);
     newItenTable.pop();

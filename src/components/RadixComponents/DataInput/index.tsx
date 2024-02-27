@@ -1,10 +1,11 @@
-import { IMaskInput } from "react-imask";
+//import { IMaskInput } from "react-imask";
 import { InputUser } from "../../../Context/InputUserContext";
 import styles from "../../Inputs/Inputs.module.css";
 import * as Popover from "@radix-ui/react-popover";
 
 export function DataInput() {
   const { setDate } = InputUser();
+
   return (
     <div>
       <Popover.Root>
@@ -17,9 +18,9 @@ export function DataInput() {
           <Popover.Content>
             <div className={styles.DataContent}>
               <label>Data</label>
-              <IMaskInput
-                mask={"00/00/0000"}
-                type="text"
+              <input
+                //mask={"00/00/0000"}
+                type="date"
                 onChange={(e) => {
                   setDate(e.target.value);
                 }}

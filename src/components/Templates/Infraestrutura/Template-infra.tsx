@@ -2,10 +2,9 @@ import styles from "./Template-infra.module.css";
 import logomulti from "../../../assets/logo_multipoint.png";
 import { InputUser } from "../../../Context/InputUserContext";
 import { CreateTable } from "../../CreateTable/Index";
+import { add } from "date-fns";
 
 export function TemplateInfra() {
-
- 
   const {
     userInfo,
     cnpjUser,
@@ -18,13 +17,41 @@ export function TemplateInfra() {
     date,
     itenTable,
     sumTotal,
-    totalContractValue,
     linesTable,
   } = InputUser();
+  /*   const newFormatYear = date?.slice(6, 10);
 
-    return(
+  const toArrayString = newFormatYear.toString();
+  const toArrayNumber = parseInt(toArrayString);
+  const valueAtt = toArrayNumber + 1; */
+  /* const newValueDate = parseInt(date); */
+  /* ;
+  console.log("Teste slice", newFormatYear);
+  console.log("teste de soma", valueAtt); */
+  //console.log(dateToString);
+  //console.log(date);
+  // const actuallyYear = ;
+
+  // const convertedDateToString = convertedDate.toString();
+  /* const oneMoreYear = add(new Date(date), {
+    years: 1,
+  }); */
+  //console.log("oneMoreYear", oneMoreYear);
+
+  //transformando a string digitada no input para Date()
+  const newDateValue = new Date(date);
+  const concertandoDia = add(newDateValue, {
+    days: 1,
+  });
+  //criando uma variavel com um ano a frente (pegando o valor da variavel acima)
+  const oneMoreYear = add(date, {
+    days: 1,
+    years: 1,
+  });
+
+  return (
     <aside className={styles.boxView} id="content1">
-      <div >
+      <div>
         <section className={styles.Header}>
           <div>
             <img src={logomulti} className={styles.logo} />
@@ -41,7 +68,7 @@ export function TemplateInfra() {
           </h4>{" "}
           <br />
         </div>
-        
+
         <p className={styles.view}>
           <strong>CONTRATADA</strong>: Pessoa jurídica responsável pela
           implantação, atendimento e treinamento do <strong>USUÁRIO</strong>,
@@ -93,7 +120,7 @@ export function TemplateInfra() {
             2.1 - TABELA DE SERVIÇOS E RECURSOS CONTRATADOS
           </h4>
         </div>
-        <div className={styles.view} >
+        <div className={styles.view}>
           <table>
             <thead className={styles.headerTable}>
               <tr className={styles.rowHeader}>
@@ -133,7 +160,7 @@ export function TemplateInfra() {
             2.2 - DETALHAMENTO DO ESCOPO DE SERVIÇOS
           </h4>
         </div>
-        <div className={styles.view} >
+        <div className={styles.view}>
           <ul>
             <li>
               <p className={styles.list}>
@@ -313,7 +340,7 @@ export function TemplateInfra() {
       <h4 className={styles.topic}>
         2.4 - ACORDO DE NÍVEL DE SERVIÇOS (ANS/SLA)
       </h4>
-      <div className={styles.view} >
+      <div className={styles.view}>
         <ul>
           <li>
             Atendimento telefônico e suporte remoto 1º Nível: atendimento em até
@@ -339,32 +366,33 @@ export function TemplateInfra() {
         </ul>
       </div>
       <div>
-      <h4 className={styles.topic}>3 - DAS EXCLUSÕES</h4>
-      <div className={styles.view}>
+        <h4 className={styles.topic}>3 - DAS EXCLUSÕES</h4>
+        <div className={styles.view}>
+          <p className={styles.view}>
+            A Contratada se exime de prestar manutenção nos seguintes casos:{" "}
+          </p>
+          <ul>
+            <li>
+              Equipamentos de terceiros e colaboradores, que não façam parte do
+              inventário de equipamentos do cliente, salvo autorização e
+              requisição do responsável legal pela gestão do contrato.
+            </li>
+            <li>
+              Reparos e instalações efetuados por terceiros sem prévia aprovação
+              da Contratada ou acompanhamento de sua equipe técnica.{" "}
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className={linesTable == 4 ? "styles.quebrarPage" : ""}>
+        <h4 className={styles.topic}>4 - DA VIGÊNCIA</h4>
         <p className={styles.view}>
-          A Contratada se exime de prestar manutenção nos seguintes casos:{" "}
+          O presente contrato entrará em vigor em{"  "}{" "}
+          <text>{concertandoDia.toLocaleDateString()}</text>, por período de 12
+          (doze) meses, e será renovado automaticamente, salvo comunicação por
+          escrito com 60 (sessenta) dias de antecedência à{"  "}
+          <text>{oneMoreYear.toLocaleDateString()}</text>
         </p>
-        <ul>
-          <li>
-            Equipamentos de terceiros e colaboradores, que não façam parte do
-            inventário de equipamentos do cliente, salvo autorização e
-            requisição do responsável legal pela gestão do contrato.
-          </li>
-          <li>
-            Reparos e instalações efetuados por terceiros sem prévia aprovação
-            da Contratada ou acompanhamento de sua equipe técnica.{" "}
-          </li>
-        </ul>
-      </div>
-      </div>
-      <div className={linesTable == 4? 'styles.quebrarPage':''}>
-      <h4 className={styles.topic}>4 - DA VIGÊNCIA</h4>
-      <p className={styles.view}>
-        O presente contrato entrará em vigor em{"  "} <span>{date}</span>, por
-        período de 12 (doze) meses, e será renovado automaticamente, salvo
-        comunicação por escrito com 60 (sessenta) dias de antecedência à{"  "}
-        <span>01/03/2024</span>
-      </p>
       </div>
       <h4 className={styles.topic}>5 - DA RESCISÃO</h4>
       <p className={styles.view}>
@@ -396,8 +424,7 @@ export function TemplateInfra() {
       <h4 className={styles.topic}>6 - PREÇO E CONDIÇÕES DE PAGAMENTO</h4>
       <p className={styles.view}>
         <strong>6.1</strong> - O preço certo e ajustado a ser pago mensalmente
-        pelo Contratante a Contratada, será de R${sumTotal}
-        <span>{totalContractValue}</span> .
+        pelo Contratante a Contratada, será de R$<text>{sumTotal}</text>
       </p>
       <p className={styles.view}>
         <strong>6.2</strong> - Na ﬁxação do preço não se incluem os tributos,
@@ -419,7 +446,7 @@ export function TemplateInfra() {
         ou, ainda, por qualquer outro determinado pelo Governo Federal, a ﬁm de
         manter o equilíbrio econômico e ﬁnanceiro desta prestação de serviços.
       </p>
-      <p className={styles.view} >
+      <p className={styles.view}>
         <strong>6.4</strong> - Todo equipamento adicional que for adquirido
         durante a vigência deste instrumento, deverá ser informado à contratada
         para que seja incorporado ao presente contrato, assim como reajustado o
@@ -427,29 +454,30 @@ export function TemplateInfra() {
         conform tabela de deﬁnição de investimento.
       </p>
       <div>
-      <h4 className={styles.topic}>7 - DAS CLÁUSULAS PENAIS</h4>
-      <p className={styles.view}>
-        <strong>7.1</strong> - A falta de pagamento de qualquer fatura em seu
-        respectivo vencimento acarretará acréscimo de multa de 2% (dois por
-        cento) sobre seu valor, acrescido de juros de 1% ao mês.
-      </p>
-      <p className={styles.view}>
-        <strong>7.2</strong> - A contratada poderá acumular os encargos
-        moratórios do item 7.1, com cessação da prestação dos serviços, objeto
-        deste contrato até efetiva regularização dos pagamentos,
-        independentemente de qualquer notiﬁcação judicial ou extrajudicial. Fica
-        eleito o fórum da Comarca da Capital do Estado de São Paulo, com
-        exclusão de qualquer outro pôr mais privilegiado que seja, para dirimir
-        quaisquer dívidas ou dúvidas decorrentes do presente contrato. E, por
-        estarem assim ajustadas as partes assinam o presente contrato em duas
-        vias de igual teor e para um só ﬁm, na presença de duas testemunhas de
-        tudo ciente.
-      </p>
+        <h4 className={styles.topic}>7 - DAS CLÁUSULAS PENAIS</h4>
+        <p className={styles.view}>
+          <strong>7.1</strong> - A falta de pagamento de qualquer fatura em seu
+          respectivo vencimento acarretará acréscimo de multa de 2% (dois por
+          cento) sobre seu valor, acrescido de juros de 1% ao mês.
+        </p>
+        <p className={styles.view}>
+          <strong>7.2</strong> - A contratada poderá acumular os encargos
+          moratórios do item 7.1, com cessação da prestação dos serviços, objeto
+          deste contrato até efetiva regularização dos pagamentos,
+          independentemente de qualquer notiﬁcação judicial ou extrajudicial.
+          Fica eleito o fórum da Comarca da Capital do Estado de São Paulo, com
+          exclusão de qualquer outro pôr mais privilegiado que seja, para
+          dirimir quaisquer dívidas ou dúvidas decorrentes do presente contrato.
+          E, por estarem assim ajustadas as partes assinam o presente contrato
+          em duas vias de igual teor e para um só ﬁm, na presença de duas
+          testemunhas de tudo ciente.
+        </p>
       </div>
       <div className={styles.quebrarPage}>
         <h4 className={styles.topic}>
           <strong>
-          São Caetano do Sul,{"  "} <strong>{date}</strong>
+            São Caetano do Sul,{"  "}
+            {/*  <strong>{date.toString()}</strong> */}
           </strong>
         </h4>
         <section className={styles.view}>
@@ -463,9 +491,9 @@ export function TemplateInfra() {
               <p>CONTRATADA</p>
               <p>DANIEL F DE ALCATARA EPP</p>
             </div>
-           </div>
-      </section>
+          </div>
+        </section>
       </div>
     </aside>
-  )
+  );
 }

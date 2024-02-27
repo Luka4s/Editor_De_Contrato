@@ -11,7 +11,7 @@ interface IUserContext {
   neighborhood: string;
   numberHouse: number;
   cep: number;
-  date: number | undefined;
+  date: string;
   itenTable: string[];
   contentIten: string;
   quantityItens: number[];
@@ -35,7 +35,7 @@ interface IUserContext {
   setNumberHouse: (e: any) => void;
   setNeighborhood: (e: any) => void;
   setCep: (e: any) => void;
-  setDate: (e: any) => void;
+  setDate: (e: any) => void | Date;
   setItenTable: (e: any) => void;
   setContentIten: (e: any) => void;
   setQuantityItens: (e: any) => void;
@@ -74,7 +74,7 @@ export function InputUserProvider({ children }: { children: ReactNode }) {
   const [neighborhood, setNeighborhood] = useState("");
   const [numberHouse, setNumberHouse] = useState(0);
   const [cep, setCep] = useState(0);
-  const [date, setDate] = useState();
+  const [date, setDate] = useState("");
 
   //define o Array da tabela
   const [itenTable, setItenTable] = useState([""]);
@@ -115,8 +115,6 @@ export function InputUserProvider({ children }: { children: ReactNode }) {
 
   //Classe para quebra de página
   const [classe, setClasse] = useState("");
- 
-  
 
   return (
     <UserContext.Provider
