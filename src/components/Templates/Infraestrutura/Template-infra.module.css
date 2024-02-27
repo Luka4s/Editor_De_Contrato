@@ -254,7 +254,7 @@ tr {
   text-align: center;
   text-shadow: 1px 1px 1px rgb(255, 255, 255);
   grid-column-start: 2;
-  justify-self: flex-start;
+  justify-self: center;
   align-self: center;
 }
 
@@ -269,13 +269,13 @@ tr {
   text-shadow: 1px 1px 1px rgb(255, 255, 255);
   grid-column-start: 2;
   grid-row-start: 3;
-  justify-self: center;
+  justify-content: center;
   align-self: flex-start;
   font-size: 1.3rem;
   text-decoration: none;
 }
 
-ul > li {
+.li {
   color: black;
   font-weight: bold;
 }

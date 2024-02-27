@@ -24,14 +24,14 @@ export function Home() {
         <div className={styles.tipo}>
           <h2>
             Escolha o tipo de contrato e desfrute de ferramentas dinâmicas que
-            foram projetadas para facilitar esta etapa de preenchimento.
+            foram projetadas para facilitar esta etapa.
           </h2>
         </div>
         <div className={styles.gridCenter}>
           <h2>Ferramentas que nossa solução possui:</h2>
         </div>
         <div className={styles.ultimoGrid}>
-          <ul>
+          <ul className={styles.li}>
             <li>Atualização de dados em tempo real</li>
             <li>Geração de tabela com dados customizados</li>
             <li>Auto-preenchimento de contrato</li>
