@@ -3,8 +3,9 @@
   border: 3px var(--primary) double;
   box-shadow: 2px 2px 4px var(--primary);
   overflow-y: auto;
+  min-width: 35rem;
+  max-width: 60rem;
   height: 550px;
   text-align: justify;
   background-color: rgb(255, 255, 255);
 }
-
