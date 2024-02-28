@@ -92,7 +92,7 @@ export function MyModal() {
         </h3>
         <label htmlFor="input1">Quantidade</label>
         <input
-          type="text"
+          type="number"
           id="input1"
           value={inputQuantity}
           onChange={(e) => {

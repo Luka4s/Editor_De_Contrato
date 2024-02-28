@@ -1,5 +1,3 @@
-import { TbSwitchHorizontal } from "react-icons/tb";
-import { InputUser } from "../Context/InputUserContext";
 import { Background } from "../components/Background/Background";
 import { Download } from "../components/Download/Download";
 import { EditTable } from "../components/EditarTable/EditTable";
@@ -8,7 +6,7 @@ import styles from "../components/Templates/Infraestrutura/Template-infra.module
 import { ViewInputsHiper } from "../components/ViewInputs/Hiper/ViewInputsHiperContrato";
 import { VisualizationHiper } from "../components/Visualization/VisualizationHiper";
 export function ViewHiper() {
-  const { setSwitchHiper, switchHiper } = InputUser();
+  // const { setSwitchHiper, switchHiper } = InputUser();
 
   return (
     <div>

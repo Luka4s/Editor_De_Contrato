@@ -4,7 +4,7 @@ import React from "react";
 interface TableData {
   content: string;
   quantity: number;
-  value: number;
+  value: string;
 }
 
 document.getElementById("root");

@@ -8,13 +8,10 @@ export function InputsContractor() {
 
   return (
     <section>
-     
-      <div>       
+      <div>
         <Popover.Root>
-          <Popover.Trigger>
-            <button className={styles.buttonsInput}>
-              <span>Contratante</span>
-            </button>
+          <Popover.Trigger className={styles.buttonsInput}>
+            <span>Contratante</span>
           </Popover.Trigger>
           <Popover.Portal>
             <Popover.Content>
@@ -32,7 +29,8 @@ export function InputsContractor() {
                   maxLength={18}
                   type="text"
                   onChange={(e) => {
-                    setCnpjUser(e.target.value);
+                    const target = e.target as HTMLInputElement;
+                    setCnpjUser(target.value);
                   }}
                 />
               </div>

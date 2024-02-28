@@ -9,10 +9,8 @@ export function DataInput() {
   return (
     <div>
       <Popover.Root>
-        <Popover.Trigger>
-          <button className={styles.buttonsInput}>
-            <span>Data</span>
-          </button>
+        <Popover.Trigger className={styles.buttonsInput}>
+          <span>Date</span>
         </Popover.Trigger>
         <Popover.Portal>
           <Popover.Content>

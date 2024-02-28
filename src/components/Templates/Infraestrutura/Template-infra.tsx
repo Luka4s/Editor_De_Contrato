@@ -117,8 +117,8 @@ export function TemplateInfra() {
                   return (
                     <CreateTable
                       key={index}
-                      content={item.quantity}
-                      quantity={item.content}
+                      content={item.content}
+                      quantity={item.quantity}
                       value={item.value}
                     />
                   );
@@ -370,10 +370,10 @@ export function TemplateInfra() {
         <h4 className={styles.topic}>4 - DA VIGÊNCIA</h4>
         <p className={styles.view}>
           O presente contrato entrará em vigor em{"  "}{" "}
-          <text>{newFormatDate.toLocaleDateString()}</text>, por período de 12
+          <span>{newFormatDate.toLocaleDateString()}</span>, por período de 12
           (doze) meses, e será renovado automaticamente, salvo comunicação por
           escrito com 60 (sessenta) dias de antecedência à{"  "}
-          <text>{oneMoreYear.toLocaleDateString()}</text>
+          <span>{oneMoreYear.toLocaleDateString()}</span>
         </p>
       </div>
       <h4 className={styles.topic}>5 - DA RESCISÃO</h4>
@@ -406,7 +406,7 @@ export function TemplateInfra() {
       <h4 className={styles.topic}>6 - PREÇO E CONDIÇÕES DE PAGAMENTO</h4>
       <p className={styles.view}>
         <strong>6.1</strong> - O preço certo e ajustado a ser pago mensalmente
-        pelo Contratante a Contratada, será de R$<text>{sumTotal}</text>
+        pelo Contratante a Contratada, será de R$<span>{sumTotal}</span>
       </p>
       <p className={styles.view}>
         <strong>6.2</strong> - Na ﬁxação do preço não se incluem os tributos,
@@ -459,7 +459,7 @@ export function TemplateInfra() {
         <h4 className={styles.topic}>
           <strong>
             São Caetano do Sul,{"  "}
-            <text>{newFormatDate.toLocaleDateString()}</text>
+            <span>{newFormatDate.toLocaleDateString()}</span>
           </strong>
         </h4>
         <section className={styles.view}>

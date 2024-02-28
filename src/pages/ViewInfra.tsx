@@ -5,12 +5,11 @@ import styles from "../components/Templates/Infraestrutura/Template-infra.module
 import { ViewInputsInfra } from "../components/ViewInputs/Infraestrutura/ViewInputsInfra";
 import { Visualization } from "../components/Visualization/Visualization";
 import { Background } from "../components/Background/Background";
-import { TbSwitchHorizontal } from "react-icons/tb";
-import { InputUser } from "../Context/InputUserContext";
+//import { InputUser } from "../Context/InputUserContext";
 
 export function ViewInfra() {
-  const { setSwitchInfra, switchInfra } = InputUser();
-  console.log(switchInfra);
+  //const { setSwitchInfra, switchInfra } = InputUser();
+  //console.log(switchInfra);
 
   return (
     <div>

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { FaCashRegister, FaServer } from "react-icons/fa6";
 import { GrSystem } from "react-icons/gr";
 import styles from "./Navegation.module.css";
@@ -6,7 +7,7 @@ import { useState } from "react";
 
 export function Navegation() {
   const [activeRoute, setActiveRoute] = useState("");
-
+  console.log(activeRoute);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -29,6 +30,7 @@ export function Navegation() {
                 }`}
                 onClick={() => {
                   navigate("/infra");
+
                   setActiveRoute("infra");
                 }}
               >

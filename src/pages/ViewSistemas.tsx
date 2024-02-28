@@ -3,13 +3,13 @@ import { EditTable } from "../components/EditarTable/EditTable";
 import { MyModal } from "../components/Modal/Modal";
 import styles from "../components/Templates/Infraestrutura/Template-infra.module.css";
 import { Background } from "../components/Background/Background";
-import { TbSwitchHorizontal } from "react-icons/tb";
-import { InputUser } from "../Context/InputUserContext";
+//import { TbSwitchHorizontal } from "react-icons/tb";
+//import { InputUser } from "../Context/InputUserContext";
 import { ViewInputsSistema } from "../components/ViewInputs/Sistemas/ViewInputsContrato";
 import { VisualizationSistemas } from "../components/Visualization/VisualizationSistemas";
 
 export function ViewSistemas() {
-  const { setSwitchSistema, switchSistema } = InputUser();
+  // const { setSwitchSistema, switchSistema } = InputUser();
 
   return (
     <div>

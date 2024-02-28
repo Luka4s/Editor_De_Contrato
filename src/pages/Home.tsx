@@ -1,5 +1,4 @@
 import styles from "../components/Templates/Infraestrutura/Template-infra.module.css";
-import MySvg from "../assets/blob.svg";
 import { Background } from "../components/Background/Background";
 import imagemHome from "../assets/Home_image.png";
 
