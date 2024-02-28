@@ -1,0 +1,25 @@
+.tr {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 0.7fr 1fr 0.6fr 1fr;
+  grid-template-rows: min-content;
+  font-size: 1rem;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+}
+.thead {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}

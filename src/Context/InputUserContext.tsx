@@ -26,6 +26,7 @@ interface IUserContext {
   switchHiper: boolean;
   linesTable: number;
   classe: string;
+  modalPVisible: boolean;
   setUserInfo: (e: any) => void;
   setIsEditing: (e: any) => void;
   setCnpjUser: (e: any) => void;
@@ -50,6 +51,7 @@ interface IUserContext {
   setSwitchHiper: (e: any) => void;
   setLinesTable: (e: any) => void;
   setClasse: (e: any) => void;
+  setModalPVisible: (e: any) => void;
 }
 
 const UserContext = createContext<IUserContext | undefined>(undefined);
@@ -116,6 +118,9 @@ export function InputUserProvider({ children }: { children: ReactNode }) {
   //Classe para quebra de página
   const [classe, setClasse] = useState("");
 
+  //Modal Propostas
+  const [modalPVisible, setModalPVisible] = useState(false);
+
   return (
     <UserContext.Provider
       value={{
@@ -134,6 +139,7 @@ export function InputUserProvider({ children }: { children: ReactNode }) {
         quantityItens,
         valueIten,
         modalVisible,
+        modalPVisible,
         inputTextValue,
         inputInfra,
         sumTotal,
@@ -167,6 +173,7 @@ export function InputUserProvider({ children }: { children: ReactNode }) {
         setSwitchHiper,
         setLinesTable,
         setClasse,
+        setModalPVisible,
       }}
     >
       {children}

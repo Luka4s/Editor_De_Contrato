@@ -1,12 +1,14 @@
 import { Download } from "../components/Download/Download";
 import { EditTable } from "../components/EditarTable/EditTable";
-import { MyModal } from "../components/Modal/Modal";
+// import { MyModal } from "../components/Modal/Modal";
 import styles from "../components/Templates/Infraestrutura/Template-infra.module.css";
 import { Background } from "../components/Background/Background";
-import { TbSwitchHorizontal } from "react-icons/tb";
+// import { TbSwitchHorizontal } from "react-icons/tb";
 import { InputUser } from "../Context/InputUserContext";
 import { ViewInputsSistema } from "../components/ViewInputs/Sistemas/ViewInputsContrato";
 import { VisualizationSistemas } from "../components/Visualization/VisualizationSistemas";
+import { MyModalProposta } from "../components/Modal/ModalProposta/ModalProposta";
+import { EditTableP } from "../components/EditarTable/EditTableP";
 
 export function ViewSistemas() {
   const { setSwitchSistema, switchSistema } = InputUser();
@@ -34,8 +36,8 @@ export function ViewSistemas() {
         <main>
           <div>
             <VisualizationSistemas />
-            <MyModal />
-            <EditTable />
+            <MyModalProposta />
+            <EditTableP />
           </div>
         </main>
       </div>

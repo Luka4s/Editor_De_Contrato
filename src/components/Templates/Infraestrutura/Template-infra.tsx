@@ -19,24 +19,6 @@ export function TemplateInfra() {
     sumTotal,
     linesTable,
   } = InputUser();
-  /*   const newFormatYear = date?.slice(6, 10);
-
-  const toArrayString = newFormatYear.toString();
-  const toArrayNumber = parseInt(toArrayString);
-  const valueAtt = toArrayNumber + 1; */
-  /* const newValueDate = parseInt(date); */
-  /* ;
-  console.log("Teste slice", newFormatYear);
-  console.log("teste de soma", valueAtt); */
-  //console.log(dateToString);
-  //console.log(date);
-  // const actuallyYear = ;
-
-  // const convertedDateToString = convertedDate.toString();
-  /* const oneMoreYear = add(new Date(date), {
-    years: 1,
-  }); */
-  //console.log("oneMoreYear", oneMoreYear);
 
   //transformando a string digitada no input para Date()
   const newDateValue = new Date(date);

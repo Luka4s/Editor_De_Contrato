@@ -1,0 +1,159 @@
+import styles from "../Modal.module.css";
+import { BsPlus } from "react-icons/bs";
+import { BsCheck } from "react-icons/bs";
+import { BsEraser } from "react-icons/bs";
+import { InputUser } from "../../../Context/InputUserContext";
+import { MouseEvent, useState } from "react";
+import React from "react";
+
+export function MyModalProposta() {
+  const {
+    itenTable,
+    contentIten,
+    modalVisible,
+    modalPVisible,
+    //sumTotal,
+    linesTable,
+    setContentIten,
+    setItenTable,
+    setModalVisible,
+    setSumTotal,
+    setLinesTable,
+    setModalPVisible,
+  } = InputUser();
+
+  const [quantityItens, setQuantityItens] = useState([0]);
+  const [valueIten, setValueIten] = useState([0]);
+  const [inputQuantity, setInputQuantity] = useState("");
+  const [inputValueIten, setInputValueIten] = useState("");
+  const [inputProduct, setInputProduct] = useState("");
+
+  const fecharModal = () => {
+    setModalPVisible(true);
+  };
+
+  function handleAddClick(e: MouseEvent<HTMLButtonElement>) {
+    e.preventDefault();
+    if (contentIten != "" || null) {
+      let linhasTabela = 0;
+      const quantity = parseInt(inputQuantity, 10) || 0;
+      const value = parseInt(inputValueIten, 10) || 0;
+      const product = inputProduct;
+
+      setQuantityItens([...quantityItens, quantity]);
+      setValueIten([...valueIten, value]);
+      setInputQuantity("");
+      setInputValueIten("");
+      setInputProduct("");
+
+      setItenTable([
+        ...itenTable,
+        {
+          quantity: quantity,
+          content: contentIten,
+          value: value,
+          product: product,
+        },
+      ]);
+      linhasTabela = linesTable + 1;
+      setLinesTable(linhasTabela);
+      console.log(linhasTabela);
+
+      // console.log("ItenTable", itenTable);
+      // console.log("value", value);
+    } else {
+      alert("Preencha todos os campos");
+    }
+  }
+
+  React.useEffect(() => {
+    const total = quantityItens.reduce((acc, quantity, index) => {
+      const value = valueIten[index] || 0;
+      return acc + quantity * value;
+    }, 0);
+    setSumTotal(total);
+  }, [quantityItens, valueIten, setSumTotal]);
+
+  const handleRemoveClick = (e: MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    setLinesTable(linesTable - 1);
+    console.log(linesTable);
+    const newItenTable = [...itenTable];
+    // console.log(newItenTable);
+    newItenTable.pop();
+
+    // let newValueSumTotal = [...valueIten];
+    // newValueSumTotal.pop();
+
+    setItenTable(newItenTable);
+    // if (itenTable.length >= 1) {
+    //   setSumTotal(newValueSumTotal.reduce((acc, val) => acc - val, 0));
+    // } else if (itenTable.length == 0) {
+    //   console.log("Else");
+    //   console.log("Valor Atual da lista de valores", newValueSumTotal);
+    //   console.log(itenTable);
+    //   const newArray = [0];
+    //   newValueSumTotal = newArray;
+    // }
+  };
+
+  return modalPVisible ? null : (
+    <section className={styles.sectionModal}>
+      <div className={styles.boxModal}>
+        <h3 className={styles.title}>
+          Preencha os campos para inserir na tabela:
+        </h3>
+
+        <label htmlFor="input3">Produto</label>
+        <input
+          type="text"
+          id="input0"
+          onChange={(e) => {
+            setInputProduct(e.target.value);
+          }}
+        />
+
+        <label htmlFor="input1">Descrição</label>
+        <input
+          type="text"
+          id="input1"
+          value={inputQuantity}
+          onChange={(e) => {
+            setInputQuantity(e.target.value);
+          }}
+        />
+
+        <label htmlFor="input2">Quantidade</label>
+        <input
+          type="text"
+          id="input2"
+          value={contentIten || ""}
+          onChange={(e) => {
+            setContentIten(e.target.value);
+          }}
+        />
+
+        <label htmlFor="input3">Valor</label>
+        <input
+          type="text"
+          id="input3"
+          onChange={(e) => {
+            setInputValueIten(e.target.value);
+          }}
+        />
+
+        <div className={styles.boxButton}>
+          <button className={styles.buttonErase} onClick={handleRemoveClick}>
+            <BsEraser />
+          </button>
+          <button className={styles.buttonAdd} onClick={handleAddClick}>
+            <BsPlus />
+          </button>
+          <button className={styles.buttonSave} onClick={fecharModal}>
+            <BsCheck />
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+}
