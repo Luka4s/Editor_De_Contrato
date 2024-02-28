@@ -1,36 +1,32 @@
-import { Download } from "../components/Download/Download"
-import { EditTable } from "../components/EditarTable/EditTable"
-import { MyModal } from "../components/Modal/Modal"
-import styles from "../components/Templates/Infraestrutura/Template-infra.module.css"
-import { ViewInputsInfra } from "../components/ViewInputs/Infraestrutura/ViewInputsInfra"
-import { Visualization } from "../components/Visualization/Visualization"
-import { Background } from "../components/Background/Background"
+import { Download } from "../components/Download/Download";
+import { EditTable } from "../components/EditarTable/EditTable";
+import { MyModal } from "../components/Modal/Modal";
+import styles from "../components/Templates/Infraestrutura/Template-infra.module.css";
+import { ViewInputsInfra } from "../components/ViewInputs/Infraestrutura/ViewInputsInfra";
+import { Visualization } from "../components/Visualization/Visualization";
+import { Background } from "../components/Background/Background";
 import { TbSwitchHorizontal } from "react-icons/tb";
-import { InputUser } from "../Context/InputUserContext"
+import { InputUser } from "../Context/InputUserContext";
 
-
-
-export function ViewInfra(){
-
-  const {setSwitchInfra, switchInfra} = InputUser()
+export function ViewInfra() {
+  const { setSwitchInfra, switchInfra } = InputUser();
   console.log(switchInfra);
-  
 
-    return(
+  return (
+    <div>
       <div>
-        <div>
-          <Background/>
-        </div>
-          <div className={styles.info}>
-          <h2>Preencha os campos abaixo:</h2>
-          </div>
-          <div className={styles.buttonSwitchContainer}>
+        <Background />
+      </div>
+      <div className={styles.info}>
+        <h2>Preencha os campos abaixo:</h2>
+      </div>
+      {/* <div className={styles.buttonSwitchContainer}>
             <button className={styles.buttonSwitch} onClick={() => {setSwitchInfra(!switchInfra)}}><span>{switchInfra?"Proposta":"Contrato"}<TbSwitchHorizontal/></span></button>
-          </div>
-          <div className={styles.wrapper}>
-          <div>
+          </div> */}
+      <div className={styles.wrapper}>
+        <div>
           <div className={styles.InputsContainer}>
-            <ViewInputsInfra/>
+            <ViewInputsInfra />
           </div>
           <section className={styles.sectionDownload}>
             <Download />
@@ -43,9 +39,7 @@ export function ViewInfra(){
             <EditTable />
           </div>
         </main>
-        </div>
       </div>
-      
-    
-    )
+    </div>
+  );
 }

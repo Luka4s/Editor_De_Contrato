@@ -18,7 +18,7 @@ export function ViewHiper() {
       <div className={styles.info}>
         <h2>Preencha os campos abaixo:</h2>
       </div>
-      <div className={styles.buttonSwitchContainer}>
+      {/* <div className={styles.buttonSwitchContainer}>
         <button
           className={styles.buttonSwitch}
           onClick={() => {
@@ -30,7 +30,7 @@ export function ViewHiper() {
             <TbSwitchHorizontal />
           </span>
         </button>
-      </div>
+      </div> */}
       <div className={styles.wrapper}>
         <div>
           <div className={styles.InputsContainer}>
