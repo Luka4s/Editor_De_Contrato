@@ -19,28 +19,10 @@ export function TemplateInfra() {
     sumTotal,
     linesTable,
   } = InputUser();
-  /*   const newFormatYear = date?.slice(6, 10);
-
-  const toArrayString = newFormatYear.toString();
-  const toArrayNumber = parseInt(toArrayString);
-  const valueAtt = toArrayNumber + 1; */
-  /* const newValueDate = parseInt(date); */
-  /* ;
-  console.log("Teste slice", newFormatYear);
-  console.log("teste de soma", valueAtt); */
-  //console.log(dateToString);
-  //console.log(date);
-  // const actuallyYear = ;
-
-  // const convertedDateToString = convertedDate.toString();
-  /* const oneMoreYear = add(new Date(date), {
-    years: 1,
-  }); */
-  //console.log("oneMoreYear", oneMoreYear);
 
   //transformando a string digitada no input para Date()
   const newDateValue = new Date(date);
-  const concertandoDia = add(newDateValue, {
+  const newFormatDate = add(newDateValue, {
     days: 1,
   });
   //criando uma variavel com um ano a frente (pegando o valor da variavel acima)
@@ -388,7 +370,7 @@ export function TemplateInfra() {
         <h4 className={styles.topic}>4 - DA VIGÊNCIA</h4>
         <p className={styles.view}>
           O presente contrato entrará em vigor em{"  "}{" "}
-          <text>{concertandoDia.toLocaleDateString()}</text>, por período de 12
+          <text>{newFormatDate.toLocaleDateString()}</text>, por período de 12
           (doze) meses, e será renovado automaticamente, salvo comunicação por
           escrito com 60 (sessenta) dias de antecedência à{"  "}
           <text>{oneMoreYear.toLocaleDateString()}</text>
@@ -477,7 +459,7 @@ export function TemplateInfra() {
         <h4 className={styles.topic}>
           <strong>
             São Caetano do Sul,{"  "}
-            {/*  <strong>{date.toString()}</strong> */}
+            <text>{newFormatDate.toLocaleDateString()}</text>
           </strong>
         </h4>
         <section className={styles.view}>

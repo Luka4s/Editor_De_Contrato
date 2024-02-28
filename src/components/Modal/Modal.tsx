@@ -4,14 +4,13 @@ import { BsCheck } from "react-icons/bs";
 import { BsEraser } from "react-icons/bs";
 import { InputUser } from "../../Context/InputUserContext";
 import { MouseEvent, useState } from "react";
-import React from "react";
 
 export function MyModal() {
   const {
     itenTable,
     contentIten,
     modalVisible,
-    //sumTotal,
+    sumTotal,
     linesTable,
     setContentIten,
     setItenTable,
@@ -24,8 +23,17 @@ export function MyModal() {
   const [valueIten, setValueIten] = useState([0]);
   const [inputQuantity, setInputQuantity] = useState("");
   const [inputValueIten, setInputValueIten] = useState("");
+  console.log("itenTable", itenTable);
+  console.log("sumTotal", sumTotal);
+  console.log("QuantityItens", quantityItens);
+  console.log("ValueIten", valueIten);
 
   const fecharModal = () => {
+    const att = quantityItens.reduce((acc, quantity, index) => {
+      const value = valueIten[index] || 0;
+      return acc + quantity * value;
+    }, 0);
+    setSumTotal(att);
     setModalVisible(true);
   };
 
@@ -40,6 +48,7 @@ export function MyModal() {
       setValueIten([...valueIten, value]);
       setInputQuantity("");
       setInputValueIten("");
+      setContentIten("");
 
       setItenTable([
         ...itenTable,
@@ -51,44 +60,28 @@ export function MyModal() {
       ]);
       linhasTabela = linesTable + 1;
       setLinesTable(linhasTabela);
-      console.log(linhasTabela);
-
-      // console.log("ItenTable", itenTable);
-      // console.log("value", value);
     } else {
       alert("Preencha todos os campos");
     }
   }
 
-  React.useEffect(() => {
-    const total = quantityItens.reduce((acc, quantity, index) => {
-      const value = valueIten[index] || 0;
-      return acc + quantity * value;
-    }, 0);
-    setSumTotal(total);
-  }, [quantityItens, valueIten, setSumTotal]);
-
   const handleRemoveClick = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    setLinesTable(linesTable - 1);
-    console.log(linesTable);
     const newItenTable = [...itenTable];
-    // console.log(newItenTable);
     newItenTable.pop();
 
-    let newValueSumTotal = [...valueIten];
+    const newValueSumTotal = [...valueIten];
     newValueSumTotal.pop();
+    valueIten.pop();
+    quantityItens.pop();
 
     setItenTable(newItenTable);
-    if (itenTable.length >= 1) {
-      setSumTotal(newValueSumTotal.reduce((acc, val) => acc - val, 0));
-    } else if (itenTable.length == 0) {
-      console.log("Else");
-      console.log("Valor Atual da lista de valores", newValueSumTotal);
-      console.log(itenTable);
-      const newArray = [0];
-      newValueSumTotal = newArray;
-    }
+
+    const total = quantityItens.reduce((quantity, index) => {
+      const value = valueIten[index] || 0;
+      return sumTotal - quantity * value;
+    }, 0);
+    setSumTotal(total);
   };
 
   return modalVisible ? null : (

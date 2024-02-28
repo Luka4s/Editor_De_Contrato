@@ -15,12 +15,11 @@ interface IUserContext {
   itenTable: string[];
   contentIten: string;
   quantityItens: number[];
-  valueIten: number[];
+  // valueIten: number[];
   modalVisible: boolean;
   inputTextValue: string;
   inputInfra: boolean;
   sumTotal: number;
-  totalContractValue: string;
   switchInfra: boolean;
   switchSistema: boolean;
   switchHiper: boolean;
@@ -39,11 +38,10 @@ interface IUserContext {
   setItenTable: (e: any) => void;
   setContentIten: (e: any) => void;
   setQuantityItens: (e: any) => void;
-  setValueIten: (e: any) => void;
+  // setValueIten: (e: any) => void;
   setModalVisible: (e: any) => void;
   setInputTextValue: (e: any) => void;
   setSumTotal: (e: any) => void;
-  setTotalContractValue: (e: any) => void;
   setInputInfra: (e: any) => void;
   setSwitchInfra: (e: any) => void;
   setSwitchSistema: (e: any) => void;
@@ -84,16 +82,13 @@ export function InputUserProvider({ children }: { children: ReactNode }) {
   const [quantityItens, setQuantityItens] = useState([0]);
 
   //Pegar o valor desse array para utilizar no reduce
-  const [valueIten, setValueIten] = useState([0]);
+  //const [valueIten, setValueIten] = useState([0]);
 
   //Input que controla o valor digitado na coluna valor
   const [inputTextValue, setInputTextValue] = useState("");
 
   //Valor da soma total dos valores
   const [sumTotal, setSumTotal] = useState(0);
-
-  //Valor total do contrato
-  const [totalContractValue, setTotalContractValue] = useState("");
 
   //Modal
   const [modalVisible, setModalVisible] = useState(true);
@@ -132,12 +127,11 @@ export function InputUserProvider({ children }: { children: ReactNode }) {
         contentIten,
         itenTable,
         quantityItens,
-        valueIten,
+        //valueIten,
         modalVisible,
         inputTextValue,
         inputInfra,
         sumTotal,
-        totalContractValue,
         switchInfra,
         switchSistema,
         switchHiper,
@@ -156,11 +150,10 @@ export function InputUserProvider({ children }: { children: ReactNode }) {
         setItenTable,
         setContentIten,
         setQuantityItens,
-        setValueIten,
+        //  setValueIten,
         setModalVisible,
         setInputTextValue,
         setSumTotal,
-        setTotalContractValue,
         setInputInfra,
         setSwitchInfra,
         setSwitchSistema,
