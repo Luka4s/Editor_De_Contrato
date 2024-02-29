@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { ReactNode, createContext, useContext, useState } from "react";
+import { TableData } from "../components/CreateTable/Index";
 
 interface IUserContext {
   userInfo: string;
@@ -12,7 +13,7 @@ interface IUserContext {
   numberHouse: number;
   cep: number;
   date: string;
-  itenTable: string[];
+  itenTable: TableData[];
   contentIten: string;
   quantityItens: number[];
   // valueIten: number[];
@@ -75,7 +76,7 @@ export function InputUserProvider({ children }: { children: ReactNode }) {
   const [date, setDate] = useState("");
 
   //define o Array da tabela
-  const [itenTable, setItenTable] = useState([""]);
+  const [itenTable, setItenTable] = useState([]);
 
   //define o conteudo que vai dentro da tabela
   const [contentIten, setContentIten] = useState("");

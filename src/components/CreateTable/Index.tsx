@@ -1,7 +1,8 @@
 //import { InputUser } from "../../Context/InputUserContext";
 import Style from "../CreateTable/CreateTable.module.css";
-import React from "react";
-interface TableData {
+import React, { Key } from "react";
+export interface TableData {
+  key: Key;
   content: string;
   quantity: number;
   value: string;
