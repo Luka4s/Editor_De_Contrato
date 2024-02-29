@@ -64,7 +64,7 @@
 }
 
 .logo {
-  width: 20%;
+  width: 100%;
 }
 
 .menu {
@@ -81,4 +81,8 @@
   align-items: center;
   justify-content: center;
   margin: 0 7rem;
+}
+
+.logoHeader {
+  width: 15rem;
 }

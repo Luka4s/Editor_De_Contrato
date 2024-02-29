@@ -46,7 +46,7 @@ export function TemplateInfra() {
         </section>
         <div className={styles.view}>
           <h4 className={styles.title}>
-            CONTRATO DE PRESTAÇÃO DE SERVIÇOS DE INFRAESTRUTURA DE TI
+            CONTRATO DE PRESTAÇÃO DE SERVIÇOS DE INFRAESTRUTURA
           </h4>{" "}
           <br />
         </div>
@@ -66,8 +66,8 @@ export function TemplateInfra() {
           de INFRAESTRUTURA DE TI, inscrito no CNPJ sob o nº{" "}
           <span>{cnpjUser}</span> ,Razão Social: {"  "} <span>{userInfo}</span>
           {"  "}com sede na cidade de <span>{city}</span>, Estado de{" "}
-          <span>{estado}</span>, na <span>{street}</span>,{" "}
-          <span>{numberHouse}</span> ,Bairro: <span>{neighborhood}</span>, CEP
+          <span>{estado}</span>, na rua <span>{street}</span>,{" "}
+          <span>{numberHouse}</span> ,Bairro: <span>{neighborhood}</span>, CEP{" "}
           <span>{cep}</span>, Brasil, doravante denominada simplesmente de{" "}
           <strong>USUÁRIO</strong>.
         </p>

@@ -27,7 +27,7 @@ export function Home() {
           </h2>
         </div>
         <div className={styles.gridCenter}>
-          <h2>Ferramentas que nossa solução possui:</h2>
+          <h2>Funcionalidades que nossa solução possui:</h2>
         </div>
         <div className={styles.ultimoGrid}>
           <ul className={styles.li}>
