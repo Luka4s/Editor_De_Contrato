@@ -3,7 +3,7 @@ import { BsPlus } from "react-icons/bs";
 import { BsCheck } from "react-icons/bs";
 import { BsEraser } from "react-icons/bs";
 import { InputUser } from "../../Context/InputUserContext";
-import { MouseEvent, useState } from "react";
+import { ChangeEvent, MouseEvent, useState } from "react";
 
 export function MyModal() {
   const {
@@ -53,8 +53,8 @@ export function MyModal() {
       setItenTable([
         ...itenTable,
         {
-          quantity: quantity,
-          content: contentIten,
+          quantity: contentIten,
+          content: quantity,
           value: value,
         },
       ]);
@@ -84,6 +84,14 @@ export function MyModal() {
     setSumTotal(total);
   };
 
+  const handleInput = (event: ChangeEvent<HTMLInputElement>) => {
+    event.currentTarget.value = event.currentTarget.value.replace(
+      /[^a-zA-Z\u00C0-\u00FF ]/g,
+      ""
+    );
+    setContentIten(event.currentTarget.value);
+  };
+
   return modalVisible ? null : (
     <section className={styles.sectionModal}>
       <div className={styles.boxModal}>
@@ -105,6 +113,8 @@ export function MyModal() {
           type="text"
           id="input2"
           value={contentIten || ""}
+          pattern="^[a-zA-Z\u00C0-\u00FF]*$"
+          onInput={handleInput}
           onChange={(e) => {
             setContentIten(e.target.value);
           }}
@@ -112,8 +122,9 @@ export function MyModal() {
 
         <label htmlFor="input3">Valor</label>
         <input
-          type="text"
+          type="number"
           id="input3"
+          value={inputValueIten}
           onChange={(e) => {
             setInputValueIten(e.target.value);
           }}

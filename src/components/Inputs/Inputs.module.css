@@ -29,28 +29,42 @@
   font-size: 1rem;
 }
 
-.enderecoContent{
-    display: flex;
-    flex-direction: column;
-    height: 20rem;
-    width: 14rem;
-    background-color: var(--primary);
-    border: 3px var(--primary) outset;
-    align-items: center;
-    justify-content: flex-start;
-    position: absolute;
-    top: 1.6rem;
-    right: -8rem;
-    
+.enderecoContent {
+  display: flex;
+  flex-direction: column;
+  height: 20rem;
+  width: 14rem;
+  background-color: var(--primary);
+  border: 3px var(--primary) outset;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  top: 1.6rem;
+  right: -8rem;
 }
 
-.ContractorContent{
+.ContractorContent {
   display: flex;
   flex-direction: column;
   height: 7rem;
   width: 13rem;
   background-color: var(--primary);
-  border: 3px var(--primary)outset;
+  border: 3px var(--primary) outset;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: -7rem;
+  top: 1.6rem;
+}
+
+.DataContent {
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
+  height: 4rem;
+  width: 12rem;
+  background-color: var(--primary);
+  border: 3px var(--primary) outset;
   align-items: center;
   justify-content: center;
   position: absolute;
@@ -58,30 +72,16 @@
   top: 1.6rem;
 }
 
-.DataContent{
-    display: flex;
-    flex-direction: column;
-    overflow-x: auto;
-    height: 4rem;
-    width: 12rem;
-    background-color: var(--primary);
-    border: 3px var(--primary) outset;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    right: -6.1rem;
-    top: 1.6rem;
-}
-
-
-.buttonsInput{
+.buttonsInput {
   background-color: var(--primary);
   height: 2.3rem;
   width: 8rem;
   color: black;
+  border-radius: 0;
+  border: 4px var(--primary) outset;
 }
 
-.buttonsInput:hover{
+.buttonsInput:hover {
   text-shadow: 4px 4px 14px rgba(255, 233, 233, 0.6);
   color: rgba(255, 233, 233, 0.6);
 }

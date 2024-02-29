@@ -1,5 +1,5 @@
 import styles from "./Header.module.css";
-import multiLogo from "../../assets/logo_multipoint.png";
+import multiLogo from "../../assets/logo_header.png";
 import { TiThMenu } from "react-icons/ti";
 import { NavLink } from "react-router-dom";
 

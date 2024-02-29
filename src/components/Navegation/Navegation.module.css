@@ -3,7 +3,6 @@
   flex-direction: column;
   gap: 6rem;
   text-align: center;
-  margin: 30px;
 }
 
 .buttons {
@@ -55,44 +54,28 @@
   gap: 5rem;
 }
 
-  .NavLink{
-    display: flex;
-    text-decoration: none;
-    color: #000000;
-    width: 13rem;
-    height: 1.8rem;
-    background-color: transparent;
-    background-color: none;
-    justify-content: center;
-    column-gap: 0.5rem;
-    align-items: center;
-  }
+.NavLink {
+  display: flex;
+  text-decoration: none;
+  color: #000000;
+  width: 13rem;
+  height: 1.8rem;
+  background-color: transparent;
+  background-color: none;
+  justify-content: center;
+  column-gap: 0.5rem;
+  align-items: center;
+}
 
-  /* .NavLink:active, .NavLink.active, .NavLink:focus{
-    color: #fff;
-    text-shadow: 1px 1px 8px #fff;
+.active {
+  color: #fff;
+  text-shadow: 1px 1px 8px #fff;
+}
 
-  }
-  .NavLink.active {
-    color: #fff;
-    text-shadow: 1px 1px 8px #fff;
-  } */
-
-  .active{
-    color: #fff;
-    text-shadow: 1px 1px 8px #fff;
-  }
-  
-
-  .buttons{
-    display: flex;
-    width: 13rem;
-    justify-content: center;
-    align-items: center;
-    font-weight: 500;
-  }
-
-
-
-
-
+.buttons {
+  display: flex;
+  width: 13rem;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+}
