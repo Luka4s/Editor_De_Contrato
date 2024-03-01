@@ -16,7 +16,16 @@ export function CreateTable({ content, quantity, value }: TableData) {
   } else {
     return (
       <React.Fragment>
-        <td className={Style.servico}>{content}</td>
+        <td className={Style.servico}>
+          <div className={Style.alignUn}>
+            {content}
+            <select className={Style.select}>
+              <option value="CX">Un</option>
+              <option value="CX">Hr</option>
+              <option value="CX">Cx</option>
+            </select>
+          </div>
+        </td>
         <td className={Style.quantidade}>{quantity}</td>
         <td className={Style.valor}>
           <div className={Style.value}>
