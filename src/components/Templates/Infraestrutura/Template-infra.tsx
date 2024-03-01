@@ -209,18 +209,24 @@ export function TemplateInfra() {
               </p>
             </li>
             <li>
-              <p className={styles.list}>
+              <p className={itenTable.length === 10 ? styles.quebrarPage : ""}>
                 Atendimento presencial mensal para manutenção preventiva com
                 duração conforme indicado na proposta comercial;{" "}
               </p>
             </li>
             <li>
-              <p className={styles.list}>
+              <p className={itenTable.length === 9 ? styles.quebrarPage : ""}>
                 Atendimento presencial mensal para manutenção corretiva com
                 duração conforme indicado na proposta comercial;{" "}
               </p>
             </li>
-            <li>
+            <li
+              className={
+                itenTable.length === 7 || itenTable.length === 8
+                  ? styles.quebrarPage
+                  : ""
+              }
+            >
               <p className={styles.list}>
                 Visitas corretivas adicionais ou avulsas serão taxas de acordo
                 com o informado na proposta comercial;{" "}
@@ -337,11 +343,11 @@ export function TemplateInfra() {
             escalonamento do atendimento 1º Nível em caso de parada dos
             equipamentos críticos, como servidores e switches;
           </li>
-          <li>
+          <li className={itenTable.length === 10 ? styles.quebrarPage : ""}>
             Atendimento remoto: atendimento em até 2h úteis, a partir do
             escalonamento do atendimento 1º nível.{" "}
           </li>
-          <li>
+          <li className={itenTable.length === 9 ? styles.quebrarPage : ""}>
             Agendamento de visitas: deverá ser realizado com, no mínimo, 72h de
             antecedência.
           </li>
@@ -354,7 +360,7 @@ export function TemplateInfra() {
             A Contratada se exime de prestar manutenção nos seguintes casos:{" "}
           </p>
           <ul>
-            <li className={itenTable.length === 7 ? styles.quebrarPage : ""}>
+            <li>
               Equipamentos de terceiros e colaboradores, que não façam parte do
               inventário de equipamentos do cliente, salvo autorização e
               requisição do responsável legal pela gestão do contrato.
@@ -435,7 +441,7 @@ export function TemplateInfra() {
         valor do contrato nos itens contratados por usuário ou dispositivo
         conform tabela de deﬁnição de investimento.
       </p>
-      <div className={styles.quebrarPage}>
+      <div>
         <h4 className={styles.topic}>7 - DAS CLÁUSULAS PENAIS</h4>
         <p className={styles.view}>
           <strong>7.1</strong> - A falta de pagamento de qualquer fatura em seu
@@ -455,7 +461,7 @@ export function TemplateInfra() {
           testemunhas de tudo ciente.
         </p>
       </div>
-      <div>
+      <div className={itenTable.length == 10 ? "" : styles.quebrarPage}>
         <h4 className={styles.topic}>
           <strong>
             São Caetano do Sul,{"  "}
