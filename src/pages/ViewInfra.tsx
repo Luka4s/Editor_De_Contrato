@@ -16,14 +16,15 @@ export function ViewInfra() {
       <div>
         <Background />
       </div>
-      <div className={styles.info}>
-        <h2>Preencha os campos abaixo:</h2>
-      </div>
+
       {/* <div className={styles.buttonSwitchContainer}>
             <button className={styles.buttonSwitch} onClick={() => {setSwitchInfra(!switchInfra)}}><span>{switchInfra?"Proposta":"Contrato"}<TbSwitchHorizontal/></span></button>
           </div> */}
       <div className={styles.wrapper}>
-        <div>
+        <div className={styles.menu}>
+          <div className={styles.info}>
+            <h2>Preencha os campos abaixo:</h2>
+          </div>
           <div className={styles.InputsContainer}>
             <ViewInputsInfra />
           </div>

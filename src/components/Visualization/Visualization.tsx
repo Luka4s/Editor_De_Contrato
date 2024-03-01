@@ -7,7 +7,7 @@ export function handleUserClick() {
   const contentElement = document.getElementById("content1");
 
   html2pdf(contentElement, {
-    margin: 8.5,
+    margin: 8,
     filename: "ContratoInfra.pdf",
     image: { type: "jpeg", quality: 0.98 },
     html2canvas: { scale: 2 },

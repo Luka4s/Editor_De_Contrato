@@ -96,8 +96,8 @@ export function TemplateInfra() {
           (ANS/SLA), conforme deﬁnições abaixo:
         </p>
       </div>
-      <div>
-        <div className={styles.quebrarPage}>
+      <div className={styles.quebrarPage}>
+        <div>
           <h4 className={styles.topic}>
             2.1 - TABELA DE SERVIÇOS E RECURSOS CONTRATADOS
           </h4>
@@ -226,7 +226,7 @@ export function TemplateInfra() {
                 com o informado na proposta comercial;{" "}
               </p>
             </li>
-            <li>
+            <li className={itenTable.length === 6 ? styles.quebrarPage : ""}>
               <p className={styles.list}>
                 Reunião de gestão bimestral online, para discussão e análise de
                 necessidades geradas pelas estratégias do negócio do cliente,
@@ -240,7 +240,7 @@ export function TemplateInfra() {
                 usuários conforme indicado na proposta comercial;{" "}
               </p>
             </li>
-            <li>
+            <li className={itenTable.length === 4 ? styles.quebrarPage : ""}>
               <p className={styles.list}>
                 Atendimento: de segunda a sexta-feira das 09h00 às 18h00
                 horário. de Brasília; Para chamados de manutenção corretiva
@@ -354,12 +354,12 @@ export function TemplateInfra() {
             A Contratada se exime de prestar manutenção nos seguintes casos:{" "}
           </p>
           <ul>
-            <li>
+            <li className={itenTable.length === 7 ? styles.quebrarPage : ""}>
               Equipamentos de terceiros e colaboradores, que não façam parte do
               inventário de equipamentos do cliente, salvo autorização e
               requisição do responsável legal pela gestão do contrato.
             </li>
-            <li>
+            <li className={itenTable.length === 4 ? styles.quebrarPage : ""}>
               Reparos e instalações efetuados por terceiros sem prévia aprovação
               da Contratada ou acompanhamento de sua equipe técnica.{" "}
             </li>
@@ -435,7 +435,7 @@ export function TemplateInfra() {
         valor do contrato nos itens contratados por usuário ou dispositivo
         conform tabela de deﬁnição de investimento.
       </p>
-      <div>
+      <div className={styles.quebrarPage}>
         <h4 className={styles.topic}>7 - DAS CLÁUSULAS PENAIS</h4>
         <p className={styles.view}>
           <strong>7.1</strong> - A falta de pagamento de qualquer fatura em seu
@@ -455,7 +455,7 @@ export function TemplateInfra() {
           testemunhas de tudo ciente.
         </p>
       </div>
-      <div className={styles.quebrarPage}>
+      <div>
         <h4 className={styles.topic}>
           <strong>
             São Caetano do Sul,{"  "}

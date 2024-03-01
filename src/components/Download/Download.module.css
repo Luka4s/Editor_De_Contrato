@@ -1,36 +1,31 @@
-.download{
-    height: 10rem;
-    width: 15rem;
-    display: flex;
-    align-items: center;
-    align-items: flex-end;
+.download {
+  height: 10rem;
+  width: 15rem;
+  display: flex;
+  align-items: center;
 }
 
-.button{
-    height: 3rem;
-    width: 10rem;
-    border-radius: 1rem;
-    background-color: var(--primary);
-    color: white;
-    font-weight: bold;
-    border: 0;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    font-size: 0.9rem;
+.button {
+  height: 3rem;
+  width: 10rem;
+  border-radius: 1rem;
+  background-color: var(--primary);
+  color: white;
+  font-weight: bold;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 0.9rem;
 }
 
-.button:hover{
-    box-shadow: 3px 3px 10px var(--primary);
+.button:hover {
+  box-shadow: 3px 3px 10px var(--primary);
 }
 
-.button svg{
-    padding-right: 0.3rem;
-    font-size: 1.8rem;
-    font-weight: bold;
+.button svg {
+  padding-right: 0.3rem;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
-
-
-
-

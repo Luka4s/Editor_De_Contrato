@@ -13,9 +13,7 @@ export function ViewHiper() {
       <div>
         <Background />
       </div>
-      <div className={styles.info}>
-        <h2>Preencha os campos abaixo:</h2>
-      </div>
+
       {/* <div className={styles.buttonSwitchContainer}>
         <button
           className={styles.buttonSwitch}
@@ -30,7 +28,10 @@ export function ViewHiper() {
         </button>
       </div> */}
       <div className={styles.wrapper}>
-        <div>
+        <div className={styles.menu}>
+          <div className={styles.info}>
+            <h2>Preencha os campos abaixo:</h2>
+          </div>
           <div className={styles.InputsContainer}>
             <ViewInputsHiper />
           </div>

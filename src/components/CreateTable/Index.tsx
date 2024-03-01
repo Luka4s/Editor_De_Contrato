@@ -20,9 +20,8 @@ export function CreateTable({ content, quantity, value }: TableData) {
           <div className={Style.alignUn}>
             {content}
             <select className={Style.select}>
-              <option value="CX">Un</option>
-              <option value="CX">Hr</option>
-              <option value="CX">Cx</option>
+              <option value="UN">UN</option>
+              <option value="HR">HR</option>
             </select>
           </div>
         </td>
