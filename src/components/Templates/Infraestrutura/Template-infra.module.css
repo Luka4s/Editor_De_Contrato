@@ -57,6 +57,12 @@ thead {
   background-color: black;
 }
 
+.logoHiper {
+  width: 320px;
+  display: flex;
+  margin-left: 6rem;
+}
+
 .list {
   color: black;
 }

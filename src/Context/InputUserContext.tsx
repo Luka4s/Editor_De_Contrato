@@ -11,6 +11,7 @@ interface IUserContext {
   street: string;
   neighborhood: string;
   numberHouse: number;
+  complement: string;
   cep: number;
   date: string;
   itenTable: TableData[];
@@ -34,6 +35,7 @@ interface IUserContext {
   setStreet: (e: any) => void;
   setNumberHouse: (e: any) => void;
   setNeighborhood: (e: any) => void;
+  setComplement: (e: any) => void;
   setCep: (e: any) => void;
   setDate: (e: any) => void | Date;
   setItenTable: (e: any) => void;
@@ -71,6 +73,7 @@ export function InputUserProvider({ children }: { children: ReactNode }) {
   const [estado, setEstado] = useState("");
   const [street, setStreet] = useState("");
   const [neighborhood, setNeighborhood] = useState("");
+  const [complement, setComplement] = useState("");
   const [numberHouse, setNumberHouse] = useState(0);
   const [cep, setCep] = useState(0);
   const [date, setDate] = useState("");
@@ -122,13 +125,13 @@ export function InputUserProvider({ children }: { children: ReactNode }) {
         estado,
         street,
         neighborhood,
+        complement,
         numberHouse,
         cep,
         date,
         contentIten,
         itenTable,
         quantityItens,
-        //valueIten,
         modalVisible,
         inputTextValue,
         inputInfra,
@@ -145,13 +148,13 @@ export function InputUserProvider({ children }: { children: ReactNode }) {
         setEstado,
         setStreet,
         setNeighborhood,
+        setComplement,
         setNumberHouse,
         setCep,
         setDate,
         setItenTable,
         setContentIten,
         setQuantityItens,
-        //  setValueIten,
         setModalVisible,
         setInputTextValue,
         setSumTotal,

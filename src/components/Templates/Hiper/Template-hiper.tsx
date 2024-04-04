@@ -1,9 +1,11 @@
+/* eslint-disable no-irregular-whitespace */
 import styles from "../Infraestrutura/Template-infra.module.css";
+import styleTable from "../Hiper/tableHiper.module.css";
 import logomulti from "../../../assets/logo_multipoint.png";
+import logoHiper from "../../../assets/logo_Hiper.svg";
 import { InputUser } from "../../../Context/InputUserContext";
-import { CreateTable } from "../../CreateTable/Index";
+//import { CreateTable } from "../../CreateTable/Index";
 import { add } from "date-fns";
-
 export function TemplateHiper() {
   const {
     userInfo,
@@ -15,9 +17,9 @@ export function TemplateHiper() {
     neighborhood,
     cep,
     date,
-    itenTable,
+    /*  itenTable,
     sumTotal,
-    linesTable,
+    linesTable, */
   } = InputUser();
 
   //transformando a string digitada no input para Date()
@@ -25,18 +27,28 @@ export function TemplateHiper() {
   const newFormatDate = add(newDateValue, {
     days: 1,
   });
+
   //criando uma variavel com um ano a frente (pegando o valor da variavel acima)
-  const oneMoreYear = add(date, {
+  /* const oneMoreYear = add(date, {
     days: 1,
     years: 1,
-  });
+  }); */
 
   return (
     <aside className={styles.boxView} id="content1">
       <div>
         <section className={styles.Header}>
           <div>
-            <img src={logomulti} className={styles.logo} />
+            <img
+              src={logomulti}
+              className={styles.logo}
+              alt="Logo MultiPoint"
+            />
+            <img
+              src={logoHiper}
+              className={styles.logoHiper}
+              alt="Logo Hiper"
+            />
             <div className={styles.boxTextHeader}>
               <p>Multipoint It Services & Consulting</p>
               <p>CNPJ 19.322.719/0001-77</p>
@@ -47,60 +59,287 @@ export function TemplateHiper() {
         <div className={styles.view}>
           <h4 className={styles.title}>CONTRATO HIPER</h4> <br />
         </div>
+        <h4 className={styles.topic}>TERMO DE USO</h4>
+        <p className={styles.view}>
+          HIPER SOFTWARE S.A, pessoa jurídica de direito privado, inscrita no
+          CNPJ/MF sob o nº 12.605.982/0001-24, com sede na cidade de Brusque,
+          Estado de Santa Catarina, Av Getúlio Vargas, Nr 61, Bloco 01, Vila
+          Schlösser, Bairro Centro 2, CEP: 88353-900, doravante denominada
+          simplesmente “HIPER”, única e exclusiva proprietária do software
+          denominado Hiper (ora em diante simplesmente “Aplicativo”), das
+          marcas, nomes e do domínio http://www.hiper.com.br associados à marca
+          HIPER.
+        </p>
 
         <p className={styles.view}>
-          <strong>CONTRATADA</strong>: Pessoa jurídica responsável pela
-          implantação, atendimento e treinamento do <strong>USUÁRIO</strong>,
-          inscrito no CNPJ sob o nº 19.322.719/0001-77, Razão Social: DANIEL F
-          DE ALCANTARA EPP com sede na cidade de São Caetano do Sul, Estado de
-          São Paulo, na Alameda João Galego, nº 783, Bairro Santa Maria, CEP
-          09560340, Brasil, neste ato representada na forma de sua constituição
-          social, doravante denominada simplesmente de{" "}
-          <strong>CONTRATADA</strong>.
+          <strong>CONTRATANTE:</strong> Pessoa jurídica que adquiriu o software
+          HIPER, inscrito no CNPJ sob o nº <span>{cnpjUser}</span>, Razão Social
+          <span>{userInfo}</span> com sede na cidade de <span>{city}</span> ,
+          Estado de <span>{estado}</span>,na rua <span>{street}</span>, nº{" "}
+          <span>{numberHouse}</span> bairro <span>{neighborhood}</span>, CEP{" "}
+          <span>{cep}</span>, Brasil, doravante denominada simplesmente de
+          CONTRATANTE. om
         </p>
         <p className={styles.view}>
-          <strong>CONTRATANTE</strong>: Pessoa jurídica que adquiriu os serviços
-          de INFRAESTRUTURA DE TI, inscrito no CNPJ sob o nº{" "}
-          <span>{cnpjUser}</span> ,Razão Social: {"  "} <span>{userInfo}</span>
-          {"  "}com sede na cidade de <span>{city}</span>, Estado de{" "}
-          <span>{estado}</span>, na rua <span>{street}</span>,{" "}
-          <span>{numberHouse}</span> ,Bairro: <span>{neighborhood}</span>, CEP{" "}
-          <span>{cep}</span>, Brasil, doravante denominada simplesmente de{" "}
-          <strong>USUÁRIO</strong>.
+          <strong>CONTRATADA:</strong> Pessoa jurídica responsável pela
+          implantação, atendimento e treinamento do USUÁRIO, inscrito no CNPJ
+          sob o nº <strong>19.322.719/0001-77</strong>, Razão Social:{" "}
+          <strong>DANIEL F DE ALCANTARA EPP</strong> com sede na cidade de{" "}
+          <strong>SÃO CAETANO DO SUL</strong>, Estado de{" "}
+          <strong>SÃO PAULO</strong>, na <strong>RUA JOANA ANGÉLICA</strong>, nº{" "}
+          <strong>254</strong>, Bairro <strong>BARCELONA</strong>, CEP{" "}
+          <strong>09551-050</strong>, Brasil, neste ato representada na forma de
+          sua constituição social, doravante denominada simplesmente de
+          CONTRATADA.
         </p>
+        <h4 className={styles.topic}>DAS DEFINIÇÕES</h4>
         <p className={styles.view}>
-          As partes devidamente qualiﬁcadas, conforme dispõem seus contratos
-          sociais, ora denomidadas Contratante e Contratada, ajustam entre si, a
-          prestação de serviços de manutenção de microcomputadores e
-          periféricos, que se regerá pela legislação pertinente e pelas
-          cláusulas a segui aduzidas:
+          Os termos a seguir constantes neste <strong>TERMO</strong> terão o
+          significado estabelecido abaixo, seja no plural ou no singular, sempre
+          que usados em letras maiúsculas:
         </p>
-        <h4 className={styles.topic}>1 - OBJETO</h4>
+        <h4 className={styles.topic}>PORTAL:</h4>
         <p className={styles.view}>
-          O objeto deste contrato é a prestação de serviços de suporte técnico
-          em infraestrutura e gerenciamento dos recursos e ambiente de TI
-          (Gestão de TI), com atendimento técnico remoto ilimitado a usuários,
-          monitoramento de dispositivos, consultoria para projetos relacionados
-          à estratégia de negócios do cliente e gestão da segurança da
-          informação.
+          significa o local onde o Aplicativo será disponibilizado para acesso
+          do USUÁRIO, cujo endereço eletrônico é o seguinte: www.hiper.com.br;
         </p>
-        <h4 className={styles.topic}>2 - ESCOPO</h4>
+        <h4 className={styles.topic}>APLICATIVO:</h4>
         <p className={styles.view}>
-          A Contratada, na vigência deste contrato, obriga-se à prestação de
-          serviços de suporte técnico em infraestrutura e gerenciamento dos
-          recursos e ambiente de TI, de acordo com os Termos Comerciais e
-          Técnicos estabelecidos incluindo o Acordo de Nível de Serviços
-          (ANS/SLA), conforme deﬁnições abaixo:
+          significa o software de propriedade exclusiva da HIPER, cujas
+          funcionalidades e serviços estão disponibilizados no Portal.
         </p>
       </div>
       <div>
         <div className={styles.quebrarPage}>
-          <h4 className={styles.topic}>
-            2.1 - TABELA DE SERVIÇOS E RECURSOS CONTRATADOS
-          </h4>
+          <h4 className={styles.topic}>INFORMAÇÕES:</h4>
         </div>
-        <div className={styles.view}>
-          <table>
+        <p className={styles.view}>
+          qualquer informação disponibilizada pelo <strong>CONTRATANTE</strong>{" "}
+          que o identifique junto a <strong>HIPER</strong>, tais como: razão
+          social/nome, CNPJ/CPF, endereço, número de telefone, fax, e-mail,
+          número de documentos, etc. <strong>CONTRATADO:</strong> pessoa
+          jurídica responsável pela implantação, atendimento e treinamento do{" "}
+          <strong>CONTRATANTE</strong>.
+        </p>
+        <h4 className={styles.topic}>PERÍODO DE TRIAL:</h4>
+        <p className={styles.view}>
+          período de teste disponibilizado ao <strong>CONTRATANTE</strong> antes
+          da contratação.
+        </p>
+        <h4 className={styles.topic}>HORÁRIO COMERCIAL:</h4>
+        <p className={styles.view}>
+          Compreendido de segundas às quintas-feiras, das 8:00h as 18:00h e
+          sextas-feiras das 8h às 17h, horário de Brasília, exceto feriados
+          nacionais ou municipais do local da sede da{" "}
+          <strong>CONTRATADO</strong> ou do <strong>PARCEIRO</strong>.
+        </p>
+        <h4 className={styles.topic}>PROPOSTA COMERCIAL:</h4>
+        <p className={styles.view}>
+          documento enviado ao <strong>CONTRATANTE</strong> com preços,
+          condições de pagamento, detalhamento do produto contratado e
+          implantação que faz parte do presente <strong>TERMO DE USO</strong>.
+          Em caso de contradição entre a proposta comercial e o presente termo,
+          prevalece as disposições da proposta comercial.
+        </p>
+        <h4 className={styles.topic}>IMPLANTAÇÃO:</h4>
+        <p className={styles.view}>
+          processo de parametrização e treinamento para uso do aplicativo
+          detalhado na PROPOSTA COMERCIAL.
+        </p>
+        <h4 className={styles.topic}>1 -DECLARAÇÃO DE VONTADE</h4>
+        <p className={styles.view}>
+          1.1. O CONTRATANTE DECLARA TER CIÊNCIA DOS DIREITOS E OBRIGAÇÕES
+          DECORRENTES DO PRESENTE TERMO, CONSTITUINDO ESTE INSTRUMENTO O ACORDO
+          COMPLETO ENTRE AS PARTES. DECLARA, AINDA, TER LIDO, COMPREENDIDO E
+          ACEITO TODOS OS TERMOS E CONDIÇÕES DESTE INSTRUMENTO.
+        </p>
+        <p className={styles.view}>
+          1.2. A partir do momento em que o CONTRATANTE aceitar este TERMO, as
+          disposições aqui constantes regerão a relação entre a CONTRATADO, o
+          CONTRATANTE, razão pela qual é recomendável que o CONTRATANTE imprima
+          uma cópia deste documento para futura referência.
+        </p>
+        <p className={styles.view}>
+          1.3. O CONTRATANTE se declara ciente de que as operações que
+          corresponderem à aceitação de determinadas opções serão registradas
+          nos bancos de dados da CONTRATADA,juntamente com a data e hora em que
+          o aceite foi manifestado pelo CONTRATANTE, podendo tal informação ser
+          utilizada como prova da aceitação da opção pelo CONTRATANTE
+          independentemente de outra formalidade.
+        </p>
+        <p className={styles.view}>
+          1.4. As informações referentes à data e hora de acesso e ao endereço
+          de protocolo de internet utilizado pelo <strong>CONTRATANTE</strong>{" "}
+          para acessar o Portal ou o Aplicativo permanecerão armazenadas pela
+          <strong>HIPER</strong> por, no mínimo, 6 (meses) a contar da data de
+          cada acesso realizado, independentemente do término da relação
+          jurídica e comercial entre a <strong>HIPER</strong> e o{" "}
+          <strong>CONTRATANTE</strong>, em cumprimento ao disposto no Artigo 15
+          da Lei nº 12.965/2014.
+        </p>
+        <h4 className={styles.topic}> 2 - RAZÕES DO CONTRATO:</h4>
+        <p className={styles.view}>
+          <strong>CONSIDERANDO</strong>, que a empresa <strong>UNI4</strong>{" "}
+          deseja comercializar em todo território nacional, por meio de Parceiro
+          Comercial devidamente credenciado, a licença de uso do programa de
+          informática denominado “Sistema Hiper”, o qual foi criado como solução
+          empresarial que une automação comercial com ferramenta de gestão,
+          direcionada a estabelecimentos varejistas de pequeno e médio porte;
+        </p>
+        <p>
+          <strong>CONSIDERANDO</strong>, que o <strong>CONTRATADO</strong> se
+          trata de parceiro credenciado para promover a comercialização da
+          licença de uso do referido sistema, bem como, por meio de
+          profissionais devidamente habilitados, oferecer diretamente aos
+          clientes finais serviços de suporte e manutenção do objeto de venda;{" "}
+          <strong>CONSIDERANDO</strong>, que a ora <strong>CONTRATANTE </strong>
+          deseja adquirir a licença de uso do “Sistema Hiper”, bem ainda, que
+          lhe seja oferecido suporte técnico e manutenção do objeto de venda por
+          parte do CONTRATADO, por meio de profissionais devidamente
+          habilitados, firmam as partes o presente instrumento, sob as condições
+          descritas adiante:
+        </p>
+        <h4 className={styles.topic}>3 - NOMENCLATURAS:</h4>
+        <p className={styles.view}>
+          <strong>I - PROGRAMA:</strong>programa/sistema de informática
+          denominado “Sistema Hiper”, integralmente desenvolvido pela UNI4 para
+          o uso de clientes finais – empresas de pequeno e médio porte de que
+          desejam aumentar sua produtividade e segurança na execução dos
+          trabalhos -, bem como o manual de usuário, manuais de operações,
+          informações técnicas complementares e materiais diversos, tais como
+          cartões de referências, folders, etc.
+        </p>
+        <p className={styles.view}>
+          <strong>II - INSTALAÇÃO:</strong>forma técnica profissional de
+          preparar bases de dados, testar, preparar os módulos existentes do
+          programa para funcionar e realizar as necessárias conexões e acionar
+          os necessários comandos para deixar o <strong>PROGRAMA</strong> em
+          estado de funcionamento no equipamento de informática.
+        </p>
+        <p className={styles.view}>
+          <strong>III – TREINAR/TREINAMENTO:</strong> compreende-se como
+          manutenção os serviços consistentes em manter atualizadas as funções
+          existentes nos módulos do <strong>PROGRAMA</strong>, com relação às
+          variáveis normalmente alteradas por legislação ou quaisquer outras
+          causas externas exigidas por determinação governamental, bem como
+          fornecer as novas versões dos “Sistema Hiper” que venham a ser
+          liberadas, desde que contenham alterações, acréscimos de rotina ou
+          melhoria de desempenho.
+        </p>
+        <p className={styles.view}>
+          <strong>IV – MANUTENÇÃO:</strong> orientar o cliente a usar
+          corretamente o <strong>PROGRAMA</strong>.
+        </p>
+        <p className={styles.view}>
+          <strong> V – SUPORTE:</strong> Compreende-se como suporte os serviços
+          de apoio e orientação exclusivamente sobre os módulos do{" "}
+          <strong>PROGRAMA</strong>, quanto ao funcionamento dos seus módulos
+          objetivando seu melhor aproveitamento, esclarecendo dúvidas
+          operacionais através de ligações telefônicas, e-mails e demais
+          modalidades de contato virtual.
+        </p>
+        <h4 className={styles.topic}>4 - DO OBJETO CONTRATUAL</h4>
+        <p className={styles.view}>
+          Cláusula primeira: Pelo presente instrumento, a{" "}
+          <strong>CONTRATADA</strong> formaliza a cessão da licença de uso do
+          <strong>PROGRAMA</strong> em favor do <strong>Cliente</strong>, bem
+          como demais componentes do produto, sob o modelo aluguel, pelo período
+          de 12 meses.
+        </p>
+        <p className={styles.view}>
+          <strong>Parágrafo único:</strong> As partes acordam que a relação
+          comercial se restringe somente entre o{" "}
+          <strong>Parceiro Comercial</strong> e o <strong>Cliente</strong>,
+          isentando a <strong>UNI4</strong> de qualquer responsabilidade
+          consumerista, bem como de prestação de serviço de suporte e
+          manutenção.
+        </p>
+        <h4 className={styles.topic}>5 - DAS CLAÚSULAS CONTRATUAIS:</h4>
+        <p className={styles.view}>
+          <strong>5.1 - Da obrigação das partes:</strong>
+        </p>
+        <p className={styles.view}>
+          <strong>Cláusula segunda:</strong> Constitui obrigação restrita do
+          <strong>Parceiro Comercial</strong> a prestação de serviços de
+          <strong>INSTALAÇÃO</strong> e <strong>SUPORTE do</strong>{" "}
+          <strong>PROGRAMA</strong>, O <strong>TREINAMENTO</strong> ao{" "}
+          <strong>Cliente</strong>, será considerado Serviço Adicional, e
+          formalizada em proposta comercial.
+        </p>
+        <p className={styles.view}>
+          <strong>Cláusula terceira:</strong> Constitui obrigação do{" "}
+          <strong>Cliente</strong> o pagamento integral do valor exigido para
+          ativação da licença do <strong>PROGRAMA</strong>, o valor referente
+          treinamento e implantação, bem como um valor mensal, fixado em tabela,
+          para prestação de suporte técnico, manutenção e atualizações do
+          sistema.​
+        </p>
+        <p className={styles.view}>
+          <strong>Cláusula quarta:</strong> O <strong>Cliente</strong> se
+          compromete ainda a não ceder à licença do <strong>PROGRAMA</strong>,
+          bem como sublicenciar, vender, dar em locação ou em garantia, doar,
+          alienar de qualquer forma, transferir, total ou parcialmente, gratuita
+          ou onerosamente, provisória ou permanente, assim como seus manuais ou
+          quaisquer informações.​
+        </p>
+        <p className={styles.view}>
+          <strong>
+            {" "}
+            5.2 - Do valor e forma de pagamento da ATIVAÇÃO DO PROGRAMA e dos
+            encargos contratuais para o caso de inadimplemento: Cláusula quinta:
+          </strong>
+          Os valores totais da ativação do PROGRAMA, bem como a forma de
+          pagamento e data de vencimento, devem obedecer ao descrito na seguinte
+          tabela:
+        </p>
+        <div className={styleTable.divTableHiper}>
+          <table className={styleTable.tableHiper}>
+            <thead>
+              <td>Nome</td>
+              <td>valor</td>
+            </thead>
+            <tbody className={styleTable.tbodyHiper}>
+              <td className={styleTable.tdHiper}>
+                <tr className={styleTable.trHiper}>
+                  Valor total da Ativação, Serviços e Equipamentos
+                </tr>
+                <tr className={styleTable.trHiper}>
+                  Quantidade de parcelas para pagamento
+                </tr>
+                <tr className={styleTable.trHiper}>Valor de cada parcela</tr>
+                <tr className={styleTable.trHiper}>Meio de Pagamento</tr>
+                <tr className={styleTable.trHiper}>
+                  Data de vencimento da 1ª Parcela
+                </tr>
+                <tr className={styleTable.trHiper}>
+                  Prazo de pagamento das demais parcelas
+                </tr>
+              </td>
+              <td>
+                <tr className={styleTable.trHiperColumn2}>
+                  <textarea name="" id=""></textarea>
+                </tr>
+                <tr className={styleTable.trHiperColumn2}>
+                  <textarea name="" id=""></textarea>
+                </tr>
+                <tr className={styleTable.trHiperColumn2}>
+                  <textarea name="" id=""></textarea>
+                </tr>
+                <tr className={styleTable.trHiperColumn2}>
+                  <textarea name="" id=""></textarea>
+                </tr>
+                <tr className={styleTable.trHiperColumn2}>
+                  <textarea name="" id=""></textarea>
+                </tr>
+                <tr>
+                  <textarea name="" id=""></textarea>
+                </tr>
+              </td>
+            </tbody>
+          </table>
+        </div>
+        {/* <div className={styles.view}>
+           <table>
             <thead className={styles.headerTable}>
               <tr className={styles.rowHeader}>
                 <td className={styles.borderRB}>Quantidade</td>
@@ -132,14 +371,14 @@ export function TemplateHiper() {
                 </td>
               </tr>
             </tfoot>
-          </table>
-        </div>
-        <div>
+          </table> 
+        </div> */}
+        {/*   <div>
           <h4 className={styles.topic}>
             2.2 - DETALHAMENTO DO ESCOPO DE SERVIÇOS
           </h4>
-        </div>
-        <div className={styles.view}>
+        </div>  */}
+        {/*  <div className={styles.view}>
           <ul>
             <li>
               <p className={styles.list}>
@@ -268,12 +507,12 @@ export function TemplateHiper() {
               </p>
             </li>
           </ul>
-        </div>
+        </div>  */}
       </div>
-      <h4 className={styles.topic}>
+      {/*    <h4 className={styles.topic}>
         2.3 - DETALHAMENTO SERVIÇOS DE MANUTENÇÃO CORRETIVA E PREVENTIVA
-      </h4>
-      <div className={styles.view}>
+      </h4> */}
+      {/*   <div className={styles.view}>
         <ul>
           <li>
             A manutenção preventiva consiste na limpeza, restauração e
@@ -315,8 +554,8 @@ export function TemplateHiper() {
             credenciados pela Contratada.{" "}
           </li>
         </ul>
-      </div>
-      <h4 className={styles.topic}>
+      </div> */}
+      {/*   <h4 className={styles.topic}>
         2.4 - ACORDO DE NÍVEL DE SERVIÇOS (ANS/SLA)
       </h4>
       <div className={styles.view}>
@@ -343,8 +582,8 @@ export function TemplateHiper() {
             antecedência.
           </li>
         </ul>
-      </div>
-      <div>
+      </div> */}
+      {/*   <div>
         <h4 className={styles.topic}>3 - DAS EXCLUSÕES</h4>
         <div className={styles.view}>
           <p className={styles.view}>
@@ -362,8 +601,8 @@ export function TemplateHiper() {
             </li>
           </ul>
         </div>
-      </div>
-      <div className={linesTable == 4 ? "styles.quebrarPage" : ""}>
+      </div> */}
+      {/*  <div className={linesTable == 4 ? "styles.quebrarPage" : ""}>
         <h4 className={styles.topic}>4 - DA VIGÊNCIA</h4>
         <p className={styles.view}>
           O presente contrato entrará em vigor em{"  "}{" "}
@@ -451,7 +690,7 @@ export function TemplateHiper() {
           em duas vias de igual teor e para um só ﬁm, na presença de duas
           testemunhas de tudo ciente.
         </p>
-      </div>
+      </div>*/}
       <div className={styles.quebrarPage}>
         <h4 className={styles.topic}>
           <strong>
