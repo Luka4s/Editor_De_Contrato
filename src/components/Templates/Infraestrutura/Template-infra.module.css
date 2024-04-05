@@ -316,3 +316,125 @@ tr {
   box-shadow: 2px 4px 30px -3px rgba(0, 0, 0, 0.75);
   margin-top: 2rem;
 }
+
+.secondTable {
+  width: 318px;
+  border: 1px solid black;
+  justify-content: right;
+}
+
+.secondTableTr {
+  display: flex;
+  justify-content: center;
+  padding: 4px;
+  border-top: 1px solid black;
+  height: 42px;
+}
+.secondTableTextArea {
+  width: 200px;
+  border-top: 1px solid black;
+}
+
+.divThirdTable {
+  display: flex;
+  justify-content: start;
+}
+
+.thirdHeaderTable {
+  display: grid;
+  grid-template-columns: 1fr 0.55fr;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.trHeaderThirdTable {
+  display: flex;
+  justify-content: center;
+  height: 20px;
+  border-top: 1px solid black;
+}
+
+.trHeaderThirdTableFirstTitle {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.trHeaderThirdTableSecondTitle {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-left: 20px;
+}
+
+.thirdTable {
+  display: flex;
+  border: 1px solid black;
+  width: 100%;
+  height: 12.5rem;
+}
+
+.thirdBodyTable {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+
+/* .leftColumnThirdTable {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+} */
+
+.TrLeftInThirdTable {
+  display: flex;
+  padding: 4px;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  width: 40rem;
+  height: 36.5px;
+  font-size: 12px;
+}
+
+.rightColumnThirdTable {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.TrRightInThirdTable textarea {
+  display: flex;
+  padding: 7px;
+  border: none;
+  border-top: 1px solid black;
+  width: 16.3rem;
+  height: 36.9px;
+}
+
+.thirdBodyTableSecondPart {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+}
+
+.firstColumnSecondPart {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  height: 50px;
+}
+.contentFistColumnSecondPart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.textAreaSecondPart {
+  display: flex;
+  border: 1px solid black;
+  width: 190px;
+}

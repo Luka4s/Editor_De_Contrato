@@ -1,95 +1,100 @@
-import React, { useState } from "react";
-import { Input } from "@mui/material";
-import styles from "../FirstTableHiper/firstTableHiper.module.css";
+import styles from "./TableHiper.module.css";
 
-interface EditableTableCellProps {
-  name: string;
-  value: string;
-  onValueChange: (newValue: string) => void;
+export default function TableHiper() {
+  return (
+    <div>
+      <table className={styles.table}>
+        <thead className={styles.headerTableH}>
+          <td>Valores e forma de pagamento</td>
+        </thead>
+        <tbody className={styles.tableBody}>
+          <div className={styles.divTest}>
+            <td>
+              <div>
+                <tr className={styles.contentTr}>
+                  Valor total da ativação, serviços e equipamentos
+                </tr>
+                <tr className={styles.contentTr}>
+                  Quantidade de parcelas para pagamento
+                </tr>
+                <tr className={styles.contentTr}>Valor de cada parcela</tr>
+                <tr className={styles.contentTr}>Meio de Pagamento</tr>
+                <tr className={styles.contentTr}>
+                  Data de vencimento da 1ª Parcela
+                </tr>
+                <tr className={styles.contentTr}>
+                  Prazo de pagamento das demais parcelas
+                </tr>
+              </div>
+            </td>
+            <td>
+              <tr>
+                <textarea name="" id=""></textarea>
+              </tr>
+              <tr>
+                <textarea name="" id=""></textarea>
+              </tr>
+              <tr>
+                <textarea name="" id=""></textarea>
+              </tr>
+              <tr>
+                <textarea name="" id=""></textarea>
+              </tr>
+              <tr>
+                <textarea name="" id=""></textarea>
+              </tr>
+              <tr>
+                <textarea name="" id=""></textarea>
+              </tr>
+            </td>
+          </div>
+        </tbody>
+      </table>
+    </div>
+  );
 }
 
-const EditableTableCell: React.FC<EditableTableCellProps> = ({
-  name,
-  value,
-  onValueChange,
-}) => {
-  const [isEditing, setIsEditing] = useState(false);
-  const [currentValue, setCurrentValue] = useState(value);
-
-  const handleEdit = () => {
-    setIsEditing(true);
-  };
-
-  const handleSave = () => {
-    if (isNaN(Number(currentValue))) {
-      alert("Valor inválido");
-      return;
-    }
-
-    onValueChange(currentValue);
-    setIsEditing(false);
-  };
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setCurrentValue(event.target.value);
-  };
-
-  return (
-    <tr>
-      <td>{name}</td>
-      <td>
-        {isEditing ? (
-          <Input
-            value={currentValue}
-            onChange={handleChange}
-            onBlur={handleSave}
-          />
-        ) : (
-          <div onClick={handleEdit}>{value}</div>
-        )}
-      </td>
-    </tr>
-  );
-};
-
-interface EditableTableProps {
-  data: Array<{ name: string; value: string }>;
-  onDataChange: (newData: Array<{ name: string; value: string }>) => void;
+{
+  /* <tr className={styles.rowBody}>
+<td className={styles.fieldBody}>
+  Valor total da ativação, serviços e equipamentos
+</td>
+<td className={styles.inputUser}>
+  <textarea></textarea>
+</td>
+</tr>
+<tr className={styles.rowBody}>
+<td className={styles.fieldBody}>
+  Quantidade de parcelas para pagamento
+</td>
+<td className={styles.inputUser}>
+  <textarea></textarea>
+</td>
+</tr>
+<tr className={styles.rowBody}>
+<td className={styles.fieldBody}>Valor de cada parcela</td>
+<td className={styles.inputUser}>
+  <textarea></textarea>
+</td>
+</tr>
+<tr className={styles.rowBody}>
+<td className={styles.fieldBody}>Meio de pagamento</td>
+<td className={styles.inputUser}>
+  <textarea></textarea>
+</td>
+</tr>
+<tr className={styles.rowBody}>
+<td className={styles.fieldBody}>Data vencimento da 1º parcela</td>
+<td className={styles.inputUser}>
+  <textarea></textarea>
+</td>
+</tr>
+<tr className={styles.rowBody}>
+<td className={styles.fieldBody}>
+  Prazo de pagamento das demais parcelas
+</td>
+<td className={styles.inputUser}>
+  <textarea></textarea>
+</td>
+</tr> */
 }
-
-const TableHiper: React.FC<EditableTableProps> = ({ data, onDataChange }) => {
-  const handleDataChange = (rowIndex: number, newValue: string) => {
-    const newData = [...data];
-    newData[rowIndex].value = newValue;
-    onDataChange(newData);
-  };
-
-  return (
-    <table className={styles.tableHiperTest}>
-      <thead>
-        <tr>
-          <th>Nome</th>
-          <th>Valor</th>
-        </tr>
-      </thead>
-      <tbody>
-        {data.map((item, rowIndex) => {
-          return (
-            <tr>
-              <EditableTableCell
-                key={item.name}
-                name={item.name}
-                value={item.value}
-                onValueChange={(newValue) =>
-                  handleDataChange(rowIndex, newValue)
-                }
-              />
-            </tr>
-          );
-        })}
-      </tbody>
-    </table>
-  );
-};
-
-export default TableHiper;
