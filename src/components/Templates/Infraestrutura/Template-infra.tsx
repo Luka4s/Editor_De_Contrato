@@ -1,4 +1,4 @@
-import styles from "./Template-infra.module.css";
+import styles from "../Template-infra.module.css";
 import logomulti from "../../../assets/logo_multipoint.png";
 import { InputUser } from "../../../Context/InputUserContext";
 import { CreateTable } from "../../CreateTable/Index";

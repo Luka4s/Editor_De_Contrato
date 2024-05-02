@@ -2,7 +2,7 @@ import { Background } from "../components/Background/Background";
 import { Download } from "../components/Download/Download";
 import { EditTable } from "../components/EditarTable/EditTable";
 import { MyModal } from "../components/Modal/Modal";
-import styles from "../components/Templates/Infraestrutura/Template-infra.module.css";
+import styles from "../components/Templates/Template-infra.module.css";
 import { ViewInputsHiper } from "../components/ViewInputs/Hiper/ViewInputsHiperContrato";
 import { VisualizationHiper } from "../components/Visualization/VisualizationHiper";
 export function ViewHiper() {

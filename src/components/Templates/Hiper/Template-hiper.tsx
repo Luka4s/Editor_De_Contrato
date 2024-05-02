@@ -1,10 +1,9 @@
 /* eslint-disable no-irregular-whitespace */
-import styles from "../Infraestrutura/Template-infra.module.css";
+import styles from "../Template-infra.module.css";
 
 import logomulti from "../../../assets/logo_multipoint.png";
 import logoHiper from "../../../assets/logo_Hiper.svg";
 import { InputUser } from "../../../Context/InputUserContext";
-//import { CreateTable } from "../../CreateTable/Index";
 import { add } from "date-fns";
 import TableHiper from "../../CreateTable/FirstTableHiper";
 export function TemplateHiper() {
@@ -18,9 +17,6 @@ export function TemplateHiper() {
     neighborhood,
     cep,
     date,
-    /*  itenTable,
-    sumTotal,
-    linesTable, */
   } = InputUser();
 
   //transformando a string digitada no input para Date()
@@ -28,12 +24,6 @@ export function TemplateHiper() {
   const newFormatDate = add(newDateValue, {
     days: 1,
   });
-
-  //criando uma variavel com um ano a frente (pegando o valor da variavel acima)
-  /* const oneMoreYear = add(date, {
-    days: 1,
-    years: 1,
-  }); */
 
   return (
     <aside className={styles.boxView} id="content1">
@@ -397,24 +387,24 @@ export function TemplateHiper() {
           softwares de terceiros.
         </p>
       </div>
-      <div className={styles.divThirdTable}>
-        <table className={styles.thirdTable}>
-          <thead className={styles.headerTableH}>
-            <td>Prazos de Atendimento para Suporte Tecnico</td>
-          </thead>
+      <table className={styles.thirdTable}>
+        <thead className={styles.headerTableH}>
+          <td>Prazos de Atendimento para Suporte Tecnico</td>
+        </thead>
 
-          <thead className={styles.thirdHeaderTable}>
+        <thead className={styles.thirdHeaderTable}>
+          <td>
+            <tr className={styles.trHeaderThirdTableFirstTitle}>
+              GRAU DE CRITICIDADE
+            </tr>
+          </td>
+          <td>
+            <tr className={styles.trHeaderThirdTableSecondTitle}>PRAZO</tr>
+          </td>
+        </thead>
+        <tbody className={styles.thirdBodyTable}>
+          <div className={styles.leftColumnThirdTable}>
             <td>
-              <tr className={styles.trHeaderThirdTableFirstTitle}>
-                GRAU DE CRITICIDADE
-              </tr>
-            </td>
-            <td>
-              <tr className={styles.trHeaderThirdTableSecondTitle}>PRAZO</tr>
-            </td>
-          </thead>
-          <tbody className={styles.thirdBodyTable}>
-            <td className={styles.leftColumnThirdTable}>
               <tr className={styles.TrLeftInThirdTable}>
                 Alto – Incidentes com o Software que possam gerar riscos de
                 interrupção do sistema.
@@ -429,7 +419,9 @@ export function TemplateHiper() {
                 alternativas.
               </tr>
             </td>
-            <td className={styles.rightColumnThirdTable}>
+          </div>
+          <div className={styles.rightColumnThirdTable}>
+            <td>
               <tr className={styles.TrRightInThirdTable}>
                 <textarea name="" id="" />
               </tr>
@@ -440,9 +432,9 @@ export function TemplateHiper() {
                 <textarea name="" id="" />
               </tr>
             </td>
-          </tbody>
-        </table>
-      </div>
+          </div>
+        </tbody>
+      </table>
       <div>
         <table className={styles.thirdTable}>
           <thead className={styles.headerTableH}>

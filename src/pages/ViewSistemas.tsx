@@ -1,7 +1,7 @@
 import { Download } from "../components/Download/Download";
 import { EditTable } from "../components/EditarTable/EditTable";
 import { MyModal } from "../components/Modal/Modal";
-import styles from "../components/Templates/Infraestrutura/Template-infra.module.css";
+import styles from "../components/Templates/Template-infra.module.css";
 import { Background } from "../components/Background/Background";
 //import { TbSwitchHorizontal } from "react-icons/tb";
 //import { InputUser } from "../Context/InputUserContext";

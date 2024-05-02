@@ -1,12 +1,11 @@
 .table {
+  max-width: 700px;
   margin-bottom: 1rem;
   border-top: 3px outset black;
   border-bottom: 3px outset black;
 }
-
 .headerTableH {
   width: 100%;
-  /* background-color: red; */
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -17,49 +16,46 @@
 .headerTableH td {
   display: flex;
   flex-direction: column;
-  /* background-color: blue; */
   align-items: center;
   font-weight: bold;
 }
 
 .tableBody {
   height: 15.9rem;
-  /* background-color: green; */
-  /*  display: grid;
+  display: grid;
   grid-auto-flow: row;
-  grid-template-columns: 0.5fr 0.5fr; */
+  grid-template-columns: 0.5fr 0.5fr;
 }
 
 .divTest {
   display: grid;
-  grid-template-columns: 1fr 0.6fr;
+  width: 100%;
+  grid-template-areas: "left right";
+  grid-template-columns: 300px 400px;
   grid-template-rows: min-content;
   font-size: 1rem;
   align-items: center;
   text-align: center;
   text-transform: uppercase;
 }
-
-.rowBody {
-  /* background-color: yellow; */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  text-transform: none;
-  font-weight: bold;
-  border-right: 1px solid black;
-  border-top: 1px solid black;
-  font-size: 1rem;
+.columnLeft {
+  grid-area: "left";
+  border: 1px solid orange;
 }
 
-textarea {
+.columnRight {
+  grid-area: "right";
+}
+
+.textAreaUser {
+  grid-area: "right";
   resize: none;
   display: flex;
   text-align: center;
   padding-top: 0.15rem;
   font-size: 1rem;
   font-weight: 300;
-  width: 350px;
+  width: 398px;
   height: 2.65rem;
   border: none;
   border-top: 1px solid black;
@@ -68,7 +64,6 @@ textarea {
     border: none;
   }
 }
-
 .fieldBody {
   display: flex;
   justify-content: center;
@@ -77,7 +72,7 @@ textarea {
 }
 
 .contentTr {
-  align-items: center;
+  grid-area: "left";
   display: flex;
   text-align: center;
   padding: 9px;
@@ -86,10 +81,10 @@ textarea {
   border-top: 1px solid black;
 }
 
-.inputUser {
+/* .inputUser {
   display: flex;
   justify-content: center;
   width: 7.5rem;
   height: 1.5rem;
   text-align: center;
-}
+} */

@@ -1,7 +1,7 @@
 import { Download } from "../components/Download/Download";
 import { EditTable } from "../components/EditarTable/EditTable";
 import { MyModal } from "../components/Modal/Modal";
-import styles from "../components/Templates/Infraestrutura/Template-infra.module.css";
+import styles from "../components/Templates/Template-infra.module.css";
 import { ViewInputsInfra } from "../components/ViewInputs/Infraestrutura/ViewInputsInfra";
 import { Visualization } from "../components/Visualization/Visualization";
 import { Background } from "../components/Background/Background";
