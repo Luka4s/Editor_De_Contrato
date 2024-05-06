@@ -1,0 +1,30 @@
+/* Segunda tabela Hiper */
+.secondTable {
+  width: 318px;
+  justify-content: right;
+  border: 1px solid black;
+}
+/* Configura as linhas da tabela */
+.secondTableTr {
+  display: flex;
+  justify-content: center;
+  padding: 4px;
+  height: 42.5px;
+  border-right: 1px solid black;
+  /*border-bottom: 1px solid black;
+   */
+}
+/* Configura as TextAreas */
+.secondTableTextArea {
+  width: 200px;
+  resize: none;
+  display: flex;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 300;
+  height: 2.65rem;
+  border: 1px solid black;
+  &:focus {
+    border: none;
+  }
+}

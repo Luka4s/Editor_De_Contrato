@@ -1,0 +1,91 @@
+/* Terceira Tabela Hiper */
+.thirdTable {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 1px solid black;
+  width: 729px;
+  height: 12.5rem;
+}
+/* Configurando o Header da tabela */
+
+.thirdHeaderTable {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* Configurando o corpo da tabela */
+.thirdBodyTable {
+  display: grid;
+  grid-template-areas: "left right";
+  grid-template-columns: 460px 200px;
+  height: 100%;
+}
+
+.leftColumnThirdTable {
+  grid-area: left;
+}
+
+.TrLeftInThirdTable {
+  display: flex;
+  padding: 4px;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  width: 100%;
+  height: 50.5px;
+  font-size: 12px;
+}
+
+.rightColumnThirdTable {
+  grid-area: right;
+}
+
+.TrRightInThirdTable textarea {
+  border-top: 1px solid black;
+  width: 16.3rem;
+  height: 48px;
+  resize: none;
+  display: flex;
+  text-align: center;
+  padding: 6px;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.thirdBodyTableSecondPart {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+}
+
+.firstColumnSecondPart {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  height: 50px;
+}
+.contentFistColumnSecondPart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.textAreaSecondPart {
+  display: flex;
+  border: 1px solid black;
+  width: 190px;
+  resize: none;
+  display: flex;
+  text-align: center;
+  padding-top: 0.15rem;
+  font-size: 1rem;
+  font-weight: 300;
+  &:focus {
+    border: none;
+  }
+}

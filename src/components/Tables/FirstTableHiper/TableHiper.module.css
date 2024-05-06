@@ -1,15 +1,16 @@
 .table {
   max-width: 700px;
   margin-bottom: 1rem;
-  border-top: 3px outset black;
-  border-bottom: 3px outset black;
+  /*   border-top: 3px outset black;
+  border-bottom: 3px outset black; */
+  border: 1px solid black;
 }
 .headerTableH {
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid black;
   text-transform: uppercase;
 }
 
@@ -33,33 +34,29 @@
   grid-template-areas: "left right";
   grid-template-columns: 300px 400px;
   grid-template-rows: min-content;
-  font-size: 1rem;
-  align-items: center;
-  text-align: center;
+  font-size: 16px;
   text-transform: uppercase;
 }
 .columnLeft {
-  grid-area: "left";
-  border: 1px solid orange;
+  grid-area: left;
 }
 
 .columnRight {
-  grid-area: "right";
+  grid-area: right;
 }
 
 .textAreaUser {
-  grid-area: "right";
+  grid-area: right;
   resize: none;
   display: flex;
   text-align: center;
-  padding-top: 0.15rem;
   font-size: 1rem;
   font-weight: 300;
-  width: 398px;
-  height: 2.65rem;
+  width: 399px;
+  height: 2.55rem;
   border: none;
-  border-top: 1px solid black;
-  border-left: 1px solid black;
+
+  border: 1px solid black;
   &:focus {
     border: none;
   }
@@ -72,19 +69,12 @@
 }
 
 .contentTr {
-  grid-area: "left";
+  grid-area: left;
   display: flex;
   text-align: center;
-  padding: 9px;
+  align-items: center;
   width: 100%;
   height: 2.65rem;
   border-top: 1px solid black;
+  border-right: 1px solid black;
 }
-
-/* .inputUser {
-  display: flex;
-  justify-content: center;
-  width: 7.5rem;
-  height: 1.5rem;
-  text-align: center;
-} */

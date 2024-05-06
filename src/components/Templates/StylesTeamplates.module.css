@@ -15,16 +15,16 @@
   align-content: flex-start;
 }
 
-table {
+.tableServices {
   display: flex;
   flex-direction: column;
   table-layout: fixed;
   width: 100%;
   border-collapse: collapse;
-  border-right: 2px solid black;
-  border-left: 2px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
 }
-thead {
+.theadServices {
   display: flex;
   justify-content: space-around;
   text-align: center;
@@ -57,6 +57,14 @@ thead {
   background-color: black;
 }
 
+.logoEasyVarejo {
+  display: flex;
+}
+
+.logoEasyVarejo img {
+  width: 220px;
+}
+
 .logoHiper {
   width: 320px;
   display: flex;
@@ -81,10 +89,10 @@ thead {
   color: black;
 }
 
-tr {
+.itensRow {
   display: grid;
   width: 100%;
-  grid-template-columns: 0.7fr 2fr 0.6fr;
+  grid-template-columns: 11.99rem 1fr 10.3rem;
   grid-template-rows: min-content;
   font-size: 1rem;
   align-items: center;
@@ -97,6 +105,12 @@ tr {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.rowHeader {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 11.99rem 1fr 10.3rem;
 }
 
 .borderRB {
@@ -128,8 +142,13 @@ tr {
 }
 
 .footerTotal {
+  display: flex;
   border-bottom: 2px outset black;
+  justify-content: flex-end;
+  padding-right: 70px;
+  width: 100%;
   padding-top: 0.4rem;
+  gap: 8px;
   height: 2.2rem;
   background-color: rgb(248, 240, 240);
 }
@@ -316,126 +335,53 @@ tr {
   box-shadow: 2px 4px 30px -3px rgba(0, 0, 0, 0.75);
   margin-top: 2rem;
 }
-/* Segunda tabela Hiper */
-.secondTable {
-  width: 318px;
+
+.TTEasy {
   border: 1px solid black;
-  justify-content: right;
+  border-radius: 6px;
+  padding: 8px;
+  margin-bottom: 20px;
 }
-/* Configura as linhas da tabela */
-.secondTableTr {
+
+.TableMMC {
+  height: 14rem;
+}
+
+.TableMMC thead {
+  display: grid;
+  grid-template-columns: 200px 360px 50px 78px;
+  text-align: center;
+  border: 1px solid black;
+}
+.TableMMC tbody {
+  display: grid;
+  grid-template-columns: 200px 360px 50px 80px;
+  height: 12.6rem;
+}
+
+.TableMMC td {
   display: flex;
-  justify-content: center;
-  padding: 4px;
-  height: 42px;
+  flex-direction: column;
 }
-/* Configura as TextAreas */
-.secondTableTextArea {
+
+.TableMMC tr {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+}
+
+.TextAreaMMC {
   width: 200px;
   resize: none;
   display: flex;
   text-align: center;
-  padding-top: 0.15rem;
-  font-size: 1rem;
+  font-size: 14px;
   font-weight: 300;
   height: 2.65rem;
   border: none;
-  border-top: 1px solid black;
-  border-left: 1px solid black;
-  &:focus {
-    border: none;
-  }
-}
-
-/* Terceira Tabela Hiper */
-.thirdTable {
-  display: flex;
-  border: 1px solid black;
-  width: 729px;
-  height: 12.5rem;
-}
-/* Configurando o Header da tabela */
-
-.trHeaderThirdTableFirstTitle {
-  display: flex;
-}
-
-.trHeaderThirdTableSecondTitle {
-  display: flex;
-}
-/* Configurando o corpo da tabela */
-.thirdBodyTable {
-  display: grid;
-  grid-template-areas: "left right";
-  grid-template-columns: 460px 200px;
-  height: 7rem;
-}
-
-.leftColumnThirdTable {
-  grid-area: "left";
-}
-
-.TrLeftInThirdTable {
-  display: flex;
-  padding: 4px;
-  border-top: 1px solid black;
-  border-right: 1px solid black;
-  width: 100%;
-  height: 36.5px;
-  font-size: 12px;
-}
-
-.rightColumnThirdTable {
-  grid-area: "right";
-}
-
-.TrRightInThirdTable textarea {
-  border: 1px solid black;
-  width: 267px;
-  height: 37.5px;
-
-  resize: none;
-  display: flex;
-  text-align: center;
-  font-size: 1rem;
-  font-weight: 300;
-  &:focus {
-    border: none;
-  }
-}
-
-.thirdBodyTableSecondPart {
-  display: grid;
-  grid-template-columns: 0.5fr 0.5fr;
-  grid-template-rows: 1fr 1fr;
-  justify-content: center;
-}
-
-.firstColumnSecondPart {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  width: 100%;
-  height: 50px;
-}
-.contentFistColumnSecondPart {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 8px;
-  font-size: 16px;
-}
-
-.textAreaSecondPart {
-  display: flex;
-  border: 1px solid black;
-  width: 190px;
-  resize: none;
-  display: flex;
-  text-align: center;
-  padding-top: 0.15rem;
-  font-size: 1rem;
-  font-weight: 300;
   &:focus {
     border: none;
   }

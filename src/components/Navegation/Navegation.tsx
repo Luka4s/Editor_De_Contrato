@@ -73,9 +73,27 @@ export function Navegation() {
                 <span>
                   <GrSystem />
                 </span>
-                SISTEMAS
+                VAREJO/EASYASSIST
               </NavLink>
             </div>
+
+            {/* <div className={styles.buttons}>
+              <NavLink
+                to="/locação"
+                className={`${styles.NavLink} ${
+                  location.pathname === "/locação" ? styles.active : ""
+                }`}
+                onClick={() => {
+                  navigate("/locação");
+                  setActiveRoute("locação");
+                }}
+              >
+                <span>
+                  <GrSystem />
+                </span>
+                LOCAÇÃO
+              </NavLink>
+            </div> */}
           </div>
         </div>
       </section>

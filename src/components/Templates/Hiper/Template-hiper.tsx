@@ -1,11 +1,12 @@
 /* eslint-disable no-irregular-whitespace */
-import styles from "../Template-infra.module.css";
-
+import styles from "../StylesTeamplates.module.css";
 import logomulti from "../../../assets/logo_multipoint.png";
 import logoHiper from "../../../assets/logo_Hiper.svg";
 import { InputUser } from "../../../Context/InputUserContext";
 import { add } from "date-fns";
-import TableHiper from "../../CreateTable/FirstTableHiper";
+import TableHiper from "../../Tables/FirstTableHiper";
+import { SecondTableHiper } from "../../Tables/SecondTableHiper";
+import { ThirdTableHiper } from "../../Tables/ThirdTableHiper";
 export function TemplateHiper() {
   const {
     userInfo,
@@ -320,32 +321,8 @@ export function TemplateHiper() {
           arcar com o pagamento de uma mensalidade, observando-se o valor e data
           de vencimento descrita na seguinte tabela:
         </p>
-        <p className={styles.view}>
-          <table className={styles.secondTable}>
-            <tbody>
-              <td>
-                <tr className={styles.secondTableTr}>Valor da mensalidade</tr>
-                <tr className={styles.secondTableTr}>PAGAMENTO</tr>
-              </td>
-              <td>
-                <tr>
-                  <textarea
-                    name=""
-                    id=""
-                    className={styles.secondTableTextArea}
-                  />
-                </tr>
-                <tr>
-                  <textarea
-                    name=""
-                    id=""
-                    className={styles.secondTableTextArea}
-                  />
-                </tr>
-              </td>
-            </tbody>
-          </table>
-        </p>
+
+        <SecondTableHiper />
       </div>
       <div>
         <p className={styles.view}>
@@ -387,87 +364,9 @@ export function TemplateHiper() {
           softwares de terceiros.
         </p>
       </div>
-      <table className={styles.thirdTable}>
-        <thead className={styles.headerTableH}>
-          <td>Prazos de Atendimento para Suporte Tecnico</td>
-        </thead>
-
-        <thead className={styles.thirdHeaderTable}>
-          <td>
-            <tr className={styles.trHeaderThirdTableFirstTitle}>
-              GRAU DE CRITICIDADE
-            </tr>
-          </td>
-          <td>
-            <tr className={styles.trHeaderThirdTableSecondTitle}>PRAZO</tr>
-          </td>
-        </thead>
-        <tbody className={styles.thirdBodyTable}>
-          <div className={styles.leftColumnThirdTable}>
-            <td>
-              <tr className={styles.TrLeftInThirdTable}>
-                Alto – Incidentes com o Software que possam gerar riscos de
-                interrupção do sistema.
-              </tr>
-              <tr className={styles.TrLeftInThirdTable}>
-                Médio – Incidentes com o Software que provoquem perturbações em
-                sua utilização, mas sem risco de interrupção do sistema.
-              </tr>
-              <tr className={styles.TrLeftInThirdTable}>
-                Baixo – Incidentes que não causem impactos imediatos, permitindo
-                a continuidade do sistema, ainda que através de soluções
-                alternativas.
-              </tr>
-            </td>
-          </div>
-          <div className={styles.rightColumnThirdTable}>
-            <td>
-              <tr className={styles.TrRightInThirdTable}>
-                <textarea name="" id="" />
-              </tr>
-              <tr className={styles.TrRightInThirdTable}>
-                <textarea name="" id="" />
-              </tr>
-              <tr className={styles.TrRightInThirdTable}>
-                <textarea name="" id="" />
-              </tr>
-            </td>
-          </div>
-        </tbody>
-      </table>
-      <div>
-        <table className={styles.thirdTable}>
-          <thead className={styles.headerTableH}>
-            <td>Valor da Hora Técnica para Serviços Adicionais</td>
-          </thead>
-
-          <tbody className={styles.thirdBodyTableSecondPart}>
-            <td className={styles.firstColumnSecondPart}>
-              <td className={styles.contentFistColumnSecondPart}>
-                <span>Suporte Local:</span>
-                <textarea name="" id="" className={styles.textAreaSecondPart} />
-              </td>
-              <td className={styles.contentFistColumnSecondPart}>
-                <span className={styles.ajusteSpan}>
-                  Suporte Remoto (fora do período):
-                </span>
-                <textarea name="" id="" className={styles.textAreaSecondPart} />
-              </td>
-            </td>
-
-            <td className={styles.firstColumnSecondPart}>
-              <td className={styles.contentFistColumnSecondPart}>
-                <span>Treinamento Remoto:</span>
-                <textarea name="" id="" className={styles.textAreaSecondPart} />
-              </td>
-              <td className={styles.contentFistColumnSecondPart}>
-                <span>Treinamento Presencial:</span>
-                <textarea name="" id="" className={styles.textAreaSecondPart} />
-              </td>
-            </td>
-          </tbody>
-        </table>
-      </div>
+      <p className={styles.view}>
+        <ThirdTableHiper />
+      </p>
       <div>
         <h4 className={styles.topic}>5.4 Da Rescisão deste contrato:</h4>
         <p className={styles.view}>

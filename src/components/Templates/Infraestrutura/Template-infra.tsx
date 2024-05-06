@@ -1,4 +1,4 @@
-import styles from "../Template-infra.module.css";
+import styles from "../StylesTeamplates.module.css";
 import logomulti from "../../../assets/logo_multipoint.png";
 import { InputUser } from "../../../Context/InputUserContext";
 import { CreateTable } from "../../CreateTable/Index";
@@ -103,7 +103,7 @@ export function TemplateInfra() {
           </h4>
         </div>
         <div className={styles.view}>
-          <table>
+          <table className={styles.tableServices}>
             <thead className={styles.headerTable}>
               <tr className={styles.rowHeader}>
                 <td className={styles.borderRB}>Quantidade</td>
@@ -112,7 +112,7 @@ export function TemplateInfra() {
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr className={styles.itensRow}>
                 {itenTable.map((item, index) => {
                   return (
                     <CreateTable
@@ -127,7 +127,6 @@ export function TemplateInfra() {
             </tbody>
             <tfoot className={styles.footerTable}>
               <tr className={styles.footerTotal}>
-                <td></td>
                 <td>Total</td>
                 <td>
                   <span>R$</span>
