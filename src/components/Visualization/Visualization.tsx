@@ -7,10 +7,10 @@ export function handleUserClick() {
   const contentElement = document.getElementById("content1");
 
   html2pdf(contentElement, {
-    margin: [7, 7, 0, 7],
+    margin: [0, 7, 0, 7],
     filename: "ContratoInfra.pdf",
     image: { type: "jpeg", quality: 0.98 },
-    html2canvas: { scale: 2 },
+    html2canvas: { scale: 1 },
     jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
     pagebreak: { mode: ["css"] },
   }).then((pdf: { save: (arg0: string) => void }) => {

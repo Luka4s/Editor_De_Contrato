@@ -178,19 +178,22 @@ export function TemplateHiper() {
           empresarial que une automação comercial com ferramenta de gestão,
           direcionada a estabelecimentos varejistas de pequeno e médio porte;
         </p>
-        <p>
-          <strong>CONSIDERANDO</strong>, que o <strong>CONTRATADO</strong> se
-          trata de parceiro credenciado para promover a comercialização da
-          licença de uso do referido sistema, bem como, por meio de
-          profissionais devidamente habilitados, oferecer diretamente aos
-          clientes finais serviços de suporte e manutenção do objeto de venda;{" "}
-          <strong>CONSIDERANDO</strong>, que a ora <strong>CONTRATANTE </strong>
-          deseja adquirir a licença de uso do “Sistema Hiper”, bem ainda, que
-          lhe seja oferecido suporte técnico e manutenção do objeto de venda por
-          parte do CONTRATADO, por meio de profissionais devidamente
-          habilitados, firmam as partes o presente instrumento, sob as condições
-          descritas adiante:
-        </p>
+        <div className={styles.quebrarPage}>
+          <p className={styles.view}>
+            <strong>CONSIDERANDO</strong>, que o <strong>CONTRATADO</strong> se
+            trata de parceiro credenciado para promover a comercialização da
+            licença de uso do referido sistema, bem como, por meio de
+            profissionais devidamente habilitados, oferecer diretamente aos
+            clientes finais serviços de suporte e manutenção do objeto de venda;{" "}
+            <strong>CONSIDERANDO</strong>, que a ora{" "}
+            <strong>CONTRATANTE </strong>
+            deseja adquirir a licença de uso do “Sistema Hiper”, bem ainda, que
+            lhe seja oferecido suporte técnico e manutenção do objeto de venda
+            por parte do CONTRATADO, por meio de profissionais devidamente
+            habilitados, firmam as partes o presente instrumento, sob as
+            condições descritas adiante:
+          </p>
+        </div>
         <h4 className={styles.topic}>3 - NOMENCLATURAS:</h4>
         <p className={styles.view}>
           <strong>I - PROGRAMA: </strong>programa/sistema de informática
@@ -274,17 +277,20 @@ export function TemplateHiper() {
           ou onerosamente, provisória ou permanente, assim como seus manuais ou
           quaisquer informações.
         </p>
-        <p className={styles.view}>
-          <strong>
-            {" "}
-            5.2 - Do valor e forma de pagamento da ATIVAÇÃO DO PROGRAMA e dos
-            encargos contratuais para o caso de inadimplemento: Cláusula quinta:{" "}
-          </strong>
-          Os valores totais da ativação do programa, bem como a forma de
-          pagamento e data de vencimento, devem obedecer ao descrito na seguinte
-          tabela:
-        </p>
         <div className={styles.quebrarPage}>
+          <p className={styles.view}>
+            <strong>
+              {" "}
+              5.2 - Do valor e forma de pagamento da ATIVAÇÃO DO PROGRAMA e dos
+              encargos contratuais para o caso de inadimplemento: Cláusula
+              quinta:{" "}
+            </strong>
+            Os valores totais da ativação do programa, bem como a forma de
+            pagamento e data de vencimento, devem obedecer ao descrito na
+            seguinte tabela:
+          </p>
+        </div>
+        <div>
           <TableHiper />
         </div>
         <p className={styles.view}>
@@ -401,31 +407,33 @@ export function TemplateHiper() {
           estes deverão adquirir novas licenças para as versões posteriores e
           eventualmente mais atualizadas em relação a que foi adquirida.​
         </p>
-        <p className={styles.view}>
-          <strong> Parágrafo segundo:</strong> Independente de prévia
-          notificação judicial ou extrajudicial de ambas as partes contratantes,
-          a <strong>UNI4</strong> reserva-se no direito de bloquear
-          integralmente o acesso da <strong>Cliente</strong> ao{" "}
-          <strong>PROGRAMA</strong>, caso constatado uso indevido, pirataria,
-          alterações ilegais, falta ou atraso – de duas parcelas consecutivas ou
-          aleatórias – dos valores cobrados pelo Parceiro Comercial para venda,
-          Suporte do objeto de venda.
-        </p>
-        <p className={styles.view}>
-          <strong> Cláusula oitava: </strong>As partes elegem o foro da Comarca
-          de São Caetano do Sul, São Paulo, com renúncia de qualquer outro por
-          mais privilegiado que seja, para nele dirimirem quaisquer dúvidas ou
-          controvérsias oriundas da execução, cumprimento ou interpretações
-          deste contrato.
-        </p>
-        <p className={styles.view}>
-          Estando juntos e contratados, assinam as partes às duas vias deste
-          instrumento, de igual teor e forma para o mesmo efeito, na presença
-          das testemunhas ao final assinadas.
-        </p>
+        <div className={styles.quebrarPage}>
+          <p className={styles.view}>
+            <strong> Parágrafo segundo:</strong> Independente de prévia
+            notificação judicial ou extrajudicial de ambas as partes
+            contratantes, a <strong>UNI4</strong> reserva-se no direito de
+            bloquear integralmente o acesso da <strong>Cliente</strong> ao{" "}
+            <strong>PROGRAMA</strong>, caso constatado uso indevido, pirataria,
+            alterações ilegais, falta ou atraso – de duas parcelas consecutivas
+            ou aleatórias – dos valores cobrados pelo Parceiro Comercial para
+            venda, Suporte do objeto de venda.
+          </p>
+          <p className={styles.view}>
+            <strong> Cláusula oitava: </strong>As partes elegem o foro da
+            Comarca de São Caetano do Sul, São Paulo, com renúncia de qualquer
+            outro por mais privilegiado que seja, para nele dirimirem quaisquer
+            dúvidas ou controvérsias oriundas da execução, cumprimento ou
+            interpretações deste contrato.
+          </p>
+          <p className={styles.view}>
+            Estando juntos e contratados, assinam as partes às duas vias deste
+            instrumento, de igual teor e forma para o mesmo efeito, na presença
+            das testemunhas ao final assinadas.
+          </p>
+        </div>
       </div>
 
-      <div className={styles.quebrarPage}>
+      <div>
         <h4 className={styles.topic}>
           <strong>
             São Caetano do Sul,{"  "}

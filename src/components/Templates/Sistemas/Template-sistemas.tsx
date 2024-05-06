@@ -8,6 +8,7 @@ import { add } from "date-fns";
 import TableHiper from "../../Tables/FirstTableHiper";
 import { SecondTableHiper } from "../../Tables/SecondTableHiper";
 import { ThirdTableHiper } from "../../Tables/ThirdTableHiper";
+import { useState } from "react";
 
 export function TemplateSistemas() {
   const {
@@ -21,6 +22,8 @@ export function TemplateSistemas() {
     cep,
     date,
   } = InputUser();
+
+  const [testValue, setTestValue] = useState("R$ 135,00");
 
   //transformando a string digitada no input para Date()
   const newDateValue = new Date(date);
@@ -172,7 +175,7 @@ export function TemplateSistemas() {
           comercial com ferramenta de gestão, direcionada a estabelecimentos
           varejistas de pequeno e médio porte;
         </p>
-        <p>
+        <p className={styles.view}>
           <strong>CONSIDERANDO</strong>, que o <strong>CONTRATADO</strong> se
           trata de parceiro credenciado para promover a comercialização da
           licença de uso do referido sistema, bem como, por meio de
@@ -185,7 +188,9 @@ export function TemplateSistemas() {
           habilitados, firmam as partes o presente instrumento, sob as condições
           descritas adiante:
         </p>
-        <h4 className={styles.topic}>3 - NOMENCLATURAS:</h4>
+        <div className={styles.quebrarPage}>
+          <h4 className={styles.topic}>3 - NOMENCLATURAS:</h4>
+        </div>
         <p className={styles.view}>
           <strong>I - PROGRAMA: </strong>programa/sistema de informática
           denominado “Sistema Easy Assist”, integralmente desenvolvido pela UNI4
@@ -453,7 +458,7 @@ export function TemplateSistemas() {
           </p>
         </div>
 
-        <div>
+        <div className={styles.quebrarPage}>
           <h1>Mensalidade Módulos Contratados</h1>
           <table className={styles.TableMMC}>
             <thead>
@@ -486,7 +491,10 @@ export function TemplateSistemas() {
                   <textarea
                     name=""
                     className={styles.TextAreaMMC}
-                    value={"R$ 135,00"}
+                    value={testValue}
+                    onChange={(e) => {
+                      setTestValue(e.target.value);
+                    }}
                   />
                 </tr>
                 <tr>R$50,00</tr>
@@ -575,9 +583,9 @@ export function TemplateSistemas() {
           softwares de terceiros.
         </p>
       </div>
-      <p className={styles.view}>
+      <div>
         <ThirdTableHiper />
-      </p>
+      </div>
       <div>
         <h4 className={styles.topic}>5.4 Da Rescisão deste contrato:</h4>
         <p className={styles.view}>
