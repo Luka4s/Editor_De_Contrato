@@ -1,7 +1,8 @@
 /* Segunda tabela Hiper */
 .secondTable {
-  width: 318px;
-  justify-content: right;
+  display: flex;
+  text-align: start;
+  width: 418px;
   border: 1px solid black;
 }
 /* Configura as linhas da tabela */
@@ -13,7 +14,7 @@
 }
 /* Configura as TextAreas */
 .secondTableTextArea {
-  width: 200px;
+  width: 300px;
   resize: none;
   display: flex;
   text-align: center;
