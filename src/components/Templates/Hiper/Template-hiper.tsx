@@ -405,7 +405,7 @@ export function TemplateHiper() {
           <strong>Parceiro Comercial</strong> e <strong>Cliente</strong>, não se
           estendendo a obrigação para as novas versões lançadas, caso em que
           estes deverão adquirir novas licenças para as versões posteriores e
-          eventualmente mais atualizadas em relação a que foi adquirida.​
+          eventualmente mais atualizadas em relação a que foi adquirida.
         </p>
         <div className={styles.quebrarPage}>
           <p className={styles.view}>

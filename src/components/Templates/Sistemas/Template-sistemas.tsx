@@ -5,10 +5,10 @@ import logoVarejo from "../../../assets/logoVarejo.png";
 import logoEasy from "../../../assets/logoEasy.png";
 import { InputUser } from "../../../Context/InputUserContext";
 import { add } from "date-fns";
-import TableHiper from "../../Tables/FirstTableHiper";
-import { SecondTableHiper } from "../../Tables/SecondTableHiper";
-import { ThirdTableHiper } from "../../Tables/ThirdTableHiper";
+import { ThirdTableEasy } from "../../TablesEasy/ThirdTableEasy";
 import { useState } from "react";
+import { SecondTableEasy } from "../../TablesEasy/SecondTableEasy";
+import { FirstTableEasy } from "../../TablesEasy/FirstTableEasy";
 
 export function TemplateSistemas() {
   const {
@@ -23,7 +23,10 @@ export function TemplateSistemas() {
     date,
   } = InputUser();
 
-  const [testValue, setTestValue] = useState("R$ 135,00");
+  const [EAPDV, setEAPDV] = useState("R$ 135,00");
+  const [EAGAR, setEAGAR] = useState("R$ 50,00");
+  const [UserVF, setUserVF] = useState("R$ 75,00");
+  const [NuvemVF, setNuvemVF] = useState("R$ 120,00");
 
   //transformando a string digitada no input para Date()
   const newDateValue = new Date(date);
@@ -346,7 +349,7 @@ export function TemplateSistemas() {
           tabela:
         </p>
         <div>
-          <TableHiper />
+          <FirstTableEasy />
         </div>
 
         <h1 className={styles.quebrarPage}>
@@ -491,15 +494,42 @@ export function TemplateSistemas() {
                   <textarea
                     name=""
                     className={styles.TextAreaMMC}
-                    value={testValue}
+                    value={EAPDV}
                     onChange={(e) => {
-                      setTestValue(e.target.value);
+                      setEAPDV(e.target.value);
                     }}
                   />
                 </tr>
-                <tr>R$50,00</tr>
-                <tr>R$ 75,00</tr>
-                <tr>R$ 120,00</tr>
+                <tr>
+                  <textarea
+                    name=""
+                    className={styles.TextAreaMMC}
+                    value={EAGAR}
+                    onChange={(e) => {
+                      setEAGAR(e.target.value);
+                    }}
+                  />
+                </tr>
+                <tr>
+                  <textarea
+                    name=""
+                    className={styles.TextAreaMMC}
+                    value={UserVF}
+                    onChange={(e) => {
+                      setUserVF(e.target.value);
+                    }}
+                  />
+                </tr>
+                <tr>
+                  <textarea
+                    name=""
+                    className={styles.TextAreaMMC}
+                    value={NuvemVF}
+                    onChange={(e) => {
+                      setNuvemVF(e.target.value);
+                    }}
+                  />
+                </tr>
               </td>
             </tbody>
           </table>
@@ -540,7 +570,7 @@ export function TemplateSistemas() {
           de vencimento descrita na seguinte tabela:
         </p>
         <p className={styles.view}>
-          <SecondTableHiper />
+          <SecondTableEasy />
         </p>
       </div>
       <div>
@@ -584,7 +614,7 @@ export function TemplateSistemas() {
         </p>
       </div>
       <div>
-        <ThirdTableHiper />
+        <ThirdTableEasy />
       </div>
       <div>
         <h4 className={styles.topic}>5.4 Da Rescisão deste contrato:</h4>

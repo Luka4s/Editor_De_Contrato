@@ -336,12 +336,13 @@
   margin-top: 2rem;
 }
 
+/* Tabela de Treinamento EasyAssist */
 .TTEasy {
   border: 1px solid black;
   border-radius: 6px;
   padding: 8px;
 }
-
+/* Tabela de Mensalidade Módulos Contratados */
 .TableMMC {
   height: 14rem;
 }
@@ -349,15 +350,12 @@
 .TableMMC thead {
   display: grid;
   grid-template-columns: 200px 360px 50px 78px;
-  text-align: center;
   border: 1px solid black;
 }
 .TableMMC tbody {
   display: grid;
-  grid-template-columns: 200px 360px 50px 80px;
+  grid-template-columns: 200px 360px 50px 90px;
   height: 12.6rem;
-  align-items: center;
-  text-align: center;
 }
 
 .TableMMC td {
@@ -381,7 +379,9 @@
   resize: none;
   display: flex;
   text-align: center;
+  padding-top: 0.7rem;
   font-size: 14px;
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
   height: 2.65rem;
   border: none;
