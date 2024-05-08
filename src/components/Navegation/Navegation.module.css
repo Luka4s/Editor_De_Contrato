@@ -6,7 +6,7 @@
 }
 
 .buttons {
-  width: 15rem;
+  width: 35rem;
   background-color: transparent;
   color: black;
   background-color: none;
@@ -74,8 +74,8 @@
 
 .buttons {
   display: flex;
-  width: 13rem;
+  width: 15rem;
   justify-content: center;
   align-items: center;
-  font-weight: 500;
+  font-weight: 400;
 }

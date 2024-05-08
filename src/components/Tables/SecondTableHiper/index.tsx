@@ -1,6 +1,10 @@
+import { useState } from "react";
 import styles from "../SecondTableHiper/SecondTableHiper.module.css";
 
 export function SecondTableHiper() {
+  const [vm, setVm] = useState("R$ 948,10"); //Valor da mensalidade
+  const [dv, setDv] = useState("30 dias após assinatura do contrato"); //Data do 1º vencimento
+
   return (
     <table className={styles.secondTable}>
       <tbody>
@@ -10,10 +14,26 @@ export function SecondTableHiper() {
         </td>
         <td>
           <tr>
-            <textarea name="" id="" className={styles.secondTableTextArea} />
+            <textarea
+              name=""
+              id=""
+              className={styles.secondTableTextArea}
+              value={vm}
+              onChange={(e) => {
+                setVm(e.target.value);
+              }}
+            />
           </tr>
           <tr>
-            <textarea name="" id="" className={styles.secondTableTextArea} />
+            <textarea
+              name=""
+              id=""
+              className={styles.secondTableTextArea}
+              value={dv}
+              onChange={(e) => {
+                setDv(e.target.value);
+              }}
+            />
           </tr>
         </td>
       </tbody>

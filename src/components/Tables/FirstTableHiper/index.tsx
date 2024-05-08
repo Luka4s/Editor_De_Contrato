@@ -1,6 +1,14 @@
+import { useState } from "react";
 import styles from "./TableHiper.module.css";
 
 export default function TableHiper() {
+  const [vta, setVta] = useState("R$ 1.530,00"); //Valor total da Ativação e Serviços Online (remoto)
+  const [qpp, setQPP] = useState("3x"); //Quantidade de parcelas para pagamento
+  const [vcp, setVcp] = useState("R$ 510,00"); //Valor de cada parcela
+  const [mp, setMp] = useState("BOLETO"); //Meio de Pagamento
+  const [dv, setDv] = useState("ATO(PIX)"); //Data de vencimento da 1ª Parcela
+  const [pp, setPp] = useState("30/60 Dias."); //Prazo de pagamento das demais parcelas
+
   return (
     <table className={styles.table}>
       <thead className={styles.headerTableH}>
@@ -32,6 +40,10 @@ export default function TableHiper() {
                 name=""
                 id=""
                 className={styles.textAreaUser}
+                value={vta}
+                onChange={(e) => {
+                  setVta(e.target.value);
+                }}
               ></textarea>
             </tr>
             <tr>
@@ -39,35 +51,55 @@ export default function TableHiper() {
                 name=""
                 id=""
                 className={styles.textAreaUser}
-              ></textarea>
+                value={qpp}
+                onChange={(e) => {
+                  setQPP(e.target.value);
+                }}
+              />
             </tr>
             <tr>
               <textarea
                 name=""
                 id=""
                 className={styles.textAreaUser}
-              ></textarea>
+                value={vcp}
+                onChange={(e) => {
+                  setVcp(e.target.value);
+                }}
+              />
             </tr>
             <tr>
               <textarea
                 name=""
                 id=""
                 className={styles.textAreaUser}
-              ></textarea>
+                value={mp}
+                onChange={(e) => {
+                  setMp(e.target.value);
+                }}
+              />
             </tr>
             <tr>
               <textarea
                 name=""
                 id=""
                 className={styles.textAreaUser}
-              ></textarea>
+                value={dv}
+                onChange={(e) => {
+                  setDv(e.target.value);
+                }}
+              />
             </tr>
             <tr>
               <textarea
                 name=""
                 id=""
                 className={styles.textAreaUser}
-              ></textarea>
+                value={pp}
+                onChange={(e) => {
+                  setPp(e.target.value);
+                }}
+              />
             </tr>
           </td>
         </div>

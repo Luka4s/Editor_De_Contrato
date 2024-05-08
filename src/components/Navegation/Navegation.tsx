@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { FaCashRegister, FaServer } from "react-icons/fa6";
+import { LuPrinter } from "react-icons/lu";
 import { GrSystem } from "react-icons/gr";
+import { PiPlugFill } from "react-icons/pi";
 import styles from "./Navegation.module.css";
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
@@ -77,23 +79,43 @@ export function Navegation() {
               </NavLink>
             </div>
 
-            {/* <div className={styles.buttons}>
+            <div className={styles.buttons}>
               <NavLink
-                to="/locação"
+                to="/cplug"
                 className={`${styles.NavLink} ${
-                  location.pathname === "/locação" ? styles.active : ""
+                  location.pathname === "/cplug" ? styles.active : ""
                 }`}
                 onClick={() => {
-                  navigate("/locação");
-                  setActiveRoute("locação");
+                  navigate("/cplug");
+                  setActiveRoute("cplug");
                 }}
               >
                 <span>
-                  <GrSystem />
+                  <PiPlugFill />
                 </span>
-                LOCAÇÃO
+                CPLUG
               </NavLink>
-            </div> */}
+            </div>
+
+            <div className={styles.buttons}>
+              <NavLink
+                to="/locacaoimpressoras"
+                className={`${styles.NavLink} ${
+                  location.pathname === "/locacaoimpressoras"
+                    ? styles.active
+                    : ""
+                }`}
+                onClick={() => {
+                  navigate("/locacaoimpressoras");
+                  setActiveRoute("locacaoImpressoras");
+                }}
+              >
+                <span>
+                  <LuPrinter />
+                </span>
+                LOCAÇÃO IMPRESSORAS
+              </NavLink>
+            </div>
           </div>
         </div>
       </section>

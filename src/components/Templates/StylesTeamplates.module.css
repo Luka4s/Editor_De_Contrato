@@ -63,12 +63,19 @@
 
 .logoEasyVarejo img {
   width: 220px;
+  height: 150px;
 }
 
 .logoHiper {
   width: 320px;
   display: flex;
   margin-left: 6rem;
+}
+
+.logoCplug {
+  width: 220px;
+  display: flex;
+  margin-left: 50px;
 }
 
 .list {
