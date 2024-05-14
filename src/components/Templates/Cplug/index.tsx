@@ -258,14 +258,12 @@ export function TemplateCplug() {
       <div className={styles.view}>
         <SecondTableCplug />
       </div>
-      <div className={styles.quebrarPage}>
-        <p className={styles.view}>
-          <strong>Parágrafo primeiro:</strong> Incidirá sobre os pagamentos
-          efetuados após a data de vencimento correção monetária, multa
-          moratória de 2% (dois por cento) calculada sobre o valor inadimplido,
-          acrescido de juros de 1% ao mês.
-        </p>
-      </div>
+      <p className={styles.view}>
+        <strong>Parágrafo primeiro:</strong> Incidirá sobre os pagamentos
+        efetuados após a data de vencimento correção monetária, multa moratória
+        de 2% (dois por cento) calculada sobre o valor inadimplido, acrescido de
+        juros de 1% ao mês.
+      </p>
       <p className={styles.view}>
         <strong>Parágrafo segundo:</strong> A falta de pagamento de qualquer
         parcela, por um prazo superior a 15 dias, acarretará no imediato

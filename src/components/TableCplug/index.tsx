@@ -19,13 +19,13 @@ export function SecondTableCplug() {
     console.log(inNumber);
     console.log(newValueDesc);
   } */
-  const valueDesc = 12.28;
-  const desc = 507.5;
-  const descReal = desc.toFixed(2);
-  descReal.replace(".", ",");
-  const array = [253.65, 28.5, 85.5, 28.5, 28.5, 28.5, 82.65, 42.75];
-  const valueArray = array.reduce((acc, att) => acc + att, 0);
-
+  /*   const valueDesc = 12.28; */
+  /*   const desc = 435.01; */
+  /*   const descReal = desc.toFixed(2); */
+  /*descReal.replace(".", ",");
+  const array = [253.65, 28.5, 85.5, 28.5, 28.5, 28.5,  82.65,  42.75];
+  const valueArray = array.reduce((acc, att) => acc + att, 0); 
+  */
   return (
     <>
       <div className={style.bodyPage}>
@@ -36,7 +36,7 @@ export function SecondTableCplug() {
               <h3>Planos Cplug</h3>
             </td>
             <td>
-              <h3>Valor</h3>
+              <h3>Quantidade</h3>
             </td>
           </thead>
           <tbody className={style.firtTbodyTable}>
@@ -45,7 +45,9 @@ export function SecondTableCplug() {
             </td>
             <td>
               <tr>
-                <span>R$ {array[0]}</span>
+                <span>
+                  <input type="number" name="" id="" />
+                </span>
               </tr>
             </td>
           </tbody>
@@ -57,7 +59,7 @@ export function SecondTableCplug() {
             </td>
             <td>
               <tr>
-                <h3>Valor</h3>
+                <h3>Quantidade</h3>
               </tr>
             </td>
           </thead>
@@ -68,27 +70,37 @@ export function SecondTableCplug() {
               <tr>Estoque em Grade</tr>
               <tr>Delivery</tr>
               <tr>Controle de mesas</tr>
-              <tr>Facilita NFE</tr>
+              {/* <tr>Facilita NFE</tr> */}
             </td>
             <td>
               <tr>
-                <span>R$ {array[1].toFixed(2)}</span>
+                <span>
+                  <input type="number" name="" id="" />
+                </span>
               </tr>
               <tr>
-                <span>R$ {array[2].toFixed(2)}</span>
+                <span>
+                  <input type="number" name="" id="" />
+                </span>
               </tr>
               <tr>
-                <span>R$ {array[3].toFixed(2)}</span>
+                <span>
+                  <input type="number" name="" id="" />
+                </span>
               </tr>
               <tr>
-                <span>R$ {array[4].toFixed(2)}</span>
+                <span>
+                  <input type="number" name="" id="" />
+                </span>
               </tr>
               <tr>
-                <span>R$ {array[5].toFixed(2)}</span>
+                <span>
+                  <input type="number" name="" id="" />
+                </span>
               </tr>
-              <tr>
-                <span>R$ {array[6]}</span>
-              </tr>
+              {/* <tr>
+                <span> {array[6]}</span>
+              </tr> */}
             </td>
           </tbody>
           <thead className={style.tableThead}>
@@ -104,24 +116,38 @@ export function SecondTableCplug() {
             </td>
             <td>
               <tr>
-                <span>R$ {array[7]}</span>
+                <span>
+                  <input type="number" name="" id="" />
+                </span>
               </tr>
             </td>
           </tbody>
-          <tfoot>
+          <tfoot className={style.firtTFooterTable}>
             <td>
               <tr>Total</tr>
-              <tr>
-                Total com desconto de <strong>{valueDesc}</strong>%
-              </tr>
+              <tr>Total com desconto do plano anual</tr>
             </td>
             <td>
               <tr>
-                R$ <span>{valueArray}</span>
+                <span>
+                  <input
+                    type="number"
+                    name=""
+                    id=""
+                    className={style.inputValueTotal}
+                  />
+                </span>
               </tr>
               <tr>
                 <div>
-                  R$ <span>{descReal}</span>
+                  <span>
+                    <input
+                      type="number"
+                      name=""
+                      id=""
+                      className={style.inputValueTotal}
+                    />
+                  </span>
                 </div>
               </tr>
             </td>

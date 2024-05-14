@@ -23,10 +23,6 @@ export function MyModal() {
   const [valueIten, setValueIten] = useState([0]);
   const [inputQuantity, setInputQuantity] = useState("");
   const [inputValueIten, setInputValueIten] = useState("");
-  console.log("itenTable", itenTable);
-  console.log("sumTotal", sumTotal);
-  console.log("QuantityItens", quantityItens);
-  console.log("ValueIten", valueIten);
 
   const fecharModal = () => {
     const att = quantityItens.reduce((acc, quantity, index) => {
@@ -100,6 +96,7 @@ export function MyModal() {
         </h3>
         <label htmlFor="input1">Quantidade</label>
         <input
+          className={styles.inputModal}
           type="number"
           id="input1"
           value={inputQuantity}
@@ -110,6 +107,7 @@ export function MyModal() {
 
         <label htmlFor="input2">Serviço</label>
         <input
+          className={styles.inputModal}
           type="text"
           id="input2"
           value={contentIten || ""}
@@ -122,6 +120,7 @@ export function MyModal() {
 
         <label htmlFor="input3">Valor</label>
         <input
+          className={styles.inputModal}
           type="number"
           id="input3"
           value={inputValueIten}
