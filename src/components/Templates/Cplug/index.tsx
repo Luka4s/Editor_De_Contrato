@@ -258,12 +258,14 @@ export function TemplateCplug() {
       <div className={styles.view}>
         <SecondTableCplug />
       </div>
-      <p className={styles.view}>
-        <strong>Parágrafo primeiro:</strong> Incidirá sobre os pagamentos
-        efetuados após a data de vencimento correção monetária, multa moratória
-        de 2% (dois por cento) calculada sobre o valor inadimplido, acrescido de
-        juros de 1% ao mês.
-      </p>
+      <div className={styles.quebrarPage}>
+        <p className={styles.view}>
+          <strong>Parágrafo primeiro:</strong> Incidirá sobre os pagamentos
+          efetuados após a data de vencimento correção monetária, multa
+          moratória de 2% (dois por cento) calculada sobre o valor inadimplido,
+          acrescido de juros de 1% ao mês.
+        </p>
+      </div>
       <p className={styles.view}>
         <strong>Parágrafo segundo:</strong> A falta de pagamento de qualquer
         parcela, por um prazo superior a 15 dias, acarretará no imediato
@@ -325,14 +327,16 @@ export function TemplateCplug() {
           ainda, por qualquer outro determinado pelo Governo Federal, a ﬁm de
           manter o equilíbrio econômico e ﬁnanceiro desta prestação de serviços.
         </p>
-        <p className={styles.view}>
-          <strong>Parágrafo quinto:</strong> A Contratada deverá prestar suporte
-          técnico telefônico, com apoio de ferramentas para atendimento remoto
-          sempre que o cliente solicitar, de segunda a sábado, das 9:00 as
-          18:00. O suporte refere-se exclusivamente ao Sistema Hiper e não
-          estende-se a equipamentos, infraestrutura, sistemas operacionais ou
-          softwares de terceiros.
-        </p>
+        <div className={styles.quebrarPage}>
+          <p className={styles.view}>
+            <strong>Parágrafo quinto:</strong> A Contratada deverá prestar
+            suporte técnico telefônico, com apoio de ferramentas para
+            atendimento remoto sempre que o cliente solicitar, de segunda a
+            sábado, das 9:00 as 18:00. O suporte refere-se exclusivamente ao
+            Sistema Hiper e não estende-se a equipamentos, infraestrutura,
+            sistemas operacionais ou softwares de terceiros.
+          </p>
+        </div>
         <h4 className={styles.topic}>5.4 Da Rescisão deste contrato:</h4>
         <p className={styles.view}>
           <strong>Parágrafo único:</strong> Pelo presente instrumento, a
