@@ -99,7 +99,7 @@ export function SecondTableCplug() {
                 </span>
               </tr>
               {/* <tr>
-                <span> {array[6]}</span>
+                <span> <input type="number" name="" id="" /></span>
               </tr> */}
             </td>
           </tbody>
