@@ -6,7 +6,9 @@ export function Switcher() {
   const { switchInfra } = InputUser();
 
   return !switchInfra ? (
-    <TemplateInfra />
+    <div>
+      <TemplateInfra />
+    </div>
   ) : (
     <div>
       <TemplateSistemas />

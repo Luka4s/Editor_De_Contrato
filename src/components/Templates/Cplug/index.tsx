@@ -4,6 +4,8 @@ import logoCplug from "../../../assets/logoCplug.png";
 import { InputUser } from "../../../Context/InputUserContext";
 import { add } from "date-fns";
 import { FirstTableEasy } from "../../TablesEasy/FirstTableEasy";
+import { SecondTableCplug } from "../../TableCplug";
+import { useState } from "react";
 
 export function TemplateCplug() {
   const {
@@ -16,8 +18,9 @@ export function TemplateCplug() {
     neighborhood,
     cep,
     date,
-    itenTable,
   } = InputUser();
+
+  const [TiValue, setTiValue] = useState("R$ ");
 
   //transformando a string digitada no input para Date()
   const newDateValue = new Date(date);
@@ -170,6 +173,7 @@ export function TemplateCplug() {
           III –<strong> TREINAR/TREINAMENTO</strong>: orientar o cliente a usar
           corretamente o PROGRAMA:{" "}
         </p>
+
         <p className={styles.view}>
           IV – <strong>MANUTENÇÃO</strong>: compreende-se como manutenção os
           serviços consistentes em manter atualizadas as funções existentes nos
@@ -179,13 +183,16 @@ export function TemplateCplug() {
           “Sistema CPLUG” que venham a ser liberadas, desde que contenham
           alterações, acréscimos de rotina ou melhoria de desempenho.{" "}
         </p>
-        <p className={styles.view}>
-          V – <strong>SUPORTE</strong>: Compreende-se como suporte os serviços
-          de apoio e orientação exclusivamente sobre os módulos do PROGRAMA,
-          quanto ao funcionamento dos seus módulos objetivando seu melhor
-          aproveitamento, esclarecendo dúvidas operacionais através de ligações
-          telefônicas, e-mails e demais modalidades de contato virtual.{" "}
-        </p>
+        <div className={styles.quebrarPage}>
+          <p className={styles.view}>
+            V – <strong>SUPORTE</strong>: Compreende-se como suporte os serviços
+            de apoio e orientação exclusivamente sobre os módulos do PROGRAMA,
+            quanto ao funcionamento dos seus módulos objetivando seu melhor
+            aproveitamento, esclarecendo dúvidas operacionais através de
+            ligações telefônicas, e-mails e demais modalidades de contato
+            virtual.{" "}
+          </p>
+        </div>
       </div>
       <div>
         <h4 className={styles.topic}>4 - DO OBJETO CONTRATUAL:</h4>
@@ -230,8 +237,27 @@ export function TemplateCplug() {
         totais da ativação do PROGRAMA, bem como a forma de pagamento e data de
         vencimento, devem obedecer ao descrito na seguinte tabela:
       </p>
-      <div className={styles.view}>{/* Tabela de implementação */}</div>
-      <div className={styles.view}>{/* Tabela de modulos contratados */}</div>
+      <div className={styles.view}>
+        {/*Tabela de implementação*/}
+        <div className={styles.divImplementation}>
+          <strong>TABELA DE IMPLEMENTAÇÃO</strong>
+          <div className={styles.inputImplementation}>
+            <span>Valor da implementação</span>
+            <textarea
+              name=""
+              id=""
+              placeholder="Digite o valor da implementação"
+              value={TiValue}
+              onChange={(e) => {
+                setTiValue(e.target.value);
+              }}
+            />
+          </div>
+        </div>
+      </div>
+      <div className={styles.view}>
+        <SecondTableCplug />
+      </div>
       <p className={styles.view}>
         <strong>Parágrafo primeiro:</strong> Incidirá sobre os pagamentos
         efetuados após a data de vencimento correção monetária, multa moratória
@@ -356,7 +382,7 @@ export function TemplateCplug() {
           efeito, na presença das testemunhas ao ﬁnal assinadas.
         </p>
       </div>
-      <div className={itenTable.length == 10 ? "" : styles.quebrarPage}>
+      <div>
         <h4 className={styles.topic}>
           <strong>
             São Caetano do Sul,{"  "}

@@ -1,0 +1,21 @@
+.CplugTable {
+  width: 400px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tableThead {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.firtTbodyTable {
+  display: grid;
+  grid-template-columns: 250px 150px;
+}
+.firtTbodyTable tr {
+  display: flex;
+  border: 1px solid black;
+  justify-content: center;
+}

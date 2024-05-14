@@ -1,15 +1,18 @@
 import { InputUser } from "../../Context/InputUserContext";
 import { TemplateCplug } from "../Templates/Cplug";
-import { TemplateSistemas } from "../Templates/Sistemas/Template-sistemas";
+import { TemplatePropostaCplug } from "../Templates/PropostaCPlug";
+//import { TemplatePropostaCplug } from "../Templates/PropostaCPlug";
 
 export function SwitcherCplug() {
   const { switchInfra } = InputUser();
 
   return !switchInfra ? (
-    <TemplateCplug />
+    <div>
+      <TemplateCplug />
+    </div>
   ) : (
     <div>
-      <TemplateSistemas />
+      <TemplatePropostaCplug />
     </div>
   );
 }

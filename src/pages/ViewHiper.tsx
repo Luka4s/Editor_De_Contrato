@@ -6,8 +6,6 @@ import styles from "../components/Templates/StylesTeamplates.module.css";
 import { ViewInputsHiper } from "../components/ViewInputs/Hiper/ViewInputsHiperContrato";
 import { VisualizationHiper } from "../components/Visualization/VisualizationHiper";
 export function ViewHiper() {
-  // const { setSwitchHiper, switchHiper } = InputUser();
-
   return (
     <div>
       <div>

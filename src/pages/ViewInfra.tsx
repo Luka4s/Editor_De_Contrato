@@ -8,18 +8,12 @@ import { Background } from "../components/Background/Background";
 //import { InputUser } from "../Context/InputUserContext";
 
 export function ViewInfra() {
-  //const { setSwitchInfra, switchInfra } = InputUser();
-  //console.log(switchInfra);
-
   return (
     <div>
       <div>
         <Background />
       </div>
 
-      {/* <div className={styles.buttonSwitchContainer}>
-            <button className={styles.buttonSwitch} onClick={() => {setSwitchInfra(!switchInfra)}}><span>{switchInfra?"Proposta":"Contrato"}<TbSwitchHorizontal/></span></button>
-          </div> */}
       <div className={styles.wrapper}>
         <div className={styles.menu}>
           <div className={styles.info}>
