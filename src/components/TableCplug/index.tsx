@@ -137,7 +137,7 @@ export function SecondTableCplug() {
             <td>
               <tr>Total:</tr>
               <tr>Total com desconto do plano anual:</tr>
-              <tr>Vencimento da primeira parcela:</tr>
+              <tr>Vencimento da primeira mensalidade:</tr>
             </td>
             <td>
               <tr>

@@ -45,9 +45,10 @@
 .firtTFooterTable tr {
   display: flex;
   height: 2.9rem;
+  font-size: 15px;
   border-top: 1px solid black;
   border-right: 1px solid black;
   justify-content: center;
-  align-items: center;
+  text-align: center;
   padding: 4px;
 }
