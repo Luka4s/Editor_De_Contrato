@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { useState } from "react";
 import style from "./TableCplug.module.css";
 
 export function SecondTableCplug() {
@@ -26,6 +27,8 @@ export function SecondTableCplug() {
   const array = [253.65, 28.5, 85.5, 28.5, 28.5, 28.5,  82.65,  42.75];
   const valueArray = array.reduce((acc, att) => acc + att, 0); 
   */
+  const [PcContent, setPcContent] = useState("ideal");
+
   return (
     <>
       <div className={style.bodyPage}>
@@ -41,7 +44,15 @@ export function SecondTableCplug() {
           </thead>
           <tbody className={style.firtTbodyTable}>
             <td>
-              <tr>ideal</tr>
+              <tr>
+                <input
+                  type="text"
+                  value={PcContent}
+                  onChange={(e) => {
+                    setPcContent(e.target.value);
+                  }}
+                />
+              </tr>
             </td>
             <td>
               <tr>
@@ -126,7 +137,7 @@ export function SecondTableCplug() {
             <td>
               <tr>Total:</tr>
               <tr>Total com desconto do plano anual:</tr>
-              <tr>Vencimento da primeira:</tr>
+              <tr>Vencimento da primeira parcela:</tr>
             </td>
             <td>
               <tr>
