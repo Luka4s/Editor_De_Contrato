@@ -24,7 +24,7 @@ export function ViewCplug() {
             }}
           >
             <span>
-              {switchInfra ? "Proposta" : "Contrato"}
+              {switchInfra ? "Contrato" : "Proposta"}
               <TbSwitchHorizontal />
             </span>
           </button>

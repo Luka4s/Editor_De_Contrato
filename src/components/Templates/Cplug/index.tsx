@@ -70,7 +70,7 @@ export function TemplateCplug() {
           <span>{estado}</span>, na rua <span>{street}</span>,{" "}
           <span>{numberHouse}</span> ,Bairro: <span>{neighborhood}</span>, CEP{" "}
           <span>{cep}</span>, Brasil, doravante denominada simplesmente de{" "}
-          <strong>USUÁRIO</strong>.
+          <strong>CONTRATANTE</strong>.
         </p>
 
         <h4 className={styles.topic}>Horário Comercial:</h4>
@@ -89,24 +89,23 @@ export function TemplateCplug() {
           prevalece as disposições da proposta comercial.
         </p>
       </div>
-      <div className={styles.quebrarPage}>
-        <div>
-          <h4 className={styles.topic}>1 -DECLARAÇÃO DE VONTADE:</h4>
-        </div>
-        <div className={styles.view}>
-          <p className={styles.view}>
-            1.1. O CONTRATADO DECLARA TER CIÊNCIA DOS DIREITOS E OBRIGAÇÕES
-            DECORRENTES DO PRESENTE TERMO, CONSTITUINDO ESTE INSTRUMENTO O
-            ACORDO COMPLETO ENTRE AS PARTES. DECLARA, AINDA, TER LIDO,
-            COMPREENDIDO E ACEITO TODOS OS TERMOS E CONDIÇÕES DESTE INSTRUMENTO.{" "}
-          </p>
-          <p className={styles.view}>
-            1.2. A partir do momento em que o CONTRATANTE aceitar este TERMO, as
-            disposições aqui constantes regerão a relação entre a CONTRATADO, o
-            CONTRATANTE e o PARCEIRO, razão pela qual é recomendável que o
-            CONTRATANTE imprima uma cópia deste documento para futura
-            referência.
-          </p>
+      <div>
+        <h4 className={styles.topic}>1 -DECLARAÇÃO DE VONTADE:</h4>
+      </div>
+      <div className={styles.view}>
+        <p className={styles.view}>
+          1.1. O CONTRATADO DECLARA TER CIÊNCIA DOS DIREITOS E OBRIGAÇÕES
+          DECORRENTES DO PRESENTE TERMO, CONSTITUINDO ESTE INSTRUMENTO O ACORDO
+          COMPLETO ENTRE AS PARTES. DECLARA, AINDA, TER LIDO, COMPREENDIDO E
+          ACEITO TODOS OS TERMOS E CONDIÇÕES DESTE INSTRUMENTO.{" "}
+        </p>
+        <p className={styles.view}>
+          1.2. A partir do momento em que o CONTRATANTE aceitar este TERMO, as
+          disposições aqui constantes regerão a relação entre a CONTRATADO, o
+          CONTRATANTE e o PARCEIRO, razão pela qual é recomendável que o
+          CONTRATANTE imprima uma cópia deste documento para futura referência.
+        </p>
+        <div className={styles.quebrarPage}>
           <p className={styles.view}>
             1.3. O CONTRATANTE se declara ciente de que as operações que
             corresponderem à aceitação de determinadas opções serão registradas
@@ -145,8 +144,8 @@ export function TemplateCplug() {
         </p>
         <p className={styles.view}>
           CONSIDERANDO, que a ora CONTRATANTE deseja adquirir a licença de uso
-          do “Sistema Hiper”, bem ainda, que lhe seja oferecido suporte técnico
-          e manutenção do objeto de venda por parte do CONTRATADO, por meio de
+          do “ConnectPlug”, bem ainda, que lhe seja oferecido suporte técnico e
+          manutenção do objeto de venda por parte do CONTRATADO, por meio de
           proﬁssionais devidamente habilitados, ﬁrmam as partes o presente
           instrumento, sob as condições descritas adiante:{" "}
         </p>
@@ -183,16 +182,13 @@ export function TemplateCplug() {
           “Sistema CPLUG” que venham a ser liberadas, desde que contenham
           alterações, acréscimos de rotina ou melhoria de desempenho.{" "}
         </p>
-        <div className={styles.quebrarPage}>
-          <p className={styles.view}>
-            V – <strong>SUPORTE</strong>: Compreende-se como suporte os serviços
-            de apoio e orientação exclusivamente sobre os módulos do PROGRAMA,
-            quanto ao funcionamento dos seus módulos objetivando seu melhor
-            aproveitamento, esclarecendo dúvidas operacionais através de
-            ligações telefônicas, e-mails e demais modalidades de contato
-            virtual.{" "}
-          </p>
-        </div>
+        <p className={styles.view}>
+          V – <strong>SUPORTE</strong>: Compreende-se como suporte os serviços
+          de apoio e orientação exclusivamente sobre os módulos do PROGRAMA,
+          quanto ao funcionamento dos seus módulos objetivando seu melhor
+          aproveitamento, esclarecendo dúvidas operacionais através de ligações
+          telefônicas, e-mails e demais modalidades de contato virtual.{" "}
+        </p>
       </div>
       <div>
         <h4 className={styles.topic}>4 - DO OBJETO CONTRATUAL:</h4>
@@ -202,12 +198,14 @@ export function TemplateCplug() {
           PROGRAMA em favor do Cliente, bem como demais componentes do produto,
           sob o modelo aluguel, pelo período de 12 meses.
         </p>
-        <p className={styles.view}>
-          Parágrafo único: As partes acordam que a relação comercial se
-          restringe somente entre o Parceiro Comercial e o Cliente , isentando a
-          CPLUG de qualquer responsabilidade consumerista, bem como de prestação
-          de serviço de suporte e manutenção.{" "}
-        </p>
+        <div className={styles.quebrarPage}>
+          <p className={styles.view}>
+            Parágrafo único: As partes acordam que a relação comercial se
+            restringe somente entre o Parceiro Comercial e o Cliente , isentando
+            a CPLUG de qualquer responsabilidade consumerista, bem como de
+            prestação de serviço de suporte e manutenção.{" "}
+          </p>
+        </div>
       </div>
       <h4 className={styles.topic}>5 - DAS CLÁUSULAS CONTRATUAIS:</h4>
       <h4>5.1 - Da obrigação das partes:</h4>
@@ -217,6 +215,7 @@ export function TemplateCplug() {
         ao Cliente, será considerado Serviço Adicional, e formalizada em
         proposta comercial.
       </p>
+
       <p className={styles.view}>
         <strong>Cláusula terceira:</strong> Constitui obrigação do Cliente o
         pagamento integral do valor exigido para ativação da licença do
@@ -264,13 +263,15 @@ export function TemplateCplug() {
         de 2% (dois por cento) calculada sobre o valor inadimplido, acrescido de
         juros de 1% ao mês.
       </p>
-      <p className={styles.view}>
-        <strong>Parágrafo segundo:</strong> A falta de pagamento de qualquer
-        parcela, por um prazo superior a 15 dias, acarretará no imediato
-        bloqueio de acesso e funcionamento do PROGRAMA, bem ainda a cobrança de
-        eventual valor inadimplido de forma administrativa ou judicial,
-        independente de prévia comunicação judicial ou extrajudicial.
-      </p>
+      <div className={styles.quebrarPage}>
+        <p className={styles.view}>
+          <strong>Parágrafo segundo:</strong> A falta de pagamento de qualquer
+          parcela, por um prazo superior a 15 dias, acarretará no imediato
+          bloqueio de acesso e funcionamento do PROGRAMA, bem ainda a cobrança
+          de eventual valor inadimplido de forma administrativa ou judicial,
+          independente de prévia comunicação judicial ou extrajudicial.
+        </p>
+      </div>
       <p className={styles.view}>
         <strong>parágrafo terceiro:</strong>A forma de pagamento - se por meio
         de Boleto, Depósito Bancário ou de forma direta -, serão convencionados

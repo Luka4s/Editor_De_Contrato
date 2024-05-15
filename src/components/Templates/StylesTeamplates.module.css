@@ -227,7 +227,7 @@
   align-items: center;
   justify-content: center;
   background-color: var(--primary);
-
+  padding: 8px;
   width: auto;
   height: auto;
 }

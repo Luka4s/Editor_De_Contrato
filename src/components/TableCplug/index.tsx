@@ -124,8 +124,9 @@ export function SecondTableCplug() {
           </tbody>
           <tfoot className={style.firtTFooterTable}>
             <td>
-              <tr>Total</tr>
-              <tr>Total com desconto do plano anual</tr>
+              <tr>Total:</tr>
+              <tr>Total com desconto do plano anual:</tr>
+              <tr>Vencimento da primeira:</tr>
             </td>
             <td>
               <tr>
@@ -143,6 +144,18 @@ export function SecondTableCplug() {
                   <span>
                     <input
                       type="number"
+                      name=""
+                      id=""
+                      className={style.inputValueTotal}
+                    />
+                  </span>
+                </div>
+              </tr>
+              <tr>
+                <div>
+                  <span>
+                    <input
+                      type="text"
                       name=""
                       id=""
                       className={style.inputValueTotal}
