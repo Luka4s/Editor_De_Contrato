@@ -76,14 +76,68 @@ export function SecondTableCplug() {
           </thead>
           <tbody className={style.firtTbodyTable}>
             <td>
+              <tr>PDVS</tr>
+              <tr>Usuários</tr>
+              <tr>Relatórios Dinâmicos</tr>
+              <tr>Vendas/Estoque/Financeiro</tr>
+              <tr>Conciliação Bancária</tr>
+              <tr>Contratos de cartões e outros</tr>
+              <tr>Controle de mesas</tr>
+              <tr>Importação de XML</tr>
+              <tr>Notas fiscais ilimitadas</tr>
+              <tr>Ordem de serviço</tr>
               <tr>Produção</tr>
               <tr>Hub Delivery</tr>
               <tr>Estoque em Grade</tr>
               <tr>Delivery</tr>
-              <tr>Controle de mesas</tr>
               {/* <tr>Facilita NFE</tr> */}
             </td>
             <td>
+              <tr>
+                <span>
+                  <input type="number" name="" id="" />
+                </span>
+              </tr>
+              <tr>
+                <span>
+                  <input type="number" name="" id="" />
+                </span>
+              </tr>
+              <tr>
+                <span>
+                  <input type="number" name="" id="" />
+                </span>
+              </tr>
+              <tr>
+                <span>
+                  <input type="number" name="" id="" />
+                </span>
+              </tr>
+              <tr>
+                <span>
+                  <input type="number" name="" id="" />
+                </span>
+              </tr>
+              <tr>
+                <span>
+                  <input type="number" name="" id="" />
+                </span>
+              </tr>
+              <tr>
+                <span>
+                  <input type="number" name="" id="" />
+                </span>
+              </tr>
+              <tr>
+                <span>
+                  <input type="number" name="" id="" />
+                </span>
+              </tr>
+              <tr>
+                <span>
+                  <input type="number" name="" id="" />
+                </span>
+              </tr>
               <tr>
                 <span>
                   <input type="number" name="" id="" />

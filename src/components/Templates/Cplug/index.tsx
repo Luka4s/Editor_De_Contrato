@@ -191,14 +191,14 @@ export function TemplateCplug() {
         </p>
       </div>
       <div>
-        <h4 className={styles.topic}>4 - DO OBJETO CONTRATUAL:</h4>
-        <p className={styles.view}>
-          Cláusula primeira: Pelo presente instrumento, a{" "}
-          <strong>CONTRATADA</strong> formaliza a cessão da licença de uso do
-          PROGRAMA em favor do Cliente, bem como demais componentes do produto,
-          sob o modelo aluguel, pelo período de 12 meses.
-        </p>
         <div className={styles.quebrarPage}>
+          <h4 className={styles.topic}>4 - DO OBJETO CONTRATUAL:</h4>
+          <p className={styles.view}>
+            Cláusula primeira: Pelo presente instrumento, a{" "}
+            <strong>CONTRATADA</strong> formaliza a cessão da licença de uso do
+            PROGRAMA em favor do Cliente, bem como demais componentes do
+            produto, sob o modelo aluguel, pelo período de 12 meses.
+          </p>
           <p className={styles.view}>
             Parágrafo único: As partes acordam que a relação comercial se
             restringe somente entre o Parceiro Comercial e o Cliente , isentando
@@ -236,26 +236,28 @@ export function TemplateCplug() {
         totais da ativação do PROGRAMA, bem como a forma de pagamento e data de
         vencimento, devem obedecer ao descrito na seguinte tabela:
       </p>
-      <div className={styles.view}>
-        {/*Tabela de implementação*/}
-        <div className={styles.divImplementation}>
-          <strong>TABELA DE IMPLEMENTAÇÃO</strong>
-          <div className={styles.inputImplementation}>
-            <span>Valor da implementação</span>
-            <textarea
-              name=""
-              id=""
-              placeholder="Digite o valor da implementação"
-              value={TiValue}
-              onChange={(e) => {
-                setTiValue(e.target.value);
-              }}
-            />
+      <div className={styles.quebrarPage}>
+        <div className={styles.view}>
+          {/*Tabela de implementação*/}
+          <div className={styles.divImplementation}>
+            <strong>TABELA DE IMPLEMENTAÇÃO</strong>
+            <div className={styles.inputImplementation}>
+              <span>Valor da implementação</span>
+              <textarea
+                name=""
+                id=""
+                placeholder="Digite o valor da implementação"
+                value={TiValue}
+                onChange={(e) => {
+                  setTiValue(e.target.value);
+                }}
+              />
+            </div>
           </div>
         </div>
-      </div>
-      <div className={styles.view}>
-        <SecondTableCplug />
+        <div className={styles.view}>
+          <SecondTableCplug />
+        </div>
       </div>
       <p className={styles.view}>
         <strong>Parágrafo primeiro:</strong> Incidirá sobre os pagamentos
@@ -263,7 +265,7 @@ export function TemplateCplug() {
         de 2% (dois por cento) calculada sobre o valor inadimplido, acrescido de
         juros de 1% ao mês.
       </p>
-      <div className={styles.quebrarPage}>
+      <div>
         <p className={styles.view}>
           <strong>Parágrafo segundo:</strong> A falta de pagamento de qualquer
           parcela, por um prazo superior a 15 dias, acarretará no imediato
@@ -326,16 +328,14 @@ export function TemplateCplug() {
           ainda, por qualquer outro determinado pelo Governo Federal, a ﬁm de
           manter o equilíbrio econômico e ﬁnanceiro desta prestação de serviços.
         </p>
-        <div className={styles.quebrarPage}>
-          <p className={styles.view}>
-            <strong>Parágrafo quinto:</strong> A Contratada deverá prestar
-            suporte técnico telefônico, com apoio de ferramentas para
-            atendimento remoto sempre que o cliente solicitar, de segunda a
-            sábado, das 9:00 as 18:00. O suporte refere-se exclusivamente ao
-            Sistema Hiper e não estende-se a equipamentos, infraestrutura,
-            sistemas operacionais ou softwares de terceiros.
-          </p>
-        </div>
+        <p className={styles.view}>
+          <strong>Parágrafo quinto:</strong> A Contratada deverá prestar suporte
+          técnico telefônico, com apoio de ferramentas para atendimento remoto
+          sempre que o cliente solicitar, de segunda a sábado, das 9:00 as
+          18:00. O suporte refere-se exclusivamente ao Sistema Hiper e não
+          estende-se a equipamentos, infraestrutura, sistemas operacionais ou
+          softwares de terceiros.
+        </p>
         <h4 className={styles.topic}>5.4 Da Rescisão deste contrato:</h4>
         <p className={styles.view}>
           <strong>Parágrafo único:</strong> Pelo presente instrumento, a
@@ -366,6 +366,7 @@ export function TemplateCplug() {
           posteriores e eventualmente mais atualizadas em relação a que foi
           adquirida.
         </p>
+        <div className={styles.quebrarPage}></div>
         <p className={styles.view}>
           <strong>Parágrafo segundo:</strong> Independente de prévia notiﬁcação
           judicial ou extrajudicial de ambas as partes contratantes, a CPLUG

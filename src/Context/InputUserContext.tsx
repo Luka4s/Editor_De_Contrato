@@ -17,7 +17,6 @@ interface IUserContext {
   itenTable: TableData[];
   contentIten: string;
   quantityItens: number[];
-  // valueIten: number[];
   modalVisible: boolean;
   inputTextValue: string;
   inputInfra: boolean;
@@ -41,7 +40,6 @@ interface IUserContext {
   setItenTable: (e: any) => void;
   setContentIten: (e: any) => void;
   setQuantityItens: (e: any) => void;
-  // setValueIten: (e: any) => void;
   setModalVisible: (e: any) => void;
   setInputTextValue: (e: any) => void;
   setSumTotal: (e: any) => void;
