@@ -281,6 +281,7 @@ export function TemplateCplug() {
         ser formalizada a escolha de pagamento em documento próprio e anexado ao
         presente.
       </p>
+      <div className={styles.quebrarPage}></div>
       <p className={styles.view}>
         <strong>5.3</strong> Do valor e forma de pagamento para aluguel do
         PROGRAMA, manutenção e suporte técnico e dos encargos contratuais para o
@@ -347,6 +348,8 @@ export function TemplateCplug() {
           5.5 Do relacionamento das partes com a CPLUG e das obrigações e
           direitos desta:
         </h4>
+        <div className={styles.quebrarPage}></div>
+
         <p className={styles.view}>
           <strong>Cláusula sétima:</strong> Sem embargo das condições constantes
           no Parágrafo único da Cláusula primeira, as partes ora Contratantes –
@@ -358,6 +361,7 @@ export function TemplateCplug() {
           promover as atualizações e condições legais necessárias para o uso do
           PROGRAMA, de acordo com a sua versão fabricada.
         </p>
+
         <p className={styles.view}>
           <strong>Parágrafo primeiro:</strong> A atualização mencionada nesta
           cláusula é restrita a versão adquirida pelo Parceiro Comercial e
@@ -366,7 +370,6 @@ export function TemplateCplug() {
           posteriores e eventualmente mais atualizadas em relação a que foi
           adquirida.
         </p>
-        <div className={styles.quebrarPage}></div>
         <p className={styles.view}>
           <strong>Parágrafo segundo:</strong> Independente de prévia notiﬁcação
           judicial ou extrajudicial de ambas as partes contratantes, a CPLUG

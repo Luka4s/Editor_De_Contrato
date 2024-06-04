@@ -85,14 +85,37 @@ export function SecondTableCplug() {
               <tr>Controle de mesas</tr>
               <tr>Importação de XML</tr>
               <tr>Notas fiscais ilimitadas</tr>
+              <tr>3000 Notas fiscais</tr>
               <tr>Ordem de serviço</tr>
               <tr>Produção</tr>
               <tr>Hub Delivery</tr>
               <tr>Estoque em Grade</tr>
               <tr>Delivery</tr>
-              {/* <tr>Facilita NFE</tr> */}
+              <tr>Cardapio Digital</tr>
+              <tr>App Gestão Cplug</tr>
+              <tr>Facilita NFE</tr>
             </td>
             <td>
+              <tr>
+                <span>
+                  <input type="number" name="" id="" />
+                </span>
+              </tr>
+              <tr>
+                <span>
+                  <input type="number" name="" id="" />
+                </span>
+              </tr>
+              <tr>
+                <span>
+                  <input type="number" name="" id="" />
+                </span>
+              </tr>
+              <tr>
+                <span>
+                  <input type="number" name="" id="" />
+                </span>
+              </tr>
               <tr>
                 <span>
                   <input type="number" name="" id="" />
