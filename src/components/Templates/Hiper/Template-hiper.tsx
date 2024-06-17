@@ -7,6 +7,7 @@ import { add } from "date-fns";
 import TableHiper from "../../Tables/FirstTableHiper";
 import { SecondTableHiper } from "../../Tables/SecondTableHiper";
 import { ThirdTableHiper } from "../../Tables/ThirdTableHiper";
+import { CreateTable } from "../../CreateTable/Index";
 export function TemplateHiper() {
   const {
     userInfo,
@@ -18,6 +19,8 @@ export function TemplateHiper() {
     neighborhood,
     cep,
     date,
+    itenTable,
+    sumTotal,
   } = InputUser();
 
   //transformando a string digitada no input para Date()
@@ -277,7 +280,7 @@ export function TemplateHiper() {
           ou onerosamente, provisória ou permanente, assim como seus manuais ou
           quaisquer informações.
         </p>
-        <div className={styles.quebrarPage}>
+        <div>
           <p className={styles.view}>
             <strong>
               {" "}
@@ -289,6 +292,42 @@ export function TemplateHiper() {
             pagamento e data de vencimento, devem obedecer ao descrito na
             seguinte tabela:
           </p>
+        </div>
+        <div>
+          <div className={styles.view}>
+            <table className={styles.tableServices}>
+              <thead className={styles.headerTable}>
+                <tr className={styles.rowHeader}>
+                  <td className={styles.borderRB}>Quantidade</td>
+                  <td className={styles.borderRB}>Serviço</td>
+                  <td className={styles.borderB}>Sub-total</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className={styles.itensRow}>
+                  {itenTable.map((item, index) => {
+                    return (
+                      <CreateTable
+                        key={index}
+                        content={item.content}
+                        quantity={item.quantity}
+                        value={item.value}
+                      />
+                    );
+                  })}
+                </tr>
+              </tbody>
+              <tfoot className={styles.footerTable}>
+                <tr className={styles.footerTotal}>
+                  <td>Total</td>
+                  <td>
+                    <span>R$</span>
+                    <strong>{sumTotal}</strong>
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
         </div>
         <div>
           <TableHiper />
@@ -343,7 +382,7 @@ export function TemplateHiper() {
           com o imediato cancelamento da prestação dos serviços de Suporte e,
           principalmente, imediato bloqueio da licença, bem ainda a cobrança de
           eventual valor inadimplido de forma administrativa ou judicial,
-          independente de prévia comunicação judicial ou extrajudicial​
+          independente de prévia comunicação judicial ou extrajudicial.
         </p>
         <p className={styles.view}>
           <strong>Parágrafo terceiro:</strong> A forma de pagamento será por

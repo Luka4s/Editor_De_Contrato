@@ -387,19 +387,29 @@ export function TemplateInfra() {
       </p>
       <div className={styles.view}>
         <ul>
-          <li>
-            <strong>5.1</strong> - Infração a qualquer cláusula ou item deste
-            contrato, mantida por prazo superior a 30 (trinta) dias, após o
-            recebimento do comunicado por escrito da parte prejudicada à parte
-            inadimplente. concordata, falência, liquidação judicial ou
-            extrajudicial, intervenção de Órgão Governamental, dissolução ou
-            qualquer forma de cessação de atividades de qualquer das partes.
-            Transferência do contrato à terceiros sem a prévia concordância das
-            partes. E caso ocorra a necessidade de transferência de contrato à
-            terceiros, a Contratante deve informar por escrito, com 60
-            (sessenta) dias de antecedência a Contratada, aﬁm de manter os
-            mesmos diretos e deveres contidos neste contrato.
-          </li>
+          <div className={itenTable.length === 2 ? styles.quebrarPage : ""}>
+            <li>
+              <strong>5.1</strong> - Infração a qualquer cláusula ou item deste
+              contrato, mantida por prazo superior a 30 (trinta) dias, após o
+              recebimento do comunicado por escrito da parte prejudicada à parte
+              inadimplente. concordata, falência, liquidação judicial ou
+              extrajudicial, intervenção de Órgão Governamental, dissolução ou
+              qualquer forma de cessação de atividades de qualquer das partes.
+              Transferência do{" "}
+              {itenTable.length == 2 ? (
+                <span>
+                  contrato à terceiros sem a prévia concordância das partes. E
+                  caso ocorra a necessidade de transferência de contrato à
+                  terceiros, a Contratante deve informar por escrito, com 60
+                  (sessenta) dias de antecedência a Contratada, aﬁm de manter os
+                  mesmos diretos e deveres contidos neste contrato.
+                </span>
+              ) : (
+                ""
+              )}
+            </li>
+          </div>
+
           <li>
             <strong>5.2</strong> - A rescisão antes do término previsto para o
             contrato, e sem a ocorrência do disposto no item 5.1 deverá ser

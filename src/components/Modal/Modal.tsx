@@ -3,7 +3,7 @@ import { BsPlus } from "react-icons/bs";
 import { BsCheck } from "react-icons/bs";
 import { BsEraser } from "react-icons/bs";
 import { InputUser } from "../../Context/InputUserContext";
-import { ChangeEvent, MouseEvent, useState } from "react";
+import { MouseEvent, useState } from "react";
 
 export function MyModal() {
   const {
@@ -80,13 +80,13 @@ export function MyModal() {
     setSumTotal(total);
   };
 
-  const handleInput = (event: ChangeEvent<HTMLInputElement>) => {
+  /*   const handleInput = (event: ChangeEvent<HTMLInputElement>) => {
     event.currentTarget.value = event.currentTarget.value.replace(
       /[^a-zA-Z\u00C0-\u00FF ]/g,
       ""
     );
     setContentIten(event.currentTarget.value);
-  };
+  }; */
 
   return modalVisible ? null : (
     <section className={styles.sectionModal}>
@@ -111,8 +111,8 @@ export function MyModal() {
           type="text"
           id="input2"
           value={contentIten || ""}
-          pattern="^[a-zA-Z\u00C0-\u00FF]*$"
-          onInput={handleInput}
+          /*   pattern="^[a-zA-Z\u00C0-\u00FF]*$"
+          onInput={handleInput} */
           onChange={(e) => {
             setContentIten(e.target.value);
           }}
