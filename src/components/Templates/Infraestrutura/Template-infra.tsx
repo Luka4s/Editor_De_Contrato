@@ -130,7 +130,7 @@ export function TemplateInfra() {
                 <td>Total</td>
                 <td>
                   <span>R$</span>
-                  <strong>{sumTotal}</strong>
+                  <strong>{sumTotal.toFixed(2)}</strong>
                 </td>
               </tr>
             </tfoot>

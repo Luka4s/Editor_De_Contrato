@@ -38,13 +38,13 @@ export function MyModal() {
     if (contentIten != "" || null) {
       let linhasTabela = 0;
       const quantity = parseInt(inputQuantity, 10) || 0;
-      const value = parseInt(inputValueIten, 10) || 0;
-
+      const value = parseFloat(inputValueIten) || 0;
       setQuantityItens([...quantityItens, quantity]);
       setValueIten([...valueIten, value]);
       setInputQuantity("");
       setInputValueIten("");
       setContentIten("");
+      console.log(valueIten);
 
       setItenTable([
         ...itenTable,
