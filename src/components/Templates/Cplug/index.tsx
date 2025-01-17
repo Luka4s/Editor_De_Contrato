@@ -119,9 +119,9 @@ export function TemplateCplug() {
             de protocolo de internet utilizado pelo CONTRATANTE para acessar o
             Portal ou o Aplicativo permanecerão armazenadas pela CPLUG por, no
             mínimo, 6 (meses) a contar da data de cada acesso realizado,
-            independentemente do término da relação jurídica e comercial entre a
-            Casa Magalhães e o CONTRATANTE, em cumprimento ao disposto no Artigo
-            15 da Lei nº 12.965/2014.
+            independentemente do término da relação jurídica e comercial entre
+            CONTRATADO e o CONTRATANTE, em cumprimento ao disposto no Artigo 15
+            da Lei nº 12.965/2014.
           </p>
         </div>
       </div>
